@@ -1,0 +1,26 @@
+# Unity相關
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.pidb
+*.user
+*.userprefs
+*.idea/
+*.vscode/
+*.tmproj
+*.vs/
+
+# 自動生成的檔案
+*.unitypackage
+
+# 操作系統相關
+.DS_Store
+Thumbs.db
