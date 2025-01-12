@@ -1634,7 +1634,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1925486047}
-        m_TargetAssemblyTypeName: MultipleChoiceManager3, Assembly-CSharp
+        m_TargetAssemblyTypeName: MultipleChoiceManager4, Assembly-CSharp
         m_MethodName: OnNextButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1925486045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc11b32825eb32b47bb9d339b58c78a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 65801b96826ba46fc8af8ed6afcca743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   optionButtons: []

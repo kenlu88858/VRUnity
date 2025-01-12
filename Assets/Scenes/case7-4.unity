@@ -1634,7 +1634,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1925486047}
-        m_TargetAssemblyTypeName: MultipleChoiceManager3, Assembly-CSharp
+        m_TargetAssemblyTypeName: MultipleChoiceManager7, Assembly-CSharp
         m_MethodName: OnNextButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -2573,7 +2573,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828993479}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: af753d79f4f435741b6bfcb26cd38c9a, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 92748a15fcba21c4dae0c833e6a8c7ab, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1925486045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc11b32825eb32b47bb9d339b58c78a1, type: 3}
+  m_Script: {fileID: 11500000, guid: fe95446cdc417e34d98d8ea2afea850b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   optionButtons: []

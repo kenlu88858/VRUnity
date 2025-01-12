@@ -269,9 +269,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 90353649}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ae52ddbf65292e42b5779f5288f9ed9, type: 3}
+  m_Script: {fileID: 11500000, guid: 967bb0e351bbb7e4da2eb2148cd2adbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  optionButtons:
+  - {fileID: 1238269828}
+  - {fileID: 839160718}
+  - {fileID: 1726809437}
+  - {fileID: 2117744505}
+  - {fileID: 263466509}
+  - {fileID: 185735687}
+  confirmButton: {fileID: 1061657328}
 --- !u!1 &185735685
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +293,7 @@ GameObject:
   - component: {fileID: 185735688}
   - component: {fileID: 185735687}
   m_Layer: 5
-  m_Name: case6
+  m_Name: situation6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,19 +362,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 185735688}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case6select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &185735688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case5
+  m_text: situation5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -552,7 +548,7 @@ GameObject:
   - component: {fileID: 263466510}
   - component: {fileID: 263466509}
   m_Layer: 5
-  m_Name: case5
+  m_Name: situation5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -621,19 +617,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 263466510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case5select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &263466510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,7 +713,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case2
+  m_text: situation2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -897,7 +881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case7
+  m_text: confirm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -987,7 +971,7 @@ GameObject:
   - component: {fileID: 839160719}
   - component: {fileID: 839160718}
   m_Layer: 5
-  m_Name: case2
+  m_Name: situation2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,19 +1040,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 839160719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case2select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &839160719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,7 +1210,7 @@ GameObject:
   - component: {fileID: 1061657329}
   - component: {fileID: 1061657328}
   m_Layer: 5
-  m_Name: case7
+  m_Name: confirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1307,19 +1279,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1061657329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case7select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1061657329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,7 +1489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case1
+  m_text: situation1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1663,7 +1623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case3
+  m_text: situation3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1753,7 +1713,7 @@ GameObject:
   - component: {fileID: 1238269829}
   - component: {fileID: 1238269828}
   m_Layer: 5
-  m_Name: case1
+  m_Name: situation1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1822,19 +1782,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1238269829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case1select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1238269829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,7 +1878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case6
+  m_text: situation6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2867,7 +2815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: case4
+  m_text: situation4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2957,7 +2905,7 @@ GameObject:
   - component: {fileID: 1726809438}
   - component: {fileID: 1726809437}
   m_Layer: 5
-  m_Name: case3
+  m_Name: situation3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3026,19 +2974,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1726809438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case3select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1726809438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3135,7 +3071,7 @@ Transform:
   m_GameObject: {fileID: 1767665156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.81, z: -9.105}
+  m_LocalPosition: {x: 0.05, y: 0.01, z: -9.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3171,7 +3107,7 @@ Transform:
   m_GameObject: {fileID: 1977863819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.108, y: -2.45, z: -1.62}
+  m_LocalPosition: {x: -1.108, y: -1.65, z: -1.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3327,7 +3263,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 111
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -3402,7 +3338,7 @@ GameObject:
   - component: {fileID: 2117744506}
   - component: {fileID: 2117744505}
   m_Layer: 5
-  m_Name: case4
+  m_Name: situation4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3471,19 +3407,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2117744506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 90353651}
-        m_TargetAssemblyTypeName: switch_scene1, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: case4select
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2117744506
 MonoBehaviour:
   m_ObjectHideFlags: 0

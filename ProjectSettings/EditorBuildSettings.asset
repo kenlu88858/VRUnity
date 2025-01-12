@@ -56,6 +56,111 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/case3-6.unity
     guid: b35708bfef119e24eb02dfa77a5760ab
+  - enabled: 1
+    path: Assets/Scenes/case1-1.unity
+    guid: efb097414ce75a54ba2da369acb07479
+  - enabled: 1
+    path: Assets/Scenes/case1-2.unity
+    guid: 93dd289c344ff71458c4b11fb6e2ba3e
+  - enabled: 1
+    path: Assets/Scenes/case1-3.unity
+    guid: 3f65eed6743ae0244bf0045d9592d42b
+  - enabled: 1
+    path: Assets/Scenes/case1-4.unity
+    guid: 02dc280fae8449f408aa819f88780df8
+  - enabled: 1
+    path: Assets/Scenes/case1-5.unity
+    guid: d78d2f1f109df924494c382af28667a9
+  - enabled: 1
+    path: Assets/Scenes/case1-6.unity
+    guid: 3bc2b01197d062f43ab11f5de76108d4
+  - enabled: 1
+    path: Assets/Scenes/case1select.unity
+    guid: 05c2565d565b10a4baac80bed57c3589
+  - enabled: 1
+    path: Assets/Scenes/case2select.unity
+    guid: 241b3041f711821419dc4916a25916a0
+  - enabled: 1
+    path: Assets/Scenes/case2-1.unity
+    guid: 509929bcb1e2a6a48b93cbb2997370c8
+  - enabled: 1
+    path: Assets/Scenes/case2-2.unity
+    guid: 6ccaf3265518ca84c8df1517b99793ea
+  - enabled: 1
+    path: Assets/Scenes/case2-3.unity
+    guid: 05bbfe97c8334784896fb621d572630a
+  - enabled: 1
+    path: Assets/Scenes/case2-4.unity
+    guid: 26e78345390e068499f543f5d8996629
+  - enabled: 1
+    path: Assets/Scenes/case2-5.unity
+    guid: 96dcd865271a7c44995d76dd74ed787c
+  - enabled: 1
+    path: Assets/Scenes/case2-6.unity
+    guid: 89537fefd1aeab94aafdff41ef29c20a
+  - enabled: 1
+    path: Assets/Scenes/case4select.unity
+    guid: fc5516dbe49fdc249bf02d1c07d8a28e
+  - enabled: 1
+    path: Assets/Scenes/case4-1.unity
+    guid: d781f1147e3ae254d82f74dfb93e9be3
+  - enabled: 1
+    path: Assets/Scenes/case4-2.unity
+    guid: c08f669b2e706724d8b768920b4ffc0f
+  - enabled: 1
+    path: Assets/Scenes/case4-3.unity
+    guid: 9445117fde64d8f4db0e8bbc719efb9f
+  - enabled: 1
+    path: Assets/Scenes/case4-4.unity
+    guid: 7618544bf6d07da42b04ab338151ba22
+  - enabled: 1
+    path: Assets/Scenes/case4-5.unity
+    guid: 08b9e5e0008a1354dbe4f0fe58c71cef
+  - enabled: 1
+    path: Assets/Scenes/case4-6.unity
+    guid: 99dcf0d2f5725e4439a0b2fcedc2cb30
+  - enabled: 1
+    path: Assets/Scenes/case5-1.unity
+    guid: e1a488d3b9425cd4b808d34d0e7aa469
+  - enabled: 1
+    path: Assets/Scenes/case5-2.unity
+    guid: 6eb6e4cf045d1bf4b91233198f16c63e
+  - enabled: 1
+    path: Assets/Scenes/case5-3.unity
+    guid: bd5483ed9434ed043941c7895116d399
+  - enabled: 1
+    path: Assets/Scenes/case5-4.unity
+    guid: 148a3edaa65cf424495505ecd30b8cbf
+  - enabled: 1
+    path: Assets/Scenes/case5-5.unity
+    guid: ab40f1c0ec9365045b2d1925f88499e8
+  - enabled: 1
+    path: Assets/Scenes/case5-6.unity
+    guid: 024d3b2083747ba459981a22b082b202
+  - enabled: 1
+    path: Assets/Scenes/case5select.unity
+    guid: 6e7499188d0a3224b8140322020528f1
+  - enabled: 1
+    path: Assets/Scenes/case7-1.unity
+    guid: 40e3999778ee14549807ebeceeaea979
+  - enabled: 1
+    path: Assets/Scenes/case7-2.unity
+    guid: bff86a6824ae4df49b46c74df0cc3c31
+  - enabled: 1
+    path: Assets/Scenes/case7-3.unity
+    guid: f5197c26fe33fed4f9bb7a315b19208c
+  - enabled: 1
+    path: Assets/Scenes/case7-4.unity
+    guid: 71063c11db538174da740c890dee6639
+  - enabled: 1
+    path: Assets/Scenes/case7-5.unity
+    guid: b67e623713a94e54c9e483098e2772e4
+  - enabled: 1
+    path: Assets/Scenes/case7-6.unity
+    guid: ab0c5e86903bedb4898619ed503768a2
+  - enabled: 1
+    path: Assets/Scenes/case7select.unity
+    guid: cf2217dcffe6c5b47a4b5a04d85d8a10
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 27ff1bc1e61b3794ca5e31b62ead9773,
       type: 2}
