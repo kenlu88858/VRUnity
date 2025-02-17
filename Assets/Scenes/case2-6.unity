@@ -5299,9 +5299,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176355299}
-        m_TargetAssemblyTypeName: MultipleChoiceManager2, Assembly-CSharp
-        m_MethodName: OnNextButtonPressed
+      - m_Target: {fileID: 1176355300}
+        m_TargetAssemblyTypeName: case2loadgarden, Assembly-CSharp
+        m_MethodName: LoadScene3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12240,6 +12240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176355298}
   - component: {fileID: 1176355299}
+  - component: {fileID: 1176355300}
   m_Layer: 0
   m_Name: scenecontroller
   m_TagString: Untagged
@@ -12276,6 +12277,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionButtons: []
   confirmButton: {fileID: 0}
+--- !u!114 &1176355300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176355296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b88f554e8df4294d90b25ee4a0ce482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
