@@ -69,7 +69,7 @@ public class OpenEntrance_Door : MonoBehaviour
         Debug.Log("Camera Position: " + cameraPosition);
 
 
-        if (isOpen && Vector3.Distance(cameraTransform.position, new Vector3(29.18f, 38.96f, 32.82f)) < 0.3f)
+        if (isOpen && Vector3.Distance(cameraTransform.position, new Vector3(29.6f, 39.31f, 32.71f)) < 0.3f)
         {
             // 載入新的場景
             StartCoroutine(LoadSceneAfterDelay());
