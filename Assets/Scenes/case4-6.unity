@@ -345,8 +345,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
+    m_Reference: {fileID: 0}
   m_RightHandMoveAction:
     m_UseReference: 1
     m_Action:
@@ -358,7 +357,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!114 &47653438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +384,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   m_RightHandTurnAction:
     m_UseReference: 1
     m_Action:
@@ -396,8 +397,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
+    m_Reference: {fileID: 0}
 --- !u!114 &47653439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13184,7 +13184,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 50d4a4208862b4c278262dc668909af2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b5b4210ca65144bbdbb8c3180963de76, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13400,7 +13400,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.787
+      value: 28.279
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
@@ -13410,12 +13410,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.905
+      value: 30.468
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
@@ -13425,7 +13425,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
@@ -13440,7 +13440,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85b6bdea043adcb42801af4cc1232f1d,
         type: 3}
@@ -25489,7 +25489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u6253\u958B\u5927\u9580 \u524D\u5F80\u5BA2\u5EF3\n\u4E26\u727D\u8457\u75C5\u4EBA\u8D70\u5411\u82B1\u5712\n"
+  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u727D\u8457\u75C5\u4EBA\u8D70\u5411\u82B1\u5712\n\u4EE5\u5EFA\u7ACB\u898F\u5F8B\u6D3B\u52D5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
