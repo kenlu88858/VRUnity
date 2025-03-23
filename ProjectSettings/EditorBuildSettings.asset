@@ -120,12 +120,6 @@ EditorBuildSettings:
     path: Assets/Scenes/case4-6.unity
     guid: 429b159d9982f475482b9d127ac2376f
   - enabled: 1
-    path: Assets/Scenes/case4-5 1.unity
-    guid: 08b9e5e0008a1354dbe4f0fe58c71cef
-  - enabled: 1
-    path: Assets/Scenes/case4-61.unity
-    guid: 99dcf0d2f5725e4439a0b2fcedc2cb30
-  - enabled: 1
     path: Assets/Scenes/case5-1.unity
     guid: e1a488d3b9425cd4b808d34d0e7aa469
   - enabled: 1
