@@ -8512,20 +8512,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &694153332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694153329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7adabe80f0008741a7929c08ddfa57f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 694153331}
-  isOpen: 0
 --- !u!65 &694153333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8726,6 +8712,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &694153336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694153329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ea1d6f061331940ba59aa8aad5faf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 694153331}
+  isOpen: 0
 --- !u!1001 &710331210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17693,10 +17693,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f8f1d7d0873be34ca7694f65a044a0f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 694153332}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f8f1d7d0873be34ca7694f65a044a0f,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 694153333}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f8f1d7d0873be34ca7694f65a044a0f,
         type: 3}
@@ -17706,6 +17702,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 694153334}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f8f1d7d0873be34ca7694f65a044a0f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 694153336}
     - targetCorrespondingSourceObject: {fileID: 8627740116627737375, guid: 4f8f1d7d0873be34ca7694f65a044a0f,
         type: 3}
       insertIndex: -1
