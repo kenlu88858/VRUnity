@@ -7,12 +7,16 @@ Shader "Custom/HighlightOutline"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Opaque" "Queue"="Geometry" } // 確保是 Opaque
         Pass
         {
             Name "OUTLINE"
             Tags { "LightMode"="ForwardBase" }
-            Cull Front
+            
+            Cull Front     // 繪製反向面
+            ZWrite On      // 確保深度測試啟用
+            ZTest LEqual   // 避免被其他物件覆蓋
+            Blend One Zero // 防止透明效果
 
             CGPROGRAM
             #pragma vertex vert
