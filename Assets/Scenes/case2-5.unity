@@ -831,6 +831,8 @@ GameObject:
   - component: {fileID: 150951188}
   - component: {fileID: 150951187}
   - component: {fileID: 150951186}
+  - component: {fileID: 150951190}
+  - component: {fileID: 150951189}
   m_Layer: 0
   m_Name: AudioManager1
   m_TagString: Untagged
@@ -845,7 +847,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150951185}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4c65db76e81dbf498fbb10fe4d7c71d, type: 3}
   m_Name: 
@@ -963,6 +965,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150951189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150951185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e237060ef66a8488514851cffe4843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 150951187}
+  playButton: {fileID: 1494581260}
+  whisperScript: {fileID: 150951190}
+--- !u!114 &150951190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150951185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0253f9aa9632b4478b2465f60059c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targetsentence: "\u6211\u5011\u51FA\u53BB\u8D70\u8D70\u770B\u770B\u9644\u8FD1\u7684\u82B1\u5712\u7136\u5F8C\u56DE\u4F86\u4F11\u606F"
+  saveFileName: recordedAudio.wav
+  recordDuration: 10
+  waitTime: 2
+  nextbutton: {fileID: 370691974}
+  audioSource: {fileID: 150951187}
 --- !u!1 &153456896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,7 +3335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &370691975
 MonoBehaviour:
   m_ObjectHideFlags: 0

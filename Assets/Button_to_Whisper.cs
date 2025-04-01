@@ -3,12 +3,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI; // 引入 UI 命名空間
 
-public class case2VoiceButtonPlayer : MonoBehaviour
+public class Button_to_Whisper : MonoBehaviour
 {
     public AudioSource audioSource; // 參考 AudioSource
     public Button playButton; // 參考 UI 按鈕
 
-    //public whisper_texttospeech whisperScript;
+    public whisper_texttospeech whisperScript;
 
     void Start()
     {
@@ -41,15 +41,15 @@ public class case2VoiceButtonPlayer : MonoBehaviour
 
         Debug.Log("播放音頻！");
         audioSource.Play(); // 播放音頻
-        //StartCoroutine(WaitForAudioFinish());
+        StartCoroutine(WaitForAudioFinish());
     }
 
-/*     private IEnumerator WaitForAudioFinish()
+    private IEnumerator WaitForAudioFinish()
     {
         // 等待音頻播放結束
         yield return new WaitForSeconds(audioSource.clip.length);
 
         // 音頻播放結束後開始錄音辨識
         whisperScript.StartRecording(); // 假設 StartRecording 是 whisper_texttospeech 中的開始錄音方法
-    } */
+    }
 }

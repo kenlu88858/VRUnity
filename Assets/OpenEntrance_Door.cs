@@ -65,8 +65,8 @@ public class OpenEntrance_Door : MonoBehaviour
             ToggleDoor();
         }
 
-        Vector3 cameraPosition = cameraTransform.position;
-        Debug.Log("Camera Position: " + cameraPosition);
+        //Vector3 cameraPosition = cameraTransform.position;
+        //Debug.Log("Camera Position: " + cameraPosition);
 
 
         if (isOpen && Vector3.Distance(cameraTransform.position, new Vector3(29.6f, 39.31f, 32.71f)) < 0.3f)
