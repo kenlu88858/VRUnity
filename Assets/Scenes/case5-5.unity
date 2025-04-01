@@ -3261,7 +3261,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334175688}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4db874ef69140bb43847bfe39df0bbbb, type: 3}
@@ -22762,7 +22762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.6, y: 0.9}
+  m_AnchoredPosition: {x: 10.6, y: -13.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1736877008
@@ -27136,7 +27136,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006789384}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8eb6da5040eb75040a25f1ab6b564ebe, type: 3}
@@ -29323,7 +29323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8ACB\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57:\n\n<color=blue>\u6211\u5011\u4E00\u8D77\u4F86\u627E\u627E\u5E33\u672C\u653E\u5728\u54EA\u88E1\n\u7136\u5F8C\u628A\u5B83\u653E\u5728\u5B89\u5168\u7684\u5730\u65B9\n\u9019\u6A23\u6BD4\u8F03\u5B89\u5FC3</color>"
+  m_text: "\u8ACB\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57:\n\n<color=#F7FF01>\"\u6211\u5011\u4E00\u8D77\u4F86\u627E\u627E\u5E33\u672C\u653E\u54EA\u88E1\n\u7136\u5F8C\u628A\u5B83\u653E\u5728\u5B89\u5168\u7684\u5730\u65B9\n\u9019\u6A23\u6BD4\u8F03\u5B89\u5FC3\"</color>\n\n\u8ACB\u8907\u8AA6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
