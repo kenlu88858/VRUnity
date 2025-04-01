@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI; // 引入 UI 命名空間
 
-public class VoiceButtonPlayer1 : MonoBehaviour
+public class case1VoiceButtonPlayer : MonoBehaviour
 {
     public AudioSource audioSource; // 參考 AudioSource
     public Button playButton; // 參考 UI 按鈕
