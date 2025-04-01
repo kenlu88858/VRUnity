@@ -998,6 +998,11 @@ MonoBehaviour:
   waitTime: 2
   nextbutton: {fileID: 370691974}
   audioSource: {fileID: 150951187}
+  followtext: {fileID: 1581761270}
+  whis_FontSize: 18
+  grab: "\u8ACB\u8907\u8AA6\n\u6211\u5011\u51FA\u53BB\u8D70\u8D70\u770B\u770B\u9644\u8FD1\u7684\u82B1\u5712\n\u7136\u5F8C\u56DE\u4F86\u4F11\u606F"
+  recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
+  finish: "\u8AAA\u7684\u771F\u597D!\n\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210"
 --- !u!1 &153456896
 GameObject:
   m_ObjectHideFlags: 0

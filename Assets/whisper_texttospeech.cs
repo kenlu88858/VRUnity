@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections;
 using UnityEngine.Networking;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class whisper_texttospeech : MonoBehaviour
 {
@@ -18,6 +19,19 @@ public class whisper_texttospeech : MonoBehaviour
     public GameObject nextbutton;
 
     public AudioSource audioSource;
+
+    public TextMeshProUGUI followtext;
+
+    public float whis_FontSize ;
+
+    [TextArea]
+    public string grab;
+    
+    [TextArea]
+    public string recongnize;
+
+    [TextArea]
+    public string finish;
 
     void Start()
     {
@@ -42,6 +56,8 @@ public class whisper_texttospeech : MonoBehaviour
     {
         while (!isTrue) // 無限循環錄音
         {
+            followtext.text = grab;
+            followtext.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
                 yield return null;  // 等待直到音頻播放結束
@@ -57,6 +73,8 @@ public class whisper_texttospeech : MonoBehaviour
 
             // 停止錄音
             Microphone.End(microphoneDevice);
+            followtext.text = recongnize;
+            followtext.fontSize = whis_FontSize;
             Debug.Log("語音錄製完成，開始辨識...");
 
             // 保存音頻檔案
@@ -70,6 +88,8 @@ public class whisper_texttospeech : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
 
+        followtext.text = finish;
+        followtext.fontSize = whis_FontSize;
         nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         StopRecording();
@@ -109,10 +129,10 @@ public class whisper_texttospeech : MonoBehaviour
             else{
                 Debug.Log("播放音頻！");
                 audioSource.Play();
-                yield return new WaitForSeconds(audioSource.clip.length);
+                //yield return new WaitForSeconds(audioSource.clip.length);
             }
 
-            //Debug.Log("語音辨識結果: " + cleanedText);
+            Debug.Log("語音辨識結果: " + cleanedText);
         }
         else
         {

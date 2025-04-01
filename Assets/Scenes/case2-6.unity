@@ -7455,12 +7455,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0253f9aa9632b4478b2465f60059c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Targetsentence: "\u4F60\u770B\u9019\u4E9B\u90FD\u662F\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u5927\u5408\u7167\u64FA\u5728\u5BA2\u5EF3\u5341\u5E7E\u5E74\u4E86\u9019\u88E1\u662F\u4F60\u7684\u5BB6\u9019\u88E1\u5F88\u5B89\u5168"
+  Targetsentence: "\u4F60\u770B\u9019\u4E9B\u90FD\u662F\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u5927\u5408\u7167\u64FA\u5728\u5BA2\u5EF3\u5341\u5E7E\u5E74\u9019\u88E1\u662F\u4F60\u7684\u5BB6\u9019\u88E1\u5F88\u5B89\u5168"
   saveFileName: recordedAudio.wav
-  recordDuration: 10
+  recordDuration: 15
   waitTime: 2
   nextbutton: {fileID: 1400682194}
   audioSource: {fileID: 602824092}
+  followtext: {fileID: 1267912983}
+  whis_FontSize: 24
+  grab: "\u8ACB\u8907\u8AA6\n\u4F60\u770B\n\u9019\u4E9B\u90FD\u662F\u6211\u5011\u4E00\u5BB6\u4EBA\u7684\u5927\u5408\u7167\n\u64FA\u5728\u5BA2\u5EF3\u5341\u5E7E\u5E74\n\u9019\u88E1\u662F\u4F60\u7684\u5BB6\n\u9019\u88E1\u5F88\u5B89\u5168"
+  recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
+  finish: "\u8AAA\u5F97\u771F\u597D!\n\n\u8FA8\u8B58\u5B8C\u6210"
 --- !u!1001 &610324640
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -55,7 +55,7 @@ public class case2grabphoto : MonoBehaviour
     private void OnGrab(XRBaseInteractor interactor)
     {
         //isgrab = true;
-        followtext.text = "請複誦\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年了\n這裡是你的家\n這裡很安全";
+        followtext.text = "請複誦\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年\n這裡是你的家\n這裡很安全";
         followtext.fontSize = grabbedFontSize;
         
         if (audioSource != null)
@@ -74,11 +74,18 @@ public class case2grabphoto : MonoBehaviour
     private void OnRelease(XRBaseInteractor interactor)
     {
         //isgrab = false;
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop(); // 停止當前播放的音頻
+        }
         
         if (whisperScript != null)
         {
             whisperScript.StopRecording();  // 停止語音辨識
         }
+
+        followtext.text = "請操作手柄\n\n拿起全家福照片";
+        followtext.fontSize = grabbedFontSize;
 
         Debug.Log("物品被放下，語音辨識停止！");
     }
