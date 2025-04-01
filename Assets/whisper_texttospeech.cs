@@ -42,6 +42,11 @@ public class whisper_texttospeech : MonoBehaviour
     {
         while (!isTrue) // 無限循環錄音
         {
+            while (audioSource.isPlaying)
+            {
+                yield return null;  // 等待直到音頻播放結束
+            }
+            
             Debug.Log("請開始說話...");
             
             // 開始錄音
@@ -67,7 +72,7 @@ public class whisper_texttospeech : MonoBehaviour
 
         nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
-
+        StopRecording();
     }
 
     // 將錄製的音頻保存為 WAV 檔案
@@ -104,6 +109,7 @@ public class whisper_texttospeech : MonoBehaviour
             else{
                 Debug.Log("播放音頻！");
                 audioSource.Play();
+                yield return new WaitForSeconds(audioSource.clip.length);
             }
 
             //Debug.Log("語音辨識結果: " + cleanedText);
@@ -137,5 +143,12 @@ public class whisper_texttospeech : MonoBehaviour
     private class ResponseData
     {
         public string text;
+    }
+
+    public void StopRecording()
+    {
+        StopAllCoroutines(); // 停止所有協程
+        Microphone.End(microphoneDevice); // 停止麥克風錄音
+        Debug.Log("錄音已手動停止！");
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
@@ -18,6 +19,11 @@ public class case2grabphoto : MonoBehaviour
     public float grabbedFontSize = 24;
     public AudioSource audioSource;  // 音源組件
 
+    public whisper_texttospeech whisperScript;
+
+    //private bool isgrab = false;
+
+
     void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
@@ -32,6 +38,7 @@ public class case2grabphoto : MonoBehaviour
         {
             // 註冊「抓取事件」
             grabInteractable.onSelectEntered.AddListener(OnGrab);
+            grabInteractable.onSelectExited.AddListener(OnRelease);
         }
     }
 
@@ -47,6 +54,7 @@ public class case2grabphoto : MonoBehaviour
     // 當玩家抓取物品時執行
     private void OnGrab(XRBaseInteractor interactor)
     {
+        //isgrab = true;
         followtext.text = "請複誦\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年了\n這裡是你的家\n這裡很安全";
         followtext.fontSize = grabbedFontSize;
         
@@ -57,9 +65,31 @@ public class case2grabphoto : MonoBehaviour
                 audioSource.Stop(); // 停止當前播放的音頻
             }
             audioSource.Play(); // 這樣音檔只會在「抓取時」播放，而不會在 Update 中每幀執行
+            StartCoroutine(WaitForAudioFinish());
+        }
+        //whisperScript.StartRecording();
+        //missionbutton.SetActive(true);
+    }
+
+    private void OnRelease(XRBaseInteractor interactor)
+    {
+        //isgrab = false;
+        
+        if (whisperScript != null)
+        {
+            whisperScript.StopRecording();  // 停止語音辨識
         }
 
-        missionbutton.SetActive(true);
+        Debug.Log("物品被放下，語音辨識停止！");
+    }
+
+    private IEnumerator WaitForAudioFinish()
+    {
+        // 等待音頻播放結束
+        yield return new WaitForSeconds(audioSource.clip.length);
+
+        // 音頻播放結束後開始錄音辨識
+        whisperScript.StartRecording(); // 假設 StartRecording 是 whisper_texttospeech 中的開始錄音方法
     }
 
     // 讓物品回到指定位置並保持正確的方向
@@ -90,6 +120,7 @@ public class case2grabphoto : MonoBehaviour
         if (grabInteractable != null)
         {
             grabInteractable.onSelectEntered.RemoveListener(OnGrab);
+            grabInteractable.onSelectEntered.RemoveListener(OnRelease);
         }
     }
 }
