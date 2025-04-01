@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class PuzzleSnap : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PuzzleSnap : MonoBehaviour
     public bool smoothSnap = true; // 是否使用平滑移動
     public float snapSpeed = 10f; // 平滑吸附速度
     public float rotationSpeed = 5f;
+    public TextMeshProUGUI followtext;
+    public float grabbedFontSize;
+    
+    public GameObject button;
     private Rigidbody rb;
     private bool isSnapped = false;
 
@@ -21,6 +26,9 @@ public class PuzzleSnap : MonoBehaviour
     private Quaternion InitRotation;
 
     private XRGrabInteractable grabInteractable;
+
+    [TextArea]
+    public string grab;
 
     void Start()
     {
@@ -45,6 +53,9 @@ public class PuzzleSnap : MonoBehaviour
         if (distance <= snapDistance)
         {
             SnapToTarget();
+            button.SetActive(true);
+            followtext.text = grab;
+            followtext.fontSize = grabbedFontSize;
         }
 
         if (grabInteractable != null && !grabInteractable.isSelected && distance > snapDistance)
