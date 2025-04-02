@@ -19,8 +19,10 @@ public class case2grabphoto : MonoBehaviour
     public TextMeshProUGUI followtext1;
     public float grabbedFontSize = 24;
     public AudioSource audioSource;  // 音源組件
+    public AudioSource audioSource1;
 
     public whisper_texttospeech whisperScript;
+    private bool recongnize_true = false;
 
     //private bool isgrab = false;
 
@@ -56,20 +58,29 @@ public class case2grabphoto : MonoBehaviour
     private void OnGrab(XRBaseInteractor interactor)
     {
         //isgrab = true;
-        followtext.text = "請複誦\n\n\n\n\n\n\n請開始複誦";
-        followtext.fontSize = grabbedFontSize;
-        followtext1.text = "\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年\n這裡是你的家\n這裡很安全";
-        followtext1.fontSize = grabbedFontSize;
-        
-        if (audioSource != null)
+        if(!recongnize_true)
         {
-            if (audioSource.isPlaying)
+            followtext.text = "請和我複誦一次以下文字\n\n\n\n\n\n\n請開始複誦";
+            followtext.fontSize = grabbedFontSize;
+            followtext1.text = "\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年\n這裡是你的家\n這裡很安全";
+            followtext1.fontSize = grabbedFontSize;
+
+            if (audioSource != null)
             {
-                audioSource.Stop(); // 停止當前播放的音頻
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop(); // 停止當前播放的音頻
+                }
+                if (audioSource1.isPlaying)
+                {
+                    audioSource1.Stop(); // 停止當前播放的音頻
+                }
+                audioSource.Play(); // 這樣音檔只會在「抓取時」播放，而不會在 Update 中每幀執行
+                StartCoroutine(WaitForAudioFinish());
             }
-            audioSource.Play(); // 這樣音檔只會在「抓取時」播放，而不會在 Update 中每幀執行
-            StartCoroutine(WaitForAudioFinish());
         }
+        
+        
         //whisperScript.StartRecording();
         //missionbutton.SetActive(true);
     }
@@ -86,11 +97,13 @@ public class case2grabphoto : MonoBehaviour
         {
             whisperScript.StopRecording();  // 停止語音辨識
         }
-
-        followtext.text = "請操作手柄\n\n拿起全家福照片";
-        followtext.fontSize = grabbedFontSize;
-        followtext1.text = "";
-        followtext1.fontSize = grabbedFontSize;
+        if(!recongnize_true)
+        {
+            followtext.text = "請操作手柄\n\n拿起全家福照片";
+            followtext.fontSize = grabbedFontSize;
+            followtext1.text = "";
+            followtext1.fontSize = grabbedFontSize;
+        }
 
         Debug.Log("物品被放下，語音辨識停止！");
     }
@@ -102,6 +115,7 @@ public class case2grabphoto : MonoBehaviour
 
         // 音頻播放結束後開始錄音辨識
         whisperScript.StartRecording(); // 假設 StartRecording 是 whisper_texttospeech 中的開始錄音方法
+        recongnize_true = true;
     }
 
     // 讓物品回到指定位置並保持正確的方向

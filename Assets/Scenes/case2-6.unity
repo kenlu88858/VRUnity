@@ -7147,6 +7147,7 @@ MonoBehaviour:
   followtext1: {fileID: 1132910265}
   grabbedFontSize: 24
   audioSource: {fileID: 602824092}
+  audioSource1: {fileID: 1352657955}
   whisperScript: {fileID: 602824093}
 --- !u!114 &602824089
 MonoBehaviour:
@@ -17330,7 +17331,7 @@ Transform:
   m_GameObject: {fileID: 1352657950}
   serializedVersion: 2
   m_LocalRotation: {x: 0.50497586, y: 0.49805835, z: -0.49853173, w: 0.4984009}
-  m_LocalPosition: {x: 31.91004, y: 39.025, z: 30.183014}
+  m_LocalPosition: {x: 31.91, y: 38.972, z: 30.183}
   m_LocalScale: {x: 0.11523136, y: 0.075280175, z: 0.08668512}
   m_ConstrainProportionsScale: 0
   m_Children: []
