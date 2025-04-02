@@ -19,13 +19,19 @@ public class whisper_texttospeech : MonoBehaviour
     public GameObject nextbutton;
 
     public AudioSource audioSource;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
 
     public TextMeshProUGUI followtext;
+    public TextMeshProUGUI followtext1;
 
     public float whis_FontSize ;
 
     [TextArea]
     public string grab;
+
+     [TextArea]
+    public string grab1;
     
     [TextArea]
     public string recongnize;
@@ -58,6 +64,8 @@ public class whisper_texttospeech : MonoBehaviour
         {
             followtext.text = grab;
             followtext.fontSize = whis_FontSize;
+            followtext1.text = grab1;
+            followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
                 yield return null;  // 等待直到音頻播放結束
@@ -75,9 +83,12 @@ public class whisper_texttospeech : MonoBehaviour
             Microphone.End(microphoneDevice);
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
+            followtext1.text = "";
+            followtext1.fontSize = whis_FontSize;
             Debug.Log("語音錄製完成，開始辨識...");
 
             // 保存音頻檔案
+            audioSource1.Play();
             SaveAudioClipAsWav(recordedClip, savePath);
              Debug.Log("WAV 檔案儲存於: " + savePath);
 
@@ -90,6 +101,8 @@ public class whisper_texttospeech : MonoBehaviour
 
         followtext.text = finish;
         followtext.fontSize = whis_FontSize;
+        followtext1.text = "";
+        followtext1.fontSize = whis_FontSize;
         nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         StopRecording();
@@ -105,7 +118,7 @@ public class whisper_texttospeech : MonoBehaviour
     // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "http://127.0.0.1:5000/transcribe";  // 伺服器的 URL
+        string serverUrl = "https://0925-1-175-89-208.ngrok-free.app/transcribe";  // 伺服器的 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
@@ -123,7 +136,11 @@ public class whisper_texttospeech : MonoBehaviour
 
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
             if(Targetsentence == cleanedText){
+                if(audioSource1.isPlaying){
+                    audioSource1.Stop();
+                }
                 Debug.Log("你說對了!");
+                audioSource2.Play();
                 isTrue = true;
             }
             else{

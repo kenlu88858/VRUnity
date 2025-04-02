@@ -16,6 +16,7 @@ public class case2grabphoto : MonoBehaviour
 
     public GameObject missionbutton;
     public TextMeshProUGUI followtext;
+    public TextMeshProUGUI followtext1;
     public float grabbedFontSize = 24;
     public AudioSource audioSource;  // 音源組件
 
@@ -55,8 +56,10 @@ public class case2grabphoto : MonoBehaviour
     private void OnGrab(XRBaseInteractor interactor)
     {
         //isgrab = true;
-        followtext.text = "請複誦\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年\n這裡是你的家\n這裡很安全";
+        followtext.text = "請複誦\n\n\n\n\n\n\n請開始複誦";
         followtext.fontSize = grabbedFontSize;
+        followtext1.text = "\n你看\n這些都是我們一家人的大合照\n擺在客廳十幾年\n這裡是你的家\n這裡很安全";
+        followtext1.fontSize = grabbedFontSize;
         
         if (audioSource != null)
         {
@@ -86,6 +89,8 @@ public class case2grabphoto : MonoBehaviour
 
         followtext.text = "請操作手柄\n\n拿起全家福照片";
         followtext.fontSize = grabbedFontSize;
+        followtext1.text = "";
+        followtext1.fontSize = grabbedFontSize;
 
         Debug.Log("物品被放下，語音辨識停止！");
     }
