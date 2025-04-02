@@ -19,6 +19,8 @@ public class case1whisper_texttospeech : MonoBehaviour
     public GameObject nextbutton;
 
     public AudioSource audioSource;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
@@ -81,6 +83,7 @@ public class case1whisper_texttospeech : MonoBehaviour
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
             followtext1.text ="";
+            audioSource2.Play();
             Debug.Log("語音錄製完成，開始辨識...");
 
             // 保存音頻檔案
@@ -132,10 +135,17 @@ public class case1whisper_texttospeech : MonoBehaviour
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
             if(Targetsentence == cleanedText){
                 Debug.Log("你說對了!");
+                if (audioSource2.isPlaying){
+                    audioSource2.Stop();
+                }
+                audioSource1.Play();
                 isTrue = true;
             }
             else{
                 Debug.Log("播放音頻！");
+                if (audioSource2.isPlaying){
+                    audioSource2.Stop();
+                }
                 audioSource.Play();
                 //yield return new WaitForSeconds(audioSource.clip.length);
             }

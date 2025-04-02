@@ -19,7 +19,7 @@ public class case1grabCalendar : MonoBehaviour
     public TextMeshProUGUI followtext1;
     public float grabbedFontSize;
     public AudioSource audioSource;  // 音源組件
-
+    public AudioSource audioSource1;
     public case1whisper_texttospeech whisperScript;
 
     //private bool isgrab = false;
@@ -54,7 +54,8 @@ public class case1grabCalendar : MonoBehaviour
 
     // 當玩家抓取物品時執行
     private void OnGrab(XRBaseInteractor interactor)
-    {
+    {   
+       
         //isgrab = true;
         followtext.text = "請和我複誦一次以下文字\n\n\n\n\n\n\n請開始複誦";
         followtext1.text = "\n現在是下午三點\n今天是星期二\n這些訊息都寫在我們的日曆上\n你可以隨時看\n";
@@ -62,7 +63,11 @@ public class case1grabCalendar : MonoBehaviour
         followtext1.fontSize = grabbedFontSize;
         
         if (audioSource != null)
-        {
+        {   
+            if (audioSource1.isPlaying)
+            {
+                audioSource1.Stop(); // 停止當前播放的音頻
+            }
             if (audioSource.isPlaying)
             {
                 audioSource.Stop(); // 停止當前播放的音頻
