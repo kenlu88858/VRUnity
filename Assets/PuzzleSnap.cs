@@ -14,7 +14,7 @@ public class PuzzleSnap : MonoBehaviour
     public float rotationSpeed = 5f;
     public TextMeshProUGUI followtext;
     public float grabbedFontSize;
-    
+    public AudioSource audioSource;
     public GameObject button;
     private Rigidbody rb;
     private bool isSnapped = false;
@@ -50,17 +50,32 @@ public class PuzzleSnap : MonoBehaviour
         Debug.Log("當前距離：" + distance);
         //Debug.Log("拼圖當前座標：" + transform.position + "，目標座標：" + snapPosition);
 
-        if (distance <= snapDistance)
+        if (distance <= snapDistance && !isSnapped)
         {
             SnapToTarget();
+            PlaySnapSound();
             button.SetActive(true);
             followtext.text = grab;
             followtext.fontSize = grabbedFontSize;
+            isSnapped = true;
         }
 
         if (grabInteractable != null && !grabInteractable.isSelected && distance > snapDistance)
         {
             MoveObjectBack();
+        }
+    }
+
+    void PlaySnapSound()
+    {
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+            Debug.Log("播放吸附音效！");
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource 或 AudioClip 沒有設定！");
         }
     }
     
