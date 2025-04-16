@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.IO;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -95,6 +96,18 @@ public class case2grabphoto : MonoBehaviour
         
         if (whisperScript != null)
         {
+            if (File.Exists(whisperScript.savePath))
+            {
+                try
+                {
+                    File.Delete(whisperScript.savePath);
+                    Debug.Log("舊的音檔已刪除: " + whisperScript.savePath);
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogError("刪除舊音檔失敗: " + e.Message);
+                }
+            }
             whisperScript.StopRecording();  // 停止語音辨識
         }
         if(!recongnize_true)

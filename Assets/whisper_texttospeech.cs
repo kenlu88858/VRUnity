@@ -8,7 +8,7 @@ using TMPro;
 public class whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
-    private string savePath;
+    public string savePath;
     public string Targetsentence; //不要加上標點符號、空格等等
     public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
 
@@ -55,6 +55,19 @@ public class whisper_texttospeech : MonoBehaviour
 
     public void StartRecording()
     {
+        if (File.Exists(savePath))
+        {
+            try
+            {
+                File.Delete(savePath);
+                Debug.Log("舊的音檔已刪除: " + savePath);
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError("刪除舊音檔失敗: " + e.Message);
+            }
+        }
+        
         StartCoroutine(RecordingLoop());
     }
 
@@ -118,7 +131,7 @@ public class whisper_texttospeech : MonoBehaviour
     // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "https://0925-1-175-89-208.ngrok-free.app/transcribe";  // 伺服器的 URL
+        string serverUrl = "https://25bf-1-175-122-77.ngrok-free.app/transcribe";  // 伺服器的 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
