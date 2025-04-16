@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.IO;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -22,7 +23,8 @@ public class case1grabCalendar : MonoBehaviour
     public AudioSource audioSource1;
     public case1whisper_texttospeech whisperScript;
 
-    //private bool isgrab = false;
+    
+    private bool whisperfinish = false;
 
 
     void Start()
@@ -74,6 +76,8 @@ public class case1grabCalendar : MonoBehaviour
             }
             audioSource.Play(); // 這樣音檔只會在「抓取時」播放，而不會在 Update 中每幀執行
             StartCoroutine(WaitForAudioFinish());
+            whisperfinish = true;
+            
         }
         //whisperScript.StartRecording();
         //missionbutton.SetActive(true);
@@ -90,13 +94,27 @@ public class case1grabCalendar : MonoBehaviour
         if (whisperScript != null)
         {
             whisperScript.StopRecording();  // 停止語音辨識
+            if (File.Exists(whisperScript.savePath))
+            {
+                try
+                {
+                    File.Delete(whisperScript.savePath);
+                    Debug.Log("舊的音檔已刪除: " + whisperScript.savePath);
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogError("刪除舊音檔失敗: " + e.Message);
+                }
+            }
         }
+        if(!whisperfinish){
+            followtext.text = "請操作手柄\n\n拿起閃爍發光的日曆\n並不斷重複提醒";
+            followtext1.text = "";
+            followtext.fontSize = grabbedFontSize;
 
-        followtext.text = "請操作手柄\n\n拿起閃爍發光的日曆\n並不斷重複提醒";
-        followtext1.text = "";
-        followtext.fontSize = grabbedFontSize;
-
-        Debug.Log("物品被放下，語音辨識停止！");
+            Debug.Log("物品被放下，語音辨識停止！");
+        }
+        
     }
 
     private IEnumerator WaitForAudioFinish()

@@ -8,14 +8,15 @@ using TMPro;
 public class case1whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
-    private string savePath;
+    private Coroutine recordingCoroutine;
+    public string savePath;
     public string Targetsentence; //不要加上標點符號、空格等等
     public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
 
     public float recordDuration = 10f; // 錄音時間
     public float waitTime = 2f; // 每次辨識後等待時間
 
-    private bool isTrue = false;
+    public bool isTrue = false;
     public GameObject nextbutton;
 
     public AudioSource audioSource;
@@ -25,6 +26,7 @@ public class case1whisper_texttospeech : MonoBehaviour
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
     public float whis_FontSize ;
+    public int count = 0;
 
     [TextArea]
     public string grab;
@@ -53,8 +55,13 @@ public class case1whisper_texttospeech : MonoBehaviour
     }
 
     public void StartRecording()
-    {
-        StartCoroutine(RecordingLoop());
+    {   
+        if (recordingCoroutine != null)
+        {
+            Debug.LogWarning("錄音流程已經在執行中，跳過重複啟動。");
+            return;
+        }
+        recordingCoroutine = StartCoroutine(RecordingLoop()); 
     }
 
     private IEnumerator RecordingLoop()
@@ -103,6 +110,7 @@ public class case1whisper_texttospeech : MonoBehaviour
         
         nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
+        recordingCoroutine = null;
         StopRecording();
     }
 
@@ -116,7 +124,8 @@ public class case1whisper_texttospeech : MonoBehaviour
     // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "https://0925-1-175-89-208.ngrok-free.app/transcribe";  // 伺服器的 URL
+        count = count + 1;
+        string serverUrl = "https://4109-1-175-122-77.ngrok-free.app/transcribe";  // 伺服器的 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
@@ -151,6 +160,7 @@ public class case1whisper_texttospeech : MonoBehaviour
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
+            Debug.Log(count);
         }
         else
         {
@@ -185,8 +195,19 @@ public class case1whisper_texttospeech : MonoBehaviour
 
     public void StopRecording()
     {
-        StopAllCoroutines(); // 停止所有協程
-        Microphone.End(microphoneDevice); // 停止麥克風錄音
-        Debug.Log("錄音已手動停止！");
+        if (recordingCoroutine != null)
+        {
+            StopCoroutine(recordingCoroutine);
+            recordingCoroutine = null;
+        }
+
+        if (Microphone.IsRecording(microphoneDevice))
+        {
+            Microphone.End(microphoneDevice); // 避免在沒錄音時叫 End 出錯
+        }
+
+        Microphone.End(microphoneDevice); // 停止錄音
+        isTrue = false; // 重設成功旗標
+        Debug.Log("錄音流程已手動停止！");
     }
 }

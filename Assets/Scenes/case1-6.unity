@@ -741,7 +741,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8907\u8AA6\u5B8C\u7562"
+  m_text: "\u4E0B\u4E00\u6B65"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -9749,10 +9749,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59345a7e35c07b4180ab16ae638e94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Targetsentence: "\u6211\u5011\u4F86\u4E00\u8D77\u505A\u500B\u62FC\u5716\u5427\u9019\u500B\u5F88\u597D\u73A9\u5594"
+  savePath: 
+  Targetsentence: "\u6211\u5011\u4F86\u4E00\u8D77\u505A\u500B\u62FC\u5716\u5427\u9019\u500B\u5F88\u597D\u73A9"
   saveFileName: recordedAudio.wav
   recordDuration: 10
   waitTime: 2
+  isTrue: 0
   nextbutton: {fileID: 251154376}
   audioSource: {fileID: 787724806}
   audioSource1: {fileID: 1956030001}
@@ -9760,8 +9762,9 @@ MonoBehaviour:
   followtext: {fileID: 1870144618}
   followtext1: {fileID: 1115417783}
   whis_FontSize: 18
+  count: 0
   grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\u8ACB\u958B\u59CB\u8907\u8AA6"
-  grab2: "\n\"\u6211\u5011\u4F86\u4E00\u8D77\u505A\u500B\u62FC\u5716\u5427\n\u9019\u500B\u5F88\u597D\u73A9\u5594!\""
+  grab2: "\n\"\u6211\u5011\u4F86\u4E00\u8D77\u505A\u500B\u62FC\u5716\u5427\n\u9019\u500B\u5F88\u597D\u73A9!\""
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
   finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86!"
 --- !u!114 &787724809
@@ -13866,7 +13869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\"\u6211\u5011\u4F86\u4E00\u8D77\u505A\u500B\u62FC\u5716\u5427\n\u9019\u500B\u5F88\u597D\u73A9\u5594!\""
+  m_text: "\n\"\u6211\u5011\u4F86\u4E00\u8D77\u505A\u500B\u62FC\u5716\u5427\n\u9019\u500B\u5F88\u597D\u73A9!\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
