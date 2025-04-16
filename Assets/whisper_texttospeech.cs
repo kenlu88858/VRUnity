@@ -8,6 +8,7 @@ using TMPro;
 public class whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
+    private Coroutine recordingCoroutine; // 放在類別最上方
     public string savePath;
     public string Targetsentence; //不要加上標點符號、空格等等
     public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
@@ -55,20 +56,12 @@ public class whisper_texttospeech : MonoBehaviour
 
     public void StartRecording()
     {
-        if (File.Exists(savePath))
+        if (recordingCoroutine != null)
         {
-            try
-            {
-                File.Delete(savePath);
-                Debug.Log("舊的音檔已刪除: " + savePath);
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError("刪除舊音檔失敗: " + e.Message);
-            }
+            Debug.LogWarning("錄音流程已經在執行中，跳過重複啟動。");
+            return;
         }
-        
-        StartCoroutine(RecordingLoop());
+        recordingCoroutine = StartCoroutine(RecordingLoop());
     }
 
     private IEnumerator RecordingLoop()
@@ -118,6 +111,7 @@ public class whisper_texttospeech : MonoBehaviour
         followtext1.fontSize = whis_FontSize;
         nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
+        recordingCoroutine = null;
         StopRecording();
     }
 
@@ -197,8 +191,16 @@ public class whisper_texttospeech : MonoBehaviour
 
     public void StopRecording()
     {
-        StopAllCoroutines(); // 停止所有協程
-        Microphone.End(microphoneDevice); // 停止麥克風錄音
-        Debug.Log("錄音已手動停止！");
+        if (recordingCoroutine != null)
+        {
+            StopCoroutine(recordingCoroutine);
+            recordingCoroutine = null;
+        }
+
+        if (Microphone.IsRecording(microphoneDevice))
+        {
+            Microphone.End(microphoneDevice); // 避免在沒錄音時叫 End 出錯
+        }
+        Debug.Log("錄音流程已手動停止！");
     }
 }
