@@ -42,6 +42,11 @@ public class whisper_texttospeech : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Microphone count: " + Microphone.devices.Length);
+        foreach (var device in Microphone.devices)
+        {
+        Debug.Log("Microphone device found: " + device);
+        }
         if (Microphone.devices.Length > 0)
         {
             microphoneDevice = Microphone.devices[0]; // 使用第一個麥克風設備
@@ -52,6 +57,7 @@ public class whisper_texttospeech : MonoBehaviour
         {
             Debug.LogError("No microphone detected!");
         }
+        
     }
 
     public void StartRecording()
@@ -63,7 +69,7 @@ public class whisper_texttospeech : MonoBehaviour
         }
         recordingCoroutine = StartCoroutine(RecordingLoop());
     }
-
+    
     private IEnumerator RecordingLoop()
     {
         while (!isTrue) // 無限循環錄音
@@ -84,6 +90,10 @@ public class whisper_texttospeech : MonoBehaviour
 
             // 等待 10 秒
             yield return new WaitForSeconds(recordDuration);
+
+            
+            Debug.Log("錄音長度 (samples): " + recordedClip.samples + ", 頻率: " + recordedClip.frequency);
+        
 
             // 停止錄音
             Microphone.End(microphoneDevice);
@@ -125,7 +135,7 @@ public class whisper_texttospeech : MonoBehaviour
     // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "https://4109-1-175-122-77.ngrok-free.app/transcribe";  // 伺服器的 URL
+        string serverUrl = "http://127.0.0.1:5000/transcribe";  // 本地伺服器 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 

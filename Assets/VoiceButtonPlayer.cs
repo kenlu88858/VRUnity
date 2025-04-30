@@ -7,6 +7,7 @@ public class VoiceButtonPlayer : MonoBehaviour
 
     public AudioSource audioSource; // 參考 AudioSource
     public Button playButton; // 參考 UI 按鈕
+    public whisper_texttospeech whisperManager;
     void Start()
     {
         if (audioSource == null)
@@ -38,6 +39,15 @@ public class VoiceButtonPlayer : MonoBehaviour
 
         Debug.Log("播放音頻！");
         audioSource.Play(); // 播放音頻
+
+        if (whisperManager != null)
+        {
+            whisperManager.StartRecording(); // 呼叫錄音
+        }
+        else
+        {
+            Debug.LogError("whisperManager 尚未綁定，無法呼叫 StartRecording！");
+        }
     }
 
 }
