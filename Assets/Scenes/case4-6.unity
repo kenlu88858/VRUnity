@@ -1434,7 +1434,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171169728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16}
+  m_LocalPosition: {x: 0, y: 0, z: 13}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11214,7 +11214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -21}
+  m_AnchoredPosition: {x: 30, y: -32.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &804314527
@@ -28527,17 +28527,17 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D"
   saveFileName: recordedAudio.wav
-  recordDuration: 15
+  recordDuration: 10
   waitTime: 2
-  nextbutton: {fileID: 797161893}
+  nextbutton: {fileID: 1283385039}
   audioSource: {fileID: 1015077730}
   audioSource1: {fileID: 65016167}
   audioSource2: {fileID: 498845056}
   followtext: {fileID: 171169730}
   followtext1: {fileID: 2070035886}
-  whis_FontSize: 0
-  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57:\n\n\n\n\u8ACB\u8907\u8AA6\n\n"
-  grab1: "\n\"\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\n\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D\"\n"
+  whis_FontSize: 20
+  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57:\n\n\n\n\u8ACB\u8907\u8AA6\n"
+  grab1: "\n\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\n\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D\"\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
   finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u60A8\u8AAA\u7684\u5B8C\u6210\u6B63\u78BA\n\n\u8ACB\u6309\u4E0B\u4E00\u6B65\u4F86\u7E7C\u7E8C\u9032\u884C\u904A\u6232\n\n"
 --- !u!1 &2014754838
@@ -29266,7 +29266,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070035884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16}
+  m_LocalPosition: {x: 0, y: 0, z: 13}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
