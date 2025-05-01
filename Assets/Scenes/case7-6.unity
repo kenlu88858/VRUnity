@@ -9427,6 +9427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 642141165}
   playButton: {fileID: 1868931179}
+  whisperManager: {fileID: 0}
 --- !u!82 &642141165
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16794,7 +16795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8907\u8AA6\u5B8C\u7562"
+  m_text: "\u4E0B\u4E00\u6B65"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -18029,6 +18030,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionButtons: []
   confirmButton: {fileID: 0}
+--- !u!1 &1176764643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176764644}
+  - component: {fileID: 1176764645}
+  m_Layer: 5
+  m_Name: voicecontroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1176764644
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176764643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2130289548}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1176764645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176764643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6e365c7227fa84685e2cf724b470ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePath: 
+  Targetsentence: "\u6211\u5011\u4ECA\u5929\u4F86\u8A66\u8A66\u8CB7\u4E00\u4E9B\u4E0D\u540C\u7684\u852C\u83DC\u597D\u55CE\u9019\u6A23\u53EF\u4EE5\u6709\u66F4\u591A\u9078\u64C7\u4F60\u770B\u9019\u4E9B\u6C34\u679C\u4E5F\u4E0D\u932F\u6211\u5011\u4F86\u6311\u4E00\u4E9B\u5427"
+  saveFileName: recordedAudio.wav
+  recordDuration: 10
+  waitTime: 2
+  nextbutton: {fileID: 1868931176}
+  audioSource: {fileID: 2098369722}
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  followtext: {fileID: 0}
+  followtext1: {fileID: 0}
+  whis_FontSize: 0
+  grab: 
+  grab1: 
+  recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\u8ACB\u7A0D\u5F8C"
+  finish: "\u8AAA\u7684\u771F\u597D \u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210"
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
@@ -31701,7 +31766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.2, y: -0.7}
+  m_AnchoredPosition: {x: 37.2, y: -15.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868931178
@@ -36474,6 +36539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2098369722}
   playButton: {fileID: 371880678}
+  whisperManager: {fileID: 1176764645}
 --- !u!82 &2098369722
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37077,6 +37143,7 @@ RectTransform:
   - {fileID: 1412261762}
   - {fileID: 1244697965}
   - {fileID: 1868931177}
+  - {fileID: 1176764644}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 271.305, z: 0}
   m_AnchorMin: {x: 0, y: 0}
