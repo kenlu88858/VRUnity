@@ -28527,7 +28527,7 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D"
   saveFileName: recordedAudio.wav
-  recordDuration: 20
+  recordDuration: 15
   waitTime: 2
   nextbutton: {fileID: 797161893}
   audioSource: {fileID: 1015077730}
