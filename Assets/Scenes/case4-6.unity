@@ -777,13 +777,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65016166}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edcf453606cb140299347e0e03d48fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 65016167}
   playButton: {fileID: 797161894}
+  whisperScript: {fileID: 0}
 --- !u!4 &65016169
 Transform:
   m_ObjectHideFlags: 0
@@ -5639,13 +5640,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498845054}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edcf453606cb140299347e0e03d48fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 498845056}
   playButton: {fileID: 797161894}
+  whisperScript: {fileID: 0}
 --- !u!82 &498845056
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13707,6 +13709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1004164043}
   playButton: {fileID: 797161894}
+  whisperScript: {fileID: 0}
 --- !u!82 &1004164043
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14255,6 +14258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1015077730}
   playButton: {fileID: 1283385040}
+  whisperScript: {fileID: 2010393971}
 --- !u!82 &1015077730
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28529,11 +28533,11 @@ MonoBehaviour:
   audioSource: {fileID: 1015077730}
   audioSource1: {fileID: 65016167}
   audioSource2: {fileID: 498845056}
-  followtext: {fileID: 0}
-  followtext1: {fileID: 0}
+  followtext: {fileID: 171169730}
+  followtext1: {fileID: 2070035886}
   whis_FontSize: 0
-  grab: "\n\"\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\n\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D\"\n"
-  grab1: 
+  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57:\n\n\n\n\u8ACB\u8907\u8AA6\n\n"
+  grab1: "\n\"\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\n\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D\"\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
   finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u60A8\u8AAA\u7684\u5B8C\u6210\u6B63\u78BA\n\n\u8ACB\u6309\u4E0B\u4E00\u6B65\u4F86\u7E7C\u7E8C\u9032\u884C\u904A\u6232\n\n"
 --- !u!1 &2014754838

@@ -6,6 +6,8 @@ public class VoiceButtonPlayer : MonoBehaviour
     public AudioSource audioSource; // 參考 AudioSource
     public Button playButton; // 參考 UI 按鈕
 
+    public whisper_texttospeech whisperScript; // 新增語音辨識控制器
+
     void Start()
     {
         if (audioSource == null)
@@ -37,5 +39,12 @@ public class VoiceButtonPlayer : MonoBehaviour
 
         Debug.Log("播放音頻！");
         audioSource.Play(); // 播放音頻
+
+        // ✅ 有設定 whisperScript 才啟動辨識，否則跳過
+        if (whisperScript != null)
+        {
+            Debug.Log("啟動語音辨識！");
+            whisperScript.StartRecording();
+        }
     }
 }

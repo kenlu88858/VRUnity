@@ -96,7 +96,7 @@ public class whisper_texttospeech : MonoBehaviour
             // 保存音頻檔案
             audioSource1.Play();
             SaveAudioClipAsWav(recordedClip, savePath);
-             Debug.Log("WAV 檔案儲存於: " + savePath);
+            Debug.Log("WAV 檔案儲存於: " + savePath);
 
             // 發送音頻到伺服器辨識
             yield return StartCoroutine(SendAudioToServer(savePath));
