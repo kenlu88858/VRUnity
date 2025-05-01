@@ -9351,7 +9351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -45.29996}
+  m_AnchoredPosition: {x: 30, y: -51.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &729581967
@@ -11922,7 +11922,7 @@ MonoBehaviour:
   followtext1: {fileID: 383830842}
   whis_FontSize: 20
   grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57:\n\n\n\n\n\u8ACB\u8907\u8AA6"
-  grab1: "\n\"\u6211\u5011\u53BB\u53C3\u52A0\u9130\u91CC\u7684\u6D3B\u52D5\n\u548C\u670B\u53CB\u5011\u4E00\u8D77\u505A\u4E9B\u6709\u8DA3\u7684\u4E8B\n\u9019\u5C0D\u4F60\u7684\u5065\u5EB7\u6709\u597D\u8655\"\n"
+  grab1: "\"\u6211\u5011\u53BB\u53C3\u52A0\u9130\u91CC\u7684\u6D3B\u52D5\n\u548C\u670B\u53CB\u5011\u4E00\u8D77\u505A\u4E9B\u6709\u8DA3\u7684\u4E8B\n\u9019\u5C0D\u4F60\u7684\u5065\u5EB7\u6709\u597D\u8655\"\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D \n\n\u8ACB\u7A0D\u5019"
   finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u60A8\u8AAA\u7684\u5B8C\u5168\u6B63\u78BA\n\n\u8ACB\u6309\u4E0B\u4E00\u6B65\u4F86\u7E7C\u7E8C\u9032\u884C\u904A\u6232"
 --- !u!1 &873812750
@@ -23819,7 +23819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 32.8}
+  m_AnchoredPosition: {x: 15, y: 29.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1674645724
