@@ -86,7 +86,7 @@ public class case2_MovePeasantElder : MonoBehaviour
             }
         }
 
-        if(Vector3.Distance(cameraTransform.position, new Vector3(30.45f, 39.43f, 46.02f)) < 0.3f){
+        if(Vector3.Distance(cameraTransform.position, new Vector3(30.45f, 39.43f, 46.02f)) < 0.6f){
             //missionComplete = true;
             Debug.Log("已至指定位置！");
             glowEffect1.SetActive(false);

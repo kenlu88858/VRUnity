@@ -61,7 +61,6 @@ public class case2_OpenEntrance_Door : MonoBehaviour
         //bool primaryButtonPressed;
         if (Vector3.Distance(cameraTransform.position, new Vector3(29.6f, 39.31f, 32.71f)) < 0.5f)
         {
-            Debug.Log("dooropen!");
             ToggleDoor();
         }
 
@@ -100,12 +99,13 @@ public class case2_OpenEntrance_Door : MonoBehaviour
 
     public void ToggleDoor()
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
         if(!isOpen)
         {
             StartCoroutine(MoveAndRotateDoor(leftDoor, leftDoorOpenPosition, Quaternion.Euler(leftDoorOpenRotation)));
             StartCoroutine(MoveAndRotateDoor(rightDoor, rightDoorOpenPosition, Quaternion.Euler(rightDoorOpenRotation)));
             isOpen = true;
+            Debug.Log("dooropen!");
         }
     }
 

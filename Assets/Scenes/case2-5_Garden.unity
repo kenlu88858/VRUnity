@@ -19151,7 +19151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u73FE\u5728\u4F60\u5DF2\u7D93\u727D\u8D77\u75C5\u4EBA\u7684\u624B\u4E86\n\u75C5\u4EBA\u6703\u8DDF\u96A8\u5728\u4F60\u5F8C\u65B9\u4E00\u8D77\u6563\u6B65\n\u8ACB\u64CD\u4F5C\u624B\u67C4\n\u966A\u4F34\u75C5\u4EBA\u5728\u82B1\u5712\u6563\u6B65\n\u4E26\u524D\u5F80\u767C\u5149\u5730\u9EDE\u5427!"
+  m_text: "\u75C5\u4EBA\u6703\u8DDF\u96A8\u5728\u4F60\u5F8C\u65B9\u4E00\u8D77\u6563\u6B65\n\u8ACB\u64CD\u4F5C\u624B\u67C4\n\u966A\u4F34\u75C5\u4EBA\u5728\u82B1\u5712\u6563\u6B65\n\u4E26\u524D\u5F80\u767C\u5149\u5730\u9EDE\u5427!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -24463,7 +24463,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d9f918479f5b9ca43a3f0f1b3bc8ad55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dd017ac76edbe044dbb761cea8f27b35, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
