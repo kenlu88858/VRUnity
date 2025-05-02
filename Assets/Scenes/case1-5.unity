@@ -2139,7 +2139,7 @@ Transform:
   m_GameObject: {fileID: 215407385}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: -0.119, y: 1.1176, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12782,10 +12782,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59345a7e35c07b4180ab16ae638e94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  savePath: 
   Targetsentence: "\u73FE\u5728\u662F\u4E0B\u5348\u4E09\u9EDE\u4ECA\u5929\u662F\u661F\u671F\u4E8C\u9019\u4E9B\u8A0A\u606F\u90FD\u5BEB\u5728\u6211\u5011\u7684\u65E5\u66C6\u4E0A\u4F60\u53EF\u4EE5\u96A8\u6642\u770B"
   saveFileName: recordedAudio.wav
   recordDuration: 15
   waitTime: 2
+  isTrue: 0
   nextbutton: {fileID: 297115952}
   audioSource: {fileID: 991842170}
   audioSource1: {fileID: 1473856340}
@@ -12793,6 +12795,7 @@ MonoBehaviour:
   followtext: {fileID: 1724028215}
   followtext1: {fileID: 405237758}
   whis_FontSize: 36
+  count: 0
   grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\n\n\u8ACB\u958B\u59CB\u8907\u8AA6"
   grab2: "\n\u73FE\u5728\u662F\u4E0B\u5348\u4E09\u9EDE\n\u4ECA\u5929\u662F\u661F\u671F\u4E8C\n\u9019\u4E9B\u8A0A\u606F\u90FD\u5BEB\u5728\u6211\u5011\u7684\u65E5\u66C6\u4E0A\n\u4F60\u53EF\u4EE5\u96A8\u6642\u770B\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
@@ -12818,6 +12821,7 @@ MonoBehaviour:
   audioSource: {fileID: 991842170}
   audioSource1: {fileID: 643653203}
   whisperScript: {fileID: 991842168}
+  Desk_Calender: {fileID: 991842165}
 --- !u!82 &991842170
 AudioSource:
   m_ObjectHideFlags: 0

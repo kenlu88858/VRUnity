@@ -125,7 +125,7 @@ public class case1whisper_texttospeech : MonoBehaviour
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
         count = count + 1;
-        string serverUrl = "https://4109-1-175-122-77.ngrok-free.app/transcribe";  // 伺服器的 URL
+        string serverUrl = "https://1c6e-1-175-74-97.ngrok-free.app/transcribe";  // 伺服器的 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 

@@ -21480,12 +21480,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1626563209 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5913452533422301798, guid: 8b5b8cefc581f8f4f98a694d40cd87ff,
-    type: 3}
-  m_PrefabInstance: {fileID: 2076422092}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1626563210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21498,29 +21492,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1938c538109004baa1fcfcadd17a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 1163722526}
-  InitTransform: {fileID: 1626563209}
-  snapDistance: 0.2
   smoothSnap: 1
-  snapSpeed: 500000
+  moveSpeed: 5
   rotationSpeed: 500000
   followtext: {fileID: 1712567709}
   grabbedFontSize: 36
   audioSource: {fileID: 28037134}
   button: {fileID: 1009600684}
   grab: "\u505A\u5F97\u5F88\u597D!"
---- !u!114 &1626563212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626563189}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a4f1d08d4fc3848bbd3b259a313c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1640779913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28607,10 +28586,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1626563210}
-    - targetCorrespondingSourceObject: {fileID: -6691896100327229307, guid: 8b5b8cefc581f8f4f98a694d40cd87ff,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1626563212}
     - targetCorrespondingSourceObject: {fileID: -2931297630342521959, guid: 8b5b8cefc581f8f4f98a694d40cd87ff,
         type: 3}
       insertIndex: -1
