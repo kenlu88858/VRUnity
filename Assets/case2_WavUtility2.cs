@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-public static class WavUtility2
+public static class case2_WavUtility2
 {
     public static byte[] FromAudioClip(AudioClip clip)
     {

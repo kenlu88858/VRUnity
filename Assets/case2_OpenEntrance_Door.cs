@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
-public class OpenEntrance_Door : MonoBehaviour
+public class case2_OpenEntrance_Door : MonoBehaviour
 {
     [Header("左右門的 Transform")]
     public Transform leftDoor;  // Entrance_Door_002
@@ -59,9 +59,9 @@ public class OpenEntrance_Door : MonoBehaviour
 
         // 檢測右手A按鍵 (主按鈕)
         //bool primaryButtonPressed;
-        if (toggleAction.action.triggered)
+        if (Vector3.Distance(cameraTransform.position, new Vector3(29.6f, 39.31f, 32.71f)) < 0.5f)
         {
-            Debug.Log("A button pressed!");
+            Debug.Log("dooropen!");
             ToggleDoor();
         }
 
@@ -79,7 +79,7 @@ public class OpenEntrance_Door : MonoBehaviour
     private IEnumerator LoadSceneAfterDelay()
     {
         // 等待 1 秒鐘
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         // 載入新的場景
         SceneManager.LoadScene("case2-5_Garden");
@@ -98,25 +98,15 @@ public class OpenEntrance_Door : MonoBehaviour
             }
         } */
 
-    public void canopendoor()
-    {
-        toggleAction.action.Enable();
-    }
-
     public void ToggleDoor()
     {
         StopAllCoroutines();
-        if (isOpen)
-        {
-            StartCoroutine(MoveAndRotateDoor(leftDoor, leftDoorClosedPosition, leftDoorClosedRotation));
-            StartCoroutine(MoveAndRotateDoor(rightDoor, rightDoorClosedPosition, rightDoorClosedRotation));
-        }
-        else
+        if(!isOpen)
         {
             StartCoroutine(MoveAndRotateDoor(leftDoor, leftDoorOpenPosition, Quaternion.Euler(leftDoorOpenRotation)));
             StartCoroutine(MoveAndRotateDoor(rightDoor, rightDoorOpenPosition, Quaternion.Euler(rightDoorOpenRotation)));
+            isOpen = true;
         }
-        isOpen = !isOpen;
     }
 
     private System.Collections.IEnumerator MoveAndRotateDoor(Transform door, Vector3 targetPosition, Quaternion targetRotation)
@@ -136,13 +126,4 @@ public class OpenEntrance_Door : MonoBehaviour
         door.localPosition = targetPosition; 
         door.localRotation = targetRotation; 
     }
-
-/*     private void GOTOGarden(Collider other)
-    {
-        if (other.CompareTag("Player") && isOpen)  // 確保是玩家進入
-        {
-            // 載入新的場景
-            SceneManager.LoadScene("case2-5_Garden");
-        }
-    } */
 }

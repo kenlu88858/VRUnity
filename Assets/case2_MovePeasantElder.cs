@@ -1,5 +1,5 @@
 using UnityEngine;
-public class MovePeasantElder : MonoBehaviour
+public class case2_MovePeasantElder : MonoBehaviour
 {
     public Transform peasantElder;  // Peasant Elder Halden 物件
     //public Vector3 startPosition = new Vector3(35.576f, 38.13972f, 46.89f);

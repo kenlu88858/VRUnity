@@ -6602,8 +6602,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
+    m_Reference: {fileID: 0}
   m_RightHandMoveAction:
     m_UseReference: 1
     m_Action:
@@ -6615,7 +6614,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!114 &574164765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6623,7 +6623,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574164762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
   m_Name: 
@@ -19120,7 +19120,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559482942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.010376}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1.1283, y: 1.1584, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19128,7 +19128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26.209, y: 108.16}
+  m_AnchoredPosition: {x: -106.5, y: 99}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559482944
@@ -19151,7 +19151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u966A\u4F34\u75C5\u4EBA\u5728\u82B1\u5712\u6563\u6B65\n\u4E26\u524D\u5F80\u767C\u5149\u5730\u9EDE\u5427!"
+  m_text: "\u73FE\u5728\u4F60\u5DF2\u7D93\u727D\u8D77\u75C5\u4EBA\u7684\u624B\u4E86\n\u75C5\u4EBA\u6703\u8DDF\u96A8\u5728\u4F60\u5F8C\u65B9\u4E00\u8D77\u6563\u6B65\n\u8ACB\u64CD\u4F5C\u624B\u67C4\n\u966A\u4F34\u75C5\u4EBA\u5728\u82B1\u5712\u6563\u6B65\n\u4E26\u524D\u5F80\u767C\u5149\u5730\u9EDE\u5427!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -19215,7 +19215,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 5.198557, z: -130.95476, w: 0}
+  m_margin: {x: 0, y: 5.198557, z: -274.8446, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -24448,7 +24448,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.033059508, y: -0.7029267, z: 0.7099307, w: -0.028276911}
   m_LocalPosition: {x: 33.201, y: 39.066, z: 42.861}
-  m_LocalScale: {x: 0.09693762, y: 0.075280175, z: 0.05403589}
+  m_LocalScale: {x: 0.13456014, y: 0.075280175, z: 0.06367049}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -24463,7 +24463,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 59d79c34df2a56340b5edc392163b8a7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9f918479f5b9ca43a3f0f1b3bc8ad55, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

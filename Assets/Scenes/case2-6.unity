@@ -7149,6 +7149,7 @@ MonoBehaviour:
   audioSource: {fileID: 602824092}
   audioSource1: {fileID: 1352657955}
   whisperScript: {fileID: 602824093}
+  photoframe: {fileID: 210051029}
 --- !u!114 &602824089
 MonoBehaviour:
   m_ObjectHideFlags: 0
