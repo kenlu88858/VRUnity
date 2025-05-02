@@ -45,7 +45,7 @@ public class case5whisper_texttospeech : MonoBehaviour
     {
         if (Microphone.devices.Length > 0)
         {
-            microphoneDevice = Microphone.devices[0]; // 使用第一個麥克風設備
+            microphoneDevice = Microphone.devices[1]; // 使用第二個麥克風設備
             savePath = Path.Combine(Application.persistentDataPath, saveFileName); // 設定保存路徑
             //StartCoroutine(RecordingLoop()); // 啟動循環錄音
         }
@@ -126,7 +126,7 @@ public class case5whisper_texttospeech : MonoBehaviour
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
         count = count + 1;
-        string serverUrl = "https://4109-1-175-122-77.ngrok-free.app/transcribe";  // 伺服器的 URL
+        string serverUrl = "http://localhost:5000/transcribe";//string serverUrl = "https://4109-1-175-122-77.ngrok-free.app/transcribe"; // 伺服器的 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
