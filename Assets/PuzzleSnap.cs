@@ -21,6 +21,7 @@ public class PuzzleSnap : MonoBehaviour
     public TextMeshProUGUI followtext;
     public float grabbedFontSize;
     public AudioSource audioSource;
+    public AudioSource audioSource1;
     public GameObject button;
     private Rigidbody rb;
     private bool isSnapped = false;
@@ -89,7 +90,10 @@ public class PuzzleSnap : MonoBehaviour
     void PlaySnapSound()
     {
         if (audioSource != null && audioSource.clip != null)
-        {
+        {   
+            if (audioSource1.isPlaying){
+                audioSource1.Stop();
+            }
             audioSource.PlayOneShot(audioSource.clip);
             Debug.Log("播放吸附音效！");
         }
@@ -108,6 +112,11 @@ public class PuzzleSnap : MonoBehaviour
         grabInteractable.enabled = false;
         StartCoroutine(SmoothMoveToTarget());
         PlaySnapSound();
+        button.SetActive(true);
+        followtext.text = grab;
+        followtext.fontSize = grabbedFontSize;   
+        
+        
     }
     
     /*void SnapToTarget()

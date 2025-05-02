@@ -7818,6 +7818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 643653203}
+  audioSource1: {fileID: 643653203}
   playButton: {fileID: 365180833}
 --- !u!82 &643653203
 AudioSource:
