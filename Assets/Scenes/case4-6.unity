@@ -28529,7 +28529,7 @@ MonoBehaviour:
   saveFileName: recordedAudio.wav
   recordDuration: 10
   waitTime: 2
-  nextbutton: {fileID: 1283385039}
+  nextbutton: {fileID: 797161893}
   audioSource: {fileID: 1015077730}
   audioSource1: {fileID: 65016167}
   audioSource2: {fileID: 498845056}
