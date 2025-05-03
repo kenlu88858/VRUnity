@@ -25901,6 +25901,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595701332}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1596370192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596370194}
+  - component: {fileID: 1596370193}
+  m_Layer: 0
+  m_Name: audiomanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1596370193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596370192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19532d4223784744088cab4e8b4950a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePath: 
+  Targetsentence: "\u6211\u5011\u4E00\u8D77\u4F86\u6E05\u7406\u51B0\u7BB1 \u9019\u6A23\u98DF\u7269\u6703\u4FDD\u6301\u65B0\u9BAE
+    \u5C0D\u4F60\u7684\u5065\u5EB7\u66F4\u597D \u4F60\u770B\u9019\u4E9B\u65B0\u9BAE\u7684\u852C\u83DC\u548C\u6C34\u679C
+    \u6211\u5011\u4E00\u8D77\u4F86\u6574\u7406\u5427"
+  saveFileName: recordedAudio.wav
+  recordDuration: 10
+  waitTime: 2
+  nextbutton: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  followtext: {fileID: 0}
+  followtext1: {fileID: 0}
+  whis_FontSize: 0
+  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57"
+  grab1: "\u6211\u5011\u4E00\u8D77\u4F86\u6E05\u7406\u51B0\u7BB1\n\u9019\u6A23\u98DF\u7269\u6703\u4FDD\u6301\u65B0\u9BAE\n\u5C0D\u4F60\u7684\u5065\u5EB7\u66F4\u597D\n\u4F60\u770B\u9019\u4E9B\u65B0\u9BAE\u7684\u852C\u83DC\u548C\u6C34\u679C\n\u6211\u5011\u4E00\u8D77\u4F86\u6574\u7406\u5427"
+  recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
+  finish: "\u8AAA\u5F97\u771F\u597D!\n\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210"
+--- !u!4 &1596370194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596370192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.980696, y: 37.97462, z: 33.223484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598960472
 GameObject:
   m_ObjectHideFlags: 0
@@ -33822,3 +33884,4 @@ SceneRoots:
   - {fileID: 1324598138}
   - {fileID: 1531255141}
   - {fileID: 610099933}
+  - {fileID: 1596370194}
