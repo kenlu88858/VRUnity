@@ -663,7 +663,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5ccfaef31a97acc4283c099cd6d8e2ac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0a73f3a9c065ef143a88a20ead09df8c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2234,7 +2234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u9EDE\u64CA\u5C07\u4FDD\u96AA\u7BB1\u958B\u555F\n\u4E26\u5F15\u5C0E\u75C5\u4EBA\u5C07\u5B58\u647A\n\u5B89\u5168\u6536\u5230\u4FDD\u96AA\u7BB1\u5167"
+  m_text: "\n\u9019\u6A23\u53EF\u4EE5\u8B93\u75C5\u4EBA\u5B89\u5FC3\n\u6E1B\u5C11\u4E0D\u5FC5\u8981\u7684\u722D\u57F7"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3466,7 +3466,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5ccfaef31a97acc4283c099cd6d8e2ac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0e74a41e068a54948806b06d4013b4a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6739,7 +6739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: -145}
+  m_AnchoredPosition: {x: 295, y: -145}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530561383
@@ -14700,7 +14700,7 @@ MonoBehaviour:
   heading4: {fileID: 2139292685}
   whis_FontSize: 0
   count: 0
-  falseRecognitionText: 
+  falseRecognitionText: "\u8FA8\u8B58\u932F\u8AA4 \u8ACB\u518D\u8A66\u4E00\u6B21!\n\n\u8ACB\u770B\u8457\u4FDD\u96AA\u7BB1\n\u4E26\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57:\n\n<color=#F7FF01>\"\u5E33\u672C\u5C31\u653E\u5728\u4FDD\u96AA\u7BB1\u88E1\n\u4F60\u53EF\u4EE5\u5B89\u5FC3\u4E86\"</color>\n\n\u8ACB\u958B\u59CB\u8907\u8AA6"
   grab: "\u54C8\u54C8"
   grab2: "\u54C8\u54C8"
   recongnize: "\u54C8\u54C8"
@@ -16645,7 +16645,7 @@ Transform:
   m_GameObject: {fileID: 1218942725}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 32.317, y: 38.895, z: 36.024}
+  m_LocalPosition: {x: 32.338, y: 38.895, z: 36.024}
   m_LocalScale: {x: 0.11523136, y: 0.075280175, z: 0.075280175}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24007,7 +24007,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1735680331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2006789384}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1735680331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27928,11 +27940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a65c37587b2c34498a5c66053f432e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDragging: 0
-  offset: {x: 0, y: 0, z: 0}
-  cam: {fileID: 0}
-  safeBoxSlot: {fileID: 331363067}
-  isPlaced: 0
 --- !u!1 &1943140034
 GameObject:
   m_ObjectHideFlags: 0
@@ -28955,7 +28962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2006789385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28980,7 +28987,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e10278702ca2f924f8eebf2d6b8210b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8fbc31150cf88184a9dcb78c69af1be2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -31164,7 +31171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8ACB\u770B\u8457\u4FDD\u96AA\u7BB1\u4E26\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57:\n\n<color=#F7FF01>\"\u5E33\u672C\u5C31\u653E\u5728\u4FDD\u96AA\u7BB1\u88E1\n\u4F60\u53EF\u4EE5\u5B89\u5FC3\u4E86\"</color>\n\n\u8ACB\u8907\u8AA6"
+  m_text: "\u8ACB\u770B\u8457\u4FDD\u96AA\u7BB1\n\u4E26\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57:\n\n<color=#F7FF01>\"\u5E33\u672C\u5C31\u653E\u5728\u4FDD\u96AA\u7BB1\u88E1\n\u4F60\u53EF\u4EE5\u5B89\u5FC3\u4E86\"</color>\n\n\u8ACB\u958B\u59CB\u8907\u8AA6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
