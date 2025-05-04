@@ -4,7 +4,7 @@ using TMPro;
 public class DoorLock : MonoBehaviour
 {
     public GameObject lockMessage; // 拖入 UI 文字
-    public float messageDuration = 2f; // 顯示幾秒
+    public float messageDuration = 30f; // 顯示幾秒
 
     void Start()
     {
