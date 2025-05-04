@@ -51,7 +51,7 @@ public class case5whisper_texttospeech : MonoBehaviour
 	nextbutton.SetActive(false);
         if (Microphone.devices.Length > 0)
         {
-            microphoneDevice = Microphone.devices[1]; // 使用第二個麥克風設備
+            microphoneDevice = Microphone.devices[0]; // 使用第一個麥克風設備
             savePath = Path.Combine(Application.persistentDataPath, saveFileName); // 設定保存路徑
         }
         else
