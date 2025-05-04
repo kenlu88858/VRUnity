@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class PassbookController : MonoBehaviour
 {
@@ -57,4 +57,4 @@ public class PassbookController : MonoBehaviour
         mousePoint.z = cam.WorldToScreenPoint(transform.position).z;
         return cam.ScreenToWorldPoint(mousePoint);
     }
-}  
+}  */

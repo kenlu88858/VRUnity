@@ -8,6 +8,7 @@ using TMPro;
 
 public class case5whisper_texttospeech : MonoBehaviour
 {
+    public SafeBoxController safeBoxController;
     private string microphoneDevice;
     private Coroutine recordingCoroutine;
     public string savePath;
@@ -29,6 +30,9 @@ public class case5whisper_texttospeech : MonoBehaviour
     public TextMeshProUGUI heading4;
     public float whis_FontSize;
     public int count = 0;
+
+    [TextArea]
+    public string falseRecognitionText;
 
     [TextArea]
     public string grab;
@@ -119,7 +123,7 @@ public class case5whisper_texttospeech : MonoBehaviour
 {
     if (heading4 != null)
     {
-        heading4.text = "\n\n語音辨識中\n\n請稍後";
+        heading4.text = "\n\n語音辨識中\n\n請稍候";
     }
 
     count += 1;
@@ -157,6 +161,11 @@ public class case5whisper_texttospeech : MonoBehaviour
 	    // 確保按鈕上的文字被正確修改
 	    TextMeshProUGUI buttonText = nextbutton.GetComponentInChildren<TextMeshProUGUI>();
 	    buttonText.text = "下一步";
+	    // 呼叫 SafeBoxController 的 ToggleSafe()
+	    if (safeBoxController != null)
+    	    {
+        	safeBoxController.ToggleSafe(); 
+    	    }
 
         }
         else
@@ -168,7 +177,8 @@ public class case5whisper_texttospeech : MonoBehaviour
             if (heading4 != null)
             {
                 //heading4.text = "請再試一次";
-		heading4.text = "請看著保險箱並和我複誦一次以下文字\n\n<color=#F7FF01>\"帳本就放在保險箱裡\n你可以安心了\"</color>\n\n請複誦";
+		//heading4.text = "請看著保險箱並和我複誦一次以下文字\n\n<color=#F7FF01>\"帳本就放在保險箱裡\n你可以安心了\"</color>\n\n請複誦";
+		heading4.text = falseRecognitionText;
 
             }
         }
