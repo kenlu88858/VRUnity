@@ -12205,8 +12205,8 @@ MonoBehaviour:
   audioSource: {fileID: 378550030}
   audioSource1: {fileID: 366925745}
   audioSource2: {fileID: 922648268}
-  followtext: {fileID: 0}
-  followtext1: {fileID: 0}
+  followtext: {fileID: 680782967}
+  followtext1: {fileID: 1389112716}
   whis_FontSize: 0
   grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57"
   grab1: "\u6211\u5011\u6BCF\u5468\u4E00\u8D77\u6AA2\u67E5\u51B0\u7BB1\n\u9019\u6A23\u53EF\u4EE5\u78BA\u4FDD\u88E1\u9762\u7684\u98DF\u7269\u90FD\u662F\u65B0\u9BAE\u7684\n\u4F60\u770B\u9019\u4E9B\u98DF\u7269\u5DF2\u7D93\u904E\u671F\u4E86\n\u6211\u5011\u628A\u5B83\u5011\u6E05\u7406\u6389\u5427"
