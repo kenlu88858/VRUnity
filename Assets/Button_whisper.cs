@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.UI; // 引入 UI 命名空間
 using System.Collections;
 
-public class case3ButtonWhisper : MonoBehaviour
+public class Button_whisper : MonoBehaviour
 {
     public AudioSource audioSource; // 參考 AudioSource
     public Button playButton; // 參考 UI 按鈕
 
-    public case1whisper_texttospeech whisperScript;
+    public whisper_texttospeech whisperScript;
 
     void Start()
     {
