@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 65016167}
-  playButton: {fileID: 797161894}
+  playButton: {fileID: 0}
   whisperScript: {fileID: 0}
 --- !u!4 &65016169
 Transform:
@@ -5646,7 +5646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 498845056}
-  playButton: {fileID: 797161894}
+  playButton: {fileID: 0}
   whisperScript: {fileID: 0}
 --- !u!82 &498845056
 AudioSource:
