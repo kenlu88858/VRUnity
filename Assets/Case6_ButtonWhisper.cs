@@ -1,29 +1,83 @@
+// using UnityEngine;
+// using UnityEngine.UI; // ï¿½Ş¤J UI ï¿½Rï¿½Wï¿½Å¶ï¿½
+// using System.Collections;
+
+// public class Case6_ButtonWhisper : MonoBehaviour
+// {
+//     public AudioSource audioSource; // ï¿½Ñ¦ï¿½ AudioSource
+//     public Button playButton; // ï¿½Ñ¦ï¿½ UI ï¿½ï¿½ï¿½s
+
+//     public whisper_texttospeech whisperScript;
+
+//     void Start()
+//     {
+//         if (audioSource == null)
+//         {
+//             Debug.LogWarning("AudioSource ï¿½ï¿½ï¿½ï¿½Ê³]ï¿½wï¿½Aï¿½ï¿½ï¿½Õ¦Û°Ê´Mï¿½ï¿½I");
+//             audioSource = GameObject.Find("AudioManager")?.GetComponent<AudioSource>();
+//         }
+
+//         if (playButton == null)
+//         {
+//             Debug.LogError("playButton ï¿½Sï¿½ï¿½ï¿½Qï¿½]ï¿½wï¿½I");
+//             return;
+//         }
+
+//         Debug.Log("ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½\ï¿½jï¿½w PlayVoice ï¿½ï¿½kï¿½I");
+//         playButton.onClick.AddListener(PlayVoice);
+//     }
+
+//     void PlayVoice()
+//     {
+//         if (audioSource == null)
+//         {
+//             Debug.LogError("AudioSource ï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½I");
+//             return;
+//         }
+
+//         if (audioSource.isPlaying)
+//             audioSource.Stop(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½ñªº­ï¿½ï¿½W
+
+//         Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½I");
+//         audioSource.Play(); // ï¿½ï¿½ï¿½ï¿½ï¿½W
+//         StartCoroutine(WaitForAudioFinish());
+//     }
+
+//     private IEnumerator WaitForAudioFinish()
+//     {
+//         // ï¿½ï¿½ï¿½İ­ï¿½ï¿½Wï¿½ï¿½ï¿½ñµ²§ï¿½
+//         yield return new WaitForSeconds(audioSource.clip.length);
+
+//         // ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ñµ²§ï¿½ï¿½ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//         whisperScript.StartRecording(); // ï¿½ï¿½ï¿½] StartRecording ï¿½O whisper_texttospeech ï¿½ï¿½ï¿½ï¿½ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½k
+//     }
+
+// }
 using UnityEngine;
-using UnityEngine.UI; // ¤Ş¤J UI ©R¦WªÅ¶¡
-using System.Collections;
+using UnityEngine.UI; // å¼•å…¥ UI å‘½åç©ºé–“
 
 public class Case6_ButtonWhisper : MonoBehaviour
 {
-    public AudioSource audioSource; // °Ñ¦Ò AudioSource
-    public Button playButton; // °Ñ¦Ò UI «ö¶s
+    public AudioSource audioSource; // åƒè€ƒ AudioSource
+    public Button playButton; // åƒè€ƒ UI æŒ‰éˆ•
 
-    public whisper_texttospeech whisperScript;
+    public whisper_texttospeech whisperScript; // æ–°å¢èªéŸ³è¾¨è­˜æ§åˆ¶å™¨
 
     void Start()
     {
         if (audioSource == null)
         {
-            Debug.LogWarning("AudioSource ¥¼¤â°Ê³]©w¡A¹Á¸Õ¦Û°Ê´M§ä¡I");
+            Debug.LogWarning("AudioSource æœªæ‰‹å‹•è¨­å®šï¼Œå˜—è©¦è‡ªå‹•å°‹æ‰¾ï¼");
             audioSource = GameObject.Find("AudioManager")?.GetComponent<AudioSource>();
         }
 
         if (playButton == null)
         {
-            Debug.LogError("playButton ¨S¦³³Q³]©w¡I");
+            Debug.LogError("playButton æ²’æœ‰è¢«è¨­å®šï¼");
             return;
         }
 
-        Debug.Log("«ö¶s¦¨¥\¸j©w PlayVoice ¤èªk¡I");
+        Debug.Log("æŒ‰éˆ•æˆåŠŸç¶å®š PlayVoice æ–¹æ³•ï¼");
         playButton.onClick.AddListener(PlayVoice);
     }
 
@@ -31,25 +85,21 @@ public class Case6_ButtonWhisper : MonoBehaviour
     {
         if (audioSource == null)
         {
-            Debug.LogError("AudioSource ¨S¦³§ä¨ì¡I");
+            Debug.LogError("AudioSource æ²’æœ‰æ‰¾åˆ°ï¼");
             return;
         }
 
         if (audioSource.isPlaying)
-            audioSource.Stop(); // °±¤î·í«e¼½©ñªº­µÀW
+            audioSource.Stop(); // åœæ­¢ç•¶å‰æ’­æ”¾çš„éŸ³é »
 
-        Debug.Log("¼½©ñ­µÀW¡I");
-        audioSource.Play(); // ¼½©ñ­µÀW
-        StartCoroutine(WaitForAudioFinish());
+        Debug.Log("æ’­æ”¾éŸ³é »ï¼");
+        audioSource.Play(); // æ’­æ”¾éŸ³é »
+
+        // âœ… æœ‰è¨­å®š whisperScript æ‰å•Ÿå‹•è¾¨è­˜ï¼Œå¦å‰‡è·³é
+        if (whisperScript != null)
+        {
+            Debug.Log("å•Ÿå‹•èªéŸ³è¾¨è­˜ï¼");
+            whisperScript.StartRecording();
+        }
     }
-
-    private IEnumerator WaitForAudioFinish()
-    {
-        // µ¥«İ­µÀW¼½©ñµ²§ô
-        yield return new WaitForSeconds(audioSource.clip.length);
-
-        // ­µÀW¼½©ñµ²§ô«á¶}©l¿ı­µ¿ëÃÑ
-        whisperScript.StartRecording(); // °²³] StartRecording ¬O whisper_texttospeech ¤¤ªº¶}©l¿ı­µ¤èªk
-    }
-
 }

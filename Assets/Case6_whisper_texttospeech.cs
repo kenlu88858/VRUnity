@@ -8,13 +8,13 @@ using TMPro;
 public class whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
-    private Coroutine recordingCoroutine; // ©ñ¦bÃþ§O³Ì¤W¤è
+    private Coroutine recordingCoroutine; // ï¿½ï¿½bï¿½ï¿½ï¿½Oï¿½Ì¤Wï¿½ï¿½
     public string savePath;
-    public string Targetsentence; //¤£­n¥[¤W¼ÐÂI²Å¸¹¡BªÅ®æµ¥µ¥
-    public string saveFileName = "recordedAudio.wav";  // ­µÀW«O¦sªºÀÉ®×¦W
+    public string Targetsentence; //ï¿½ï¿½ï¿½nï¿½[ï¿½Wï¿½ï¿½ï¿½Iï¿½Å¸ï¿½ï¿½Bï¿½Å®æµ¥ï¿½ï¿½
+    public string saveFileName = "recordedAudio.wav";  // ï¿½ï¿½ï¿½Wï¿½Oï¿½sï¿½ï¿½ï¿½É®×¦W
 
-    public float recordDuration = 10f; // ¿ý­µ®É¶¡
-    public float waitTime = 2f; // ¨C¦¸¿ëÃÑ«áµ¥«Ý®É¶¡
+    public float recordDuration = 10f; // ï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½
+    public float waitTime = 2f; // ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ñ«áµ¥ï¿½Ý®É¶ï¿½
 
     private bool isTrue = false;
     public GameObject nextbutton;
@@ -44,9 +44,9 @@ public class whisper_texttospeech : MonoBehaviour
     {
         if (Microphone.devices.Length > 0)
         {
-            microphoneDevice = Microphone.devices[0]; // ¨Ï¥Î²Ä¤@­Ó³Á§J­·³]³Æ
-            savePath = Path.Combine(Application.persistentDataPath, saveFileName); // ³]©w«O¦s¸ô®|
-            //StartCoroutine(RecordingLoop()); // ±Ò°Ê´`Àô¿ý­µ
+            microphoneDevice = Microphone.devices[0]; // ï¿½Ï¥Î²Ä¤@ï¿½Ó³ï¿½ï¿½Jï¿½ï¿½ï¿½]ï¿½ï¿½
+            savePath = Path.Combine(Application.persistentDataPath, saveFileName); // ï¿½]ï¿½wï¿½Oï¿½sï¿½ï¿½ï¿½|
+            //StartCoroutine(RecordingLoop()); // ï¿½Ò°Ê´`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
         else
         {
@@ -58,7 +58,7 @@ public class whisper_texttospeech : MonoBehaviour
     {
         if (recordingCoroutine != null)
         {
-            Debug.LogWarning("¿ý­µ¬yµ{¤w¸g¦b°õ¦æ¤¤¡A¸õ¹L­«½Æ±Ò°Ê¡C");
+            Debug.LogWarning("ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½{ï¿½wï¿½gï¿½bï¿½ï¿½ï¿½æ¤¤ï¿½Aï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½Æ±Ò°Ê¡C");
             return;
         }
         recordingCoroutine = StartCoroutine(RecordingLoop());
@@ -66,7 +66,7 @@ public class whisper_texttospeech : MonoBehaviour
 
     private IEnumerator RecordingLoop()
     {
-        while (!isTrue) // µL­­´`Àô¿ý­µ
+        while (!isTrue) // ï¿½Lï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
             followtext.text = grab;
             followtext.fontSize = whis_FontSize;
@@ -74,34 +74,34 @@ public class whisper_texttospeech : MonoBehaviour
             followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
-                yield return null;  // µ¥«Ýª½¨ì­µÀW¼½©ñµ²§ô
+                yield return null;  // ï¿½ï¿½ï¿½Ýªï¿½ï¿½ì­µï¿½Wï¿½ï¿½ï¿½ñµ²§ï¿½
             }
 
-            Debug.Log("½Ð¶}©l»¡¸Ü...");
+            Debug.Log("ï¿½Ð¶}ï¿½lï¿½ï¿½ï¿½ï¿½...");
 
-            // ¶}©l¿ý­µ
+            // ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
 
-            // µ¥«Ý 10 ¬í
+            // ï¿½ï¿½ï¿½ï¿½ 10 ï¿½ï¿½
             yield return new WaitForSeconds(recordDuration);
 
-            // °±¤î¿ý­µ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Microphone.End(microphoneDevice);
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
             followtext1.text = "";
             followtext1.fontSize = whis_FontSize;
-            Debug.Log("»y­µ¿ý»s§¹¦¨¡A¶}©l¿ëÃÑ...");
+            Debug.Log("ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½...");
 
-            // «O¦s­µÀWÀÉ®×
+            // ï¿½Oï¿½sï¿½ï¿½ï¿½Wï¿½É®ï¿½
             audioSource1.Play();
             SaveAudioClipAsWav(recordedClip, savePath);
-            Debug.Log("WAV ÀÉ®×Àx¦s©ó: " + savePath);
+            Debug.Log("WAV ï¿½É®ï¿½ï¿½xï¿½sï¿½ï¿½: " + savePath);
 
-            // µo°e­µÀW¨ì¦øªA¾¹¿ëÃÑ
+            // ï¿½oï¿½eï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             yield return StartCoroutine(SendAudioToServer(savePath));
 
-            // µ¥«Ý 2 ¬í¦AÄ~Äò¤U¤@¦¸¿ý­µ
+            // ï¿½ï¿½ï¿½ï¿½ 2 ï¿½ï¿½ï¿½Aï¿½~ï¿½ï¿½Uï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             yield return new WaitForSeconds(waitTime);
         }
 
@@ -110,26 +110,26 @@ public class whisper_texttospeech : MonoBehaviour
         followtext1.text = "";
         followtext1.fontSize = whis_FontSize;
         nextbutton.SetActive(true);
-        Debug.Log("°±¤î¿ý­µ¡A»y­µ¿ëÃÑ¤wµ²§ô¡C");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½yï¿½ï¿½ï¿½ï¿½ï¿½Ñ¤wï¿½ï¿½ï¿½ï¿½ï¿½C");
         recordingCoroutine = null;
         StopRecording();
     }
 
-    // ±N¿ý»sªº­µÀW«O¦s¬° WAV ÀÉ®×
+    // ï¿½Nï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Oï¿½sï¿½ï¿½ WAV ï¿½É®ï¿½
     public static void SaveAudioClipAsWav(AudioClip clip, string path)
     {
-        byte[] audioData = WavUtility2.FromAudioClip(clip); // Âà´« AudioClip ¬° WAV ®æ¦¡ªº byte[]
-        File.WriteAllBytes(path, audioData); // Àx¦sÀÉ®×
+        byte[] audioData = WavUtility2.FromAudioClip(clip); // ï¿½à´« AudioClip ï¿½ï¿½ WAV ï¿½æ¦¡ï¿½ï¿½ byte[]
+        File.WriteAllBytes(path, audioData); // ï¿½xï¿½sï¿½É®ï¿½
     }
 
-    // µo°e­µÀWÀÉ®×¨ì¦øªA¾¹
+    // ï¿½oï¿½eï¿½ï¿½ï¿½Wï¿½É®×¨ï¿½ï¿½ï¿½Aï¿½ï¿½
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "https://4109-1-175-122-77.ngrok-free.app/transcribe";  // ¦øªA¾¹ªº URL
+        string serverUrl = "http://127.0.0.1:5000/transcribe";  // ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ URL
         WWWForm form = new WWWForm();
-        byte[] audioData = File.ReadAllBytes(audioFilePath);  // Åª¨ú­µÀWÀÉ®×
+        byte[] audioData = File.ReadAllBytes(audioFilePath);  // Åªï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½É®ï¿½
 
-        form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");  // °²³]ÀÉ®×¬O WAV ®æ¦¡
+        form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");  // ï¿½ï¿½ï¿½]ï¿½É®×¬O WAV ï¿½æ¦¡
 
         UnityWebRequest www = UnityWebRequest.Post(serverUrl, form);
         yield return www.SendWebRequest();
@@ -137,7 +137,7 @@ public class whisper_texttospeech : MonoBehaviour
         if (www.result == UnityWebRequest.Result.Success)
         {
             string rawText = www.downloadHandler.text;
-            Debug.Log("¦øªA¾¹¦^À³: " + rawText);
+            Debug.Log("ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½^ï¿½ï¿½: " + rawText);
 
             string extractedText = ExtractTextFromJson(rawText);
 
@@ -148,22 +148,22 @@ public class whisper_texttospeech : MonoBehaviour
                 {
                     audioSource1.Stop();
                 }
-                Debug.Log("§A»¡¹ï¤F!");
+                Debug.Log("ï¿½Aï¿½ï¿½ï¿½ï¿½F!");
                 audioSource2.Play();
                 isTrue = true;
             }
             else
             {
-                Debug.Log("¼½©ñ­µÀW¡I");
+                Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½I");
                 audioSource.Play();
                 //yield return new WaitForSeconds(audioSource.clip.length);
             }
 
-            Debug.Log("»y­µ¿ëÃÑµ²ªG: " + cleanedText);
+            Debug.Log("ï¿½yï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½ï¿½G: " + cleanedText);
         }
         else
         {
-            Debug.LogError("¿ëÃÑ¿ù»~: " + www.error);
+            Debug.LogError("ï¿½ï¿½ï¿½Ñ¿ï¿½ï¿½~: " + www.error);
         }
     }
 
@@ -172,18 +172,18 @@ public class whisper_texttospeech : MonoBehaviour
         try
         {
             var jsonObj = JsonUtility.FromJson<ResponseData>(jsonText);
-            return jsonObj.text; // °²³]¦øªA¾¹¦^¶Ç®æ¦¡¬° {"text": "§A¦n¡A³o¬O´ú¸Õ¡I"}
+            return jsonObj.text; // ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½^ï¿½Ç®æ¦¡ï¿½ï¿½ {"text": "ï¿½Aï¿½nï¿½Aï¿½oï¿½Oï¿½ï¿½ï¿½Õ¡I"}
         }
         catch
         {
-            Debug.LogError("µLªk¸ÑªR JSON¡A½Ð½T»{¦øªA¾¹¦^À³®æ¦¡");
-            return jsonText; // ¦pªG¸ÑªR¥¢±Ñ¡Aª½±µ¦^¶Ç­ì©l¦r¦ê
+            Debug.LogError("ï¿½Lï¿½kï¿½ÑªR JSONï¿½Aï¿½Ð½Tï¿½{ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½^ï¿½ï¿½ï¿½æ¦¡");
+            return jsonText; // ï¿½pï¿½Gï¿½ÑªRï¿½ï¿½ï¿½Ñ¡Aï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½Ç­ï¿½lï¿½rï¿½ï¿½
         }
     }
 
     private string RemovePunctuationAndWhitespace(string input)
     {
-        return Regex.Replace(input, @"\W+", ""); // \W+ ªí¥Ü²¾°£©Ò¦³«D¦r¥À¼Æ¦rªº¦r²Å
+        return Regex.Replace(input, @"\W+", ""); // \W+ ï¿½ï¿½ï¿½Ü²ï¿½ï¿½ï¿½ï¿½Ò¦ï¿½ï¿½Dï¿½rï¿½ï¿½ï¿½Æ¦rï¿½ï¿½ï¿½rï¿½ï¿½
     }
 
     [System.Serializable]
@@ -202,9 +202,9 @@ public class whisper_texttospeech : MonoBehaviour
 
         if (Microphone.IsRecording(microphoneDevice))
         {
-            Microphone.End(microphoneDevice); // Á×§K¦b¨S¿ý­µ®É¥s End ¥X¿ù
+            Microphone.End(microphoneDevice); // ï¿½×§Kï¿½bï¿½Sï¿½ï¿½ï¿½ï¿½ï¿½É¥s End ï¿½Xï¿½ï¿½
         }
-        Debug.Log("¿ý­µ¬yµ{¤w¤â°Ê°±¤î¡I");
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½{ï¿½wï¿½ï¿½Ê°ï¿½ï¿½ï¿½I");
     }
 }
 
