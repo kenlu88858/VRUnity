@@ -1483,7 +1483,7 @@
                     "name": "Select",
                     "type": "Button",
                     "id": "ac96c10b-c955-4a46-8e67-bf16bc069b53",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1604,6 +1604,17 @@
                 },
                 {
                     "name": "",
+                    "id": "694b9424-1b88-43e7-8804-01cc8ff5ab4e",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Generic XR Controller",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "dd433817-216c-46b9-8dd3-f3a4ea1767b9",
                     "path": "<XRController>{RightHand}/{Grip}",
                     "interactions": "",
@@ -1620,6 +1631,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
+                    "action": "Select Value",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30bbb63d-dcfb-411c-8884-ae9ee7411353",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Generic XR Controller",
                     "action": "Select Value",
                     "isComposite": false,
                     "isPartOfComposite": false
