@@ -20278,7 +20278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\n\u8D70\u5411\u5927\u9580\n\n\u958B\u555F\u5927\u9580"
+  m_text: "\u8ACB\u64CD\u4F5C\u624B\u67C4\n\n\u8D70\u5411\u5927\u9580"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
