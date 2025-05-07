@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI; // 引入 UI 命名空間
 
-public class VoiceButtonPlayer : MonoBehaviour
+public class case4_VoiceButtonPlayer : MonoBehaviour
 {
     public AudioSource audioSource; // 參考 AudioSource
     public Button playButton; // 參考 UI 按鈕
 
-    public whisper_texttospeech whisperScript; // 新增語音辨識控制器
+    public case4_whisper_texttospeech whisperScript; // 新增語音辨識控制器
 
     void Start()
     {

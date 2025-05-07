@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using System.Text.RegularExpressions;
 using TMPro;
 
-public class whisper_texttospeech : MonoBehaviour
+public class case4_whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
     private Coroutine recordingCoroutine; // 放在類別最上方
@@ -31,7 +31,7 @@ public class whisper_texttospeech : MonoBehaviour
     [TextArea]
     public string grab;
 
-     [TextArea]
+    [TextArea]
     public string grab1;
     
     [TextArea]
@@ -118,7 +118,7 @@ public class whisper_texttospeech : MonoBehaviour
     // 將錄製的音頻保存為 WAV 檔案
     public static void SaveAudioClipAsWav(AudioClip clip, string path)
     {
-        byte[] audioData = WavUtility2.FromAudioClip(clip); // 轉換 AudioClip 為 WAV 格式的 byte[]
+        byte[] audioData = case4_WavUtility2.FromAudioClip(clip); // 轉換 AudioClip 為 WAV 格式的 byte[]
         File.WriteAllBytes(path, audioData); // 儲存檔案
     }
 
