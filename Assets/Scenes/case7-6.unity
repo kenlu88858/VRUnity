@@ -1161,7 +1161,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.9924528, g: 0.9739708, b: 0.050558835, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2141,7 +2141,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4102,7 +4102,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.96981126, g: 0.94623536, b: 0.027447322, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.93962264, g: 0.05495901, b: 0.05495901, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -9750,7 +9750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u8D70\u5230\u6524\u8CA9\u524D\u4E26\u5C07\u767C\u5149\u8655\u7684\u6C34\u679C\u653E\u9032\u8CFC\u7269\u8ECA\u5167"
+  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u8D70\u5230\u6524\u8CA9\u524D\u4E26\u9EDE\u64CA\u767C\u5149\u8655\u7684\u6C34\u679C\u653E\u9032\u8CFC\u7269\u8ECA\u5167"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -11477,17 +11477,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d211d1fa4f6ecc4e91a8a32432546ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.516
+      value: 21.52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d211d1fa4f6ecc4e91a8a32432546ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.074
+      value: 38.008
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d211d1fa4f6ecc4e91a8a32432546ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.674
+      value: 23.677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d211d1fa4f6ecc4e91a8a32432546ce,
         type: 3}
@@ -12800,7 +12800,7 @@ Transform:
   m_GameObject: {fileID: 847907858}
   serializedVersion: 2
   m_LocalRotation: {x: 0.60448706, y: -0, z: -0, w: 0.796615}
-  m_LocalPosition: {x: 10.2, y: 723, z: 11}
+  m_LocalPosition: {x: 10.2, y: 603.5, z: -6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12855,7 +12855,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.8738567, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 10
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -25655,7 +25655,7 @@ Transform:
   m_GameObject: {fileID: 1657124083}
   serializedVersion: 2
   m_LocalRotation: {x: -0.61569214, y: 0.0076125544, z: 0.09422404, w: 0.7822961}
-  m_LocalPosition: {x: -1.277, y: 0.377, z: -0.686}
+  m_LocalPosition: {x: -1.27, y: 0.313, z: -0.702}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27231,17 +27231,17 @@ PrefabInstance:
     - target: {fileID: 40258701864665554, guid: 0708d410ceaf54740ba86aa9668506c3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.602
+      value: -1.601
       objectReference: {fileID: 0}
     - target: {fileID: 40258701864665554, guid: 0708d410ceaf54740ba86aa9668506c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.646
+      value: 0.694
       objectReference: {fileID: 0}
     - target: {fileID: 40258701864665554, guid: 0708d410ceaf54740ba86aa9668506c3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.405
+      value: 1.411
       objectReference: {fileID: 0}
     - target: {fileID: 40258701864665554, guid: 0708d410ceaf54740ba86aa9668506c3,
         type: 3}
@@ -29954,7 +29954,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.96981126, g: 0.94623536, b: 0.027447322, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.93962264, g: 0.05495901, b: 0.05495901, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -32033,7 +32033,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.96278644, g: 1, b: 0.013207495, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
