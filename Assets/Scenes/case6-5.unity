@@ -26881,7 +26881,7 @@ MonoBehaviour:
   followtext1: {fileID: 689988689}
   whis_FontSize: 18
   grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57"
-  grab1: "\u6211\u5011\u4E00\u8D77\u4F86\u6E05\u7406\u51B0\u7BB1\n\u9019\u6A23\u98DF\u7269\u6703\u4FDD\u6301\u65B0\u9BAE\n\u6211\u5011\u4E00\u8D77\u4F86\u6574\u7406\u5427"
+  grab1: "\n\u6211\u5011\u4E00\u8D77\u4F86\u6E05\u7406\u51B0\u7BB1\n\u9019\u6A23\u98DF\u7269\u6703\u4FDD\u6301\u65B0\u9BAE\n\u6211\u5011\u4E00\u8D77\u4F86\u6574\u7406\u5427"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
   finish: "\u8AAA\u5F97\u771F\u597D!\n\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210"
 --- !u!4 &1596370194
@@ -33101,7 +33101,7 @@ Transform:
   m_GameObject: {fileID: 2031361060}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9995963, z: -0, w: -0.028412277}
-  m_LocalPosition: {x: 32.723, y: 38.098, z: 29.767}
+  m_LocalPosition: {x: 32.8, y: 38.098, z: 30.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
