@@ -11080,7 +11080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &931858266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12404,7 +12404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePath: 
-  Targetsentence: "\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\u6211\u5011\u4E00\u8D77\u4F86\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\u5B89\u5168\u7684"
+  Targetsentence: "\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\u5B89\u5168\u7684"
   saveFileName: recordedAudio.wav
   recordDuration: 8
   waitTime: 2
@@ -14286,7 +14286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1218801894}
-  playButton: {fileID: 73228932}
+  playButton: {fileID: 0}
   whisperScript: {fileID: 0}
 --- !u!1001 &1220766427
 PrefabInstance:
@@ -20318,7 +20318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1628747236}
-  playButton: {fileID: 73228932}
+  playButton: {fileID: 0}
   whisperScript: {fileID: 0}
 --- !u!1001 &1640779913
 PrefabInstance:
