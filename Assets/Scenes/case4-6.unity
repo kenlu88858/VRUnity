@@ -13720,7 +13720,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3ba8fd1f2f87d429daffbbbaacd68e18, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b8636b304bac749e58a9cfc28ab83589, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26552,7 +26552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 168}
+  m_AnchoredPosition: {x: -5, y: 175}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904460165
@@ -26575,7 +26575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u727D\u8D77\u75C5\u4EBA\u7684\u624B\u8D70\u5411\n\u82B1\u5712\u4E2D\u7684\u767C\u5149\u8655\n"
+  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u9EDE\u64CA\u75C5\u4EBA\u7684\u624B\n\u5E36\u9818\u4ED6\u8D70\u5411\n\u82B1\u5712\u4E2D\u7684\u767C\u5149\u8655\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
