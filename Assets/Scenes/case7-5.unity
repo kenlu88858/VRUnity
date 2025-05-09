@@ -12267,6 +12267,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: 10200_Pineapple_v1-L2
       objectReference: {fileID: 0}
+    - target: {fileID: 3561280008007030956, guid: b988acaf057fed04bb79f644c12074d1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561280008007030956, guid: b988acaf057fed04bb79f644c12074d1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561280008007030956, guid: b988acaf057fed04bb79f644c12074d1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
