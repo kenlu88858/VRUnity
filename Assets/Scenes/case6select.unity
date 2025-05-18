@@ -238,7 +238,6 @@ GameObject:
   m_Component:
   - component: {fileID: 90353650}
   - component: {fileID: 90353651}
-  - component: {fileID: 90353652}
   m_Layer: 0
   m_Name: scnencontroller
   m_TagString: Untagged
@@ -281,19 +280,6 @@ MonoBehaviour:
   - {fileID: 263466509}
   - {fileID: 185735687}
   confirmButton: {fileID: 1061657328}
---- !u!114 &90353652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90353649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3782e5c11e345af4a81b842f2b0e2f14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlane: {fileID: 1137435693}
 --- !u!1 &185735685
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &185735686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -378,9 +364,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90353652}
-        m_TargetAssemblyTypeName: PlaneHider, Assembly-CSharp
-        m_MethodName: HidePlane
+      - m_Target: {fileID: 1543598795}
+        m_TargetAssemblyTypeName: VideoButtonController, Assembly-CSharp
+        m_MethodName: OnOptionSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -596,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &263466508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -661,9 +647,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90353652}
-        m_TargetAssemblyTypeName: PlaneHider, Assembly-CSharp
-        m_MethodName: HidePlane
+      - m_Target: {fileID: 1543598795}
+        m_TargetAssemblyTypeName: VideoButtonController, Assembly-CSharp
+        m_MethodName: OnOptionSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1048,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &839160717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1113,9 +1099,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90353652}
-        m_TargetAssemblyTypeName: PlaneHider, Assembly-CSharp
-        m_MethodName: HidePlane
+      - m_Target: {fileID: 1543598795}
+        m_TargetAssemblyTypeName: VideoButtonController, Assembly-CSharp
+        m_MethodName: OnOptionSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1314,7 +1300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1061657327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1940,7 +1926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1238269827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2005,9 +1991,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90353652}
-        m_TargetAssemblyTypeName: PlaneHider, Assembly-CSharp
-        m_MethodName: HidePlane
+      - m_Target: {fileID: 1543598795}
+        m_TargetAssemblyTypeName: VideoButtonController, Assembly-CSharp
+        m_MethodName: OnOptionSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3400,6 +3386,60 @@ MonoBehaviour:
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!1 &1543598794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543598796}
+  - component: {fileID: 1543598795}
+  m_Layer: 0
+  m_Name: video_button_controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1543598795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543598794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3782e5c11e345af4a81b842f2b0e2f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1260550546}
+  optionButtons:
+  - {fileID: 1238269826}
+  - {fileID: 839160716}
+  - {fileID: 1726809435}
+  - {fileID: 2117744503}
+  - {fileID: 263466507}
+  - {fileID: 185735685}
+  confirmButton: {fileID: 1061657326}
+  instructionVoice: {fileID: 8300000, guid: 50a1cf48b3a6cac4c8502ddb1bb7f2b8, type: 3}
+--- !u!4 &1543598796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543598794}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1701039084
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1726809436
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3619,9 +3659,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90353652}
-        m_TargetAssemblyTypeName: PlaneHider, Assembly-CSharp
-        m_MethodName: HidePlane
+      - m_Target: {fileID: 1543598795}
+        m_TargetAssemblyTypeName: VideoButtonController, Assembly-CSharp
+        m_MethodName: OnOptionSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4014,7 +4054,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2117744504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4079,9 +4119,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90353652}
-        m_TargetAssemblyTypeName: PlaneHider, Assembly-CSharp
-        m_MethodName: HidePlane
+      - m_Target: {fileID: 1543598795}
+        m_TargetAssemblyTypeName: VideoButtonController, Assembly-CSharp
+        m_MethodName: OnOptionSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4833,3 +4873,4 @@ SceneRoots:
   - {fileID: 1113827114}
   - {fileID: 1767665159}
   - {fileID: 1451409072}
+  - {fileID: 1543598796}

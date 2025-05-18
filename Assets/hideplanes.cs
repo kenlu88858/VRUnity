@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class hideplanes : MonoBehaviour
+public class HideAfterDelay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float delayTime = 3f; // 幾秒後隱藏物件
+
+    private void Start()
     {
-        
+        Invoke(nameof(HideObject), delayTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HideObject()
     {
-        
+        gameObject.SetActive(false);
     }
 }
