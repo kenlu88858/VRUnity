@@ -4,7 +4,9 @@ using UnityEngine.EventSystems;
 
 public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public Color hoverColor = Color.red;
+    public Color hoverColor = Color.red;        // 🔴 碰到時的紅色
+    public Color clickedColor = Color.yellow;   // 🟡 點擊後的黃色（保持）
+
     private Color originalColor;
     private bool isClicked = false;
     private Image btnImage;
@@ -22,7 +24,6 @@ public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             originalColor = btnImage.color;
         }
 
-        // 加入 AudioSource
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
     }
@@ -31,12 +32,11 @@ public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!isClicked && btnImage != null)
         {
-            btnImage.color = hoverColor;
+            btnImage.color = hoverColor; // 🔴 碰到變紅
 
-            // 播放 hover 音效
             if (hoverSound != null)
             {
-                audioSource.PlayOneShot(hoverSound);
+                audioSource.PlayOneShot(hoverSound); // 播放 hover 音效
             }
         }
     }
@@ -45,7 +45,7 @@ public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!isClicked && btnImage != null)
         {
-            btnImage.color = originalColor;
+            btnImage.color = originalColor; // 離開還原原色
         }
     }
 
@@ -55,13 +55,12 @@ public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         if (btnImage != null)
         {
-            btnImage.color = hoverColor;
+            btnImage.color = clickedColor; // 🟡 點擊後變黃色，永久保持
         }
 
-        // 播放 click 音效
         if (clickSound != null)
         {
-            audioSource.PlayOneShot(clickSound);
+            audioSource.PlayOneShot(clickSound); // 播放 click 音效
         }
     }
 }

@@ -1744,7 +1744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e8b603337e3954d82695acba0082f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 1, g: 0.9749821, b: 0, a: 1}
+  hoverColor: {r: 1, g: 0.23127139, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
   clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1 &1427215782

@@ -12671,7 +12671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &958604621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17463,7 +17463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1288459241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21139,6 +21139,7 @@ GameObject:
   - component: {fileID: 1505222605}
   - component: {fileID: 1505222604}
   - component: {fileID: 1505222603}
+  - component: {fileID: 1505222607}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -21260,6 +21261,22 @@ RectTransform:
   m_AnchoredPosition: {x: 10.6, y: -0.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1505222607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505222602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e8b603337e3954d82695acba0082f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1001 &1514843649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29499,7 +29516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2079063459
 MonoBehaviour:
   m_ObjectHideFlags: 0
