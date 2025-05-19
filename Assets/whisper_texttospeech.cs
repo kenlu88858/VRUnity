@@ -18,10 +18,12 @@ public class whisper_texttospeech : MonoBehaviour
 
     private bool isTrue = false;
     public GameObject nextbutton;
+    public TextMeshProUGUI errorTipText; // 顯示辨識錯誤的提示文字
 
     public AudioSource audioSource;
     public AudioSource audioSource1;
     public AudioSource audioSource2;
+    public AudioSource wrongAudioSource; // 辨識錯誤時要播的語音
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
@@ -142,18 +144,29 @@ public class whisper_texttospeech : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
 
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
-            if(Targetsentence == cleanedText){
-                if(audioSource1.isPlaying){
+            if (Targetsentence == cleanedText)
+            {
+                if (audioSource1.isPlaying)
+                {
                     audioSource1.Stop();
                 }
                 Debug.Log("你說對了!");
                 audioSource2.Play();
                 isTrue = true;
+                errorTipText.gameObject.SetActive(false); // 正確時隱藏錯誤訊息
+                nextbutton.SetActive(true);  // ✅ 把這行加在這裡！
+
             }
-            else{
+            else
+            {
                 Debug.Log("播放音頻！");
-                audioSource.Play();
+                wrongAudioSource.Play();
+                yield return new WaitWhile(() => wrongAudioSource.isPlaying);
                 //yield return new WaitForSeconds(audioSource.clip.length);
+                // 顯示錯誤提示文字
+                // errorTipText.text = "辨識內容有誤";
+                // errorTipText.fontSize = whis_FontSize; // 跟原本一致
+                errorTipText.gameObject.SetActive(true); // 顯示出來
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
