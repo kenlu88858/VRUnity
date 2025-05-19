@@ -3725,7 +3725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4E0B\u4E00\u6B65"
+  m_text: "\u4E0B\u4E00\u5E55"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -29583,7 +29583,7 @@ MonoBehaviour:
   grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57:\n\n\n\n\u8ACB\u8907\u8AA6\n"
   grab1: "\n\"\u6211\u5011\u6BCF\u5929\u65E9\u4E0A\u4E00\u8D77\u53BB\u6563\u6B65\n\u9019\u6A23\u5C0D\u4F60\u7684\u5065\u5EB7\u6703\u66F4\u597D\"\n"
   recongnize: "\n\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
-  finish: "\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u60A8\u8AAA\u7684\u5B8C\u6210\u6B63\u78BA"
+  finish: "\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86\n\u8AAA\u7684\u771F\u597D"
 --- !u!1 &2014754838
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,8 @@ public class case4_whisper_texttospeech : MonoBehaviour
 
     public float whis_FontSize ;
 
+    private bool showErrorMessage = false;
+
     [TextArea]
     public string grab;
 
@@ -69,10 +71,23 @@ public class case4_whisper_texttospeech : MonoBehaviour
     {
         while (!isTrue) // 無限循環錄音
         {
-            followtext.text = grab;
+            if (showErrorMessage)
+            {
+                followtext.text = "複誦內容有誤\n" + grab;
+                followtext1.text = "\n" + grab1;
+            }
+            else
+            {
+                followtext.text = grab;
+                followtext1.text = grab1;
+            }
             followtext.fontSize = whis_FontSize;
-            followtext1.text = grab1;
             followtext1.fontSize = whis_FontSize;
+
+            //followtext.text = grab;
+            //followtext.fontSize = whis_FontSize;
+            //followtext1.text = grab1;
+            //followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
                 yield return null;  // 等待直到音頻播放結束
@@ -152,11 +167,13 @@ public class case4_whisper_texttospeech : MonoBehaviour
                 Debug.Log("你說對了!");
                 audioSource2.Play();
                 isTrue = true;
+                showErrorMessage = false;
                 nextbutton.SetActive(true);
             }
             else
             {
                 Debug.Log("播放音頻！");
+                showErrorMessage = true; //
                 audioSource.Play();
                 //yield return new WaitForSeconds(audioSource.clip.length);
             }
