@@ -1135,8 +1135,8 @@ MonoBehaviour:
   - {fileID: 2117744505}
   - {fileID: 263466509}
   - {fileID: 185735687}
-  confirmButton: {fileID: 363041411}
-  instructionAudio: {fileID: 0}
+  confirmButton: {fileID: 1061657326}
+  instructionAudio: {fileID: 363041412}
 --- !u!4 &783070628
 Transform:
   m_ObjectHideFlags: 0
