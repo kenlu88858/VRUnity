@@ -42,6 +42,7 @@ public class case4_whisper_texttospeech : MonoBehaviour
 
     void Start()
     {
+        nextbutton.SetActive(false);
         if (Microphone.devices.Length > 0)
         {
             microphoneDevice = Microphone.devices[0]; // 使用第一個麥克風設備
@@ -109,7 +110,7 @@ public class case4_whisper_texttospeech : MonoBehaviour
         followtext.fontSize = whis_FontSize;
         followtext1.text = "";
         followtext1.fontSize = whis_FontSize;
-        nextbutton.SetActive(true);
+        //nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
         StopRecording();
@@ -142,15 +143,19 @@ public class case4_whisper_texttospeech : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
 
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
-            if(Targetsentence == cleanedText){
-                if(audioSource1.isPlaying){
+            if (Targetsentence == cleanedText)
+            {
+                if (audioSource1.isPlaying)
+                {
                     audioSource1.Stop();
                 }
                 Debug.Log("你說對了!");
                 audioSource2.Play();
                 isTrue = true;
+                nextbutton.SetActive(true);
             }
-            else{
+            else
+            {
                 Debug.Log("播放音頻！");
                 audioSource.Play();
                 //yield return new WaitForSeconds(audioSource.clip.length);
