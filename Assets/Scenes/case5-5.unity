@@ -3896,6 +3896,7 @@ GameObject:
   - component: {fileID: 378909135}
   - component: {fileID: 378909134}
   - component: {fileID: 378909133}
+  - component: {fileID: 378909139}
   m_Layer: 5
   m_Name: heading5
   m_TagString: Untagged
@@ -3910,11 +3911,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378909132}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5ccfaef31a97acc4283c099cd6d8e2ac, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 8cbfdc03d32a20b49833a220fc3885e1, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4104,6 +4105,20 @@ RectTransform:
   m_AnchoredPosition: {x: 31.239, y: 38.652}
   m_SizeDelta: {x: 1079.5, y: 545.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &378909139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378909132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc327ee18e398c14c8190a357ce6e8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 378909133}
+  buttonToShow: {fileID: 1292417131}
 --- !u!1001 &380135663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5170,19 +5185,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 471555318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1775005426}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &471555318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9921,6 +9924,7 @@ GameObject:
   - component: {fileID: 719459157}
   - component: {fileID: 719459156}
   - component: {fileID: 719459161}
+  - component: {fileID: 719459162}
   m_Layer: 5
   m_Name: heading3
   m_TagString: Untagged
@@ -10044,7 +10048,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1afe3871bdeab3a4c86ee550e397f0dc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10129,6 +10133,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &719459162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719459155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc327ee18e398c14c8190a357ce6e8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 719459161}
+  buttonToShow: {fileID: 471555316}
 --- !u!1001 &727334684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21317,6 +21335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465574100}
   - component: {fileID: 1465574101}
+  - component: {fileID: 1465574102}
   m_Layer: 0
   m_Name: h5controller
   m_TagString: Untagged
@@ -21353,7 +21372,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 378909132}
   button: {fileID: 1292417132}
-  delayTime: 3
+  delayTime: 0
+--- !u!114 &1465574102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465574099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3bbcbea2a457444a9bcd6f95ec7a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 378909132}
+  button: {fileID: 471555317}
 --- !u!1 &1470349320
 GameObject:
   m_ObjectHideFlags: 0
