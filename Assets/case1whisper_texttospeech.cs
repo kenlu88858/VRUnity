@@ -10,7 +10,8 @@ public class case1whisper_texttospeech : MonoBehaviour
     private string microphoneDevice;
     private Coroutine recordingCoroutine;
     public string savePath;
-    public string Targetsentence; //不要加上標點符號、空格等等
+    public string Targetsentence;
+    public string Targetsentence1;//不要加上標點符號、空格等等
     public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
 
     public float recordDuration = 10f; // 錄音時間
@@ -22,6 +23,7 @@ public class case1whisper_texttospeech : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource audioSource1;
     public AudioSource audioSource2;
+    public AudioSource audioSource3;
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
@@ -68,11 +70,11 @@ public class case1whisper_texttospeech : MonoBehaviour
     {
         while (!isTrue) // 無限循環錄音
         {
-            followtext.text = grab;
-            followtext.fontSize = whis_FontSize;
-            followtext1.text = grab2;
-            followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
+            {
+                yield return null;  // 等待直到音頻播放結束
+            }
+            while (audioSource3.isPlaying)
             {
                 yield return null;  // 等待直到音頻播放結束
             }
@@ -143,7 +145,7 @@ public class case1whisper_texttospeech : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
 
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
-            if(Targetsentence == cleanedText){
+            if(Targetsentence == cleanedText || Targetsentence1 == cleanedText){
                 Debug.Log("你說對了!");
                 if (audioSource2.isPlaying){
                     audioSource2.Stop();
@@ -152,11 +154,15 @@ public class case1whisper_texttospeech : MonoBehaviour
                 isTrue = true;
             }
             else{
+                followtext.text = grab;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text = grab2;
+                followtext1.fontSize = whis_FontSize;
                 Debug.Log("播放音頻！");
                 if (audioSource2.isPlaying){
                     audioSource2.Stop();
                 }
-                audioSource.Play();
+                audioSource3.Play();
                 //yield return new WaitForSeconds(audioSource.clip.length);
             }
 

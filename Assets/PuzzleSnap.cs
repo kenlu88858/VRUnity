@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.EventSystems;
@@ -33,6 +34,8 @@ public class PuzzleSnap : MonoBehaviour
     private Quaternion InitRotation;
 
     private XRGrabInteractable grabInteractable;
+    public Button allowGrabButton; // 拖進你想要點擊來解鎖抓取的 UI 按鈕
+    private bool grabAllowed = false;
 
     [TextArea]
     public string grab;
@@ -49,6 +52,9 @@ public class PuzzleSnap : MonoBehaviour
         grabInteractable = GetComponent<XRGrabInteractable>();*/
         grabInteractable = GetComponent<XRGrabInteractable>();
         rb = GetComponent<Rigidbody>();
+        grabInteractable.enabled = false; // 一開始禁止抓取
+
+        allowGrabButton.onClick.AddListener(EnableGrabbing);
 
         if (rb != null)
         {
@@ -102,21 +108,28 @@ public class PuzzleSnap : MonoBehaviour
             Debug.LogWarning("AudioSource 或 AudioClip 沒有設定！");
         }
     }
-    
+
     /*void MoveObjectBack(){
         transform.position = Vector3.MoveTowards(transform.position, InitPosition, snapSpeed * Time.deltaTime);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, InitRotation, rotationSpeed * Time.deltaTime);
     }*/
+    void EnableGrabbing()
+    {
+        grabInteractable.enabled = true;
+        grabAllowed = true;
+        Debug.Log("抓取功能已啟用");
+    }
     private void OnGrab(XRBaseInteractor interactor)
     {
+        if (!grabAllowed) return; // 如果還沒按按鈕，直接忽略
         grabInteractable.enabled = false;
         StartCoroutine(SmoothMoveToTarget());
         PlaySnapSound();
         button.SetActive(true);
         followtext.text = grab;
-        followtext.fontSize = grabbedFontSize;   
-        
-        
+        followtext.fontSize = grabbedFontSize;
+
+
     }
     
     /*void SnapToTarget()

@@ -5,6 +5,7 @@ using System.Collections;
 public class case1ButtonWhisper : MonoBehaviour
 {
     public AudioSource audioSource; // 參考 AudioSource
+    public AudioSource audioSource1; 
     public Button playButton; // 參考 UI 按鈕
 
     public case1whisper_texttospeech whisperScript;
@@ -35,8 +36,8 @@ public class case1ButtonWhisper : MonoBehaviour
             return;
         }
 
-        if (audioSource.isPlaying)
-            audioSource.Stop(); // 停止當前播放的音頻
+        if (audioSource1.isPlaying)
+            audioSource1.Stop(); // 停止當前播放的音頻
 
         Debug.Log("播放音頻！");
         audioSource.Play(); // 播放音頻
