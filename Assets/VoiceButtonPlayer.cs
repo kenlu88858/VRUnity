@@ -50,4 +50,13 @@ public class VoiceButtonPlayer : MonoBehaviour
         }
     }
 
+    void StopVoice()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            Debug.Log("語音被停止！");
+            audioSource.Stop();
+        }
+    }
+
 }
