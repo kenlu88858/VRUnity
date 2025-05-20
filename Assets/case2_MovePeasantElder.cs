@@ -24,10 +24,12 @@ public class case2_MovePeasantElder : MonoBehaviour
     public GameObject glowEffect3;
 
     public GameObject glowEffect4;
+    
+    public AudioSource audioSource;
 
     //private bool missionComplete = false;
 
-    
+
 
     void Start()
     {
@@ -89,6 +91,11 @@ public class case2_MovePeasantElder : MonoBehaviour
         if(Vector3.Distance(cameraTransform.position, new Vector3(30.45f, 39.43f, 46.02f)) < 0.6f){
             //missionComplete = true;
             Debug.Log("已至指定位置！");
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+                Debug.Log("音訊已停止播放");
+            }
             glowEffect1.SetActive(false);
             glowEffect2.SetActive(false);
             glowEffect3.SetActive(false);

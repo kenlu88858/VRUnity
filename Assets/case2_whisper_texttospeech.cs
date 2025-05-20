@@ -68,10 +68,6 @@ public class case2_whisper_texttospeech : MonoBehaviour
     {
         while (!isTrue) // 無限循環錄音
         {
-            followtext.text = grab;
-            followtext.fontSize = whis_FontSize;
-            followtext1.text = grab1;
-            followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
                 yield return null;  // 等待直到音頻播放結束
@@ -152,6 +148,10 @@ public class case2_whisper_texttospeech : MonoBehaviour
                 isTrue = true;
             }
             else{
+                followtext.text = grab;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text = grab1;
+                followtext1.fontSize = whis_FontSize;
                 Debug.Log("播放音頻！");
                 audioSource.Play();
                 //yield return new WaitForSeconds(audioSource.clip.length);

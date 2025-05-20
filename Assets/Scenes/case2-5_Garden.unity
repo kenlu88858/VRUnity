@@ -10596,9 +10596,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1176355300}
-        m_TargetAssemblyTypeName: case2loadgarden, Assembly-CSharp
-        m_MethodName: LoadScene2
+      - m_Target: {fileID: 1176355299}
+        m_TargetAssemblyTypeName: MultipleChoiceManager2, Assembly-CSharp
+        m_MethodName: OnNextButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27612,6 +27612,7 @@ MonoBehaviour:
   glowEffect2: {fileID: 1381948855}
   glowEffect3: {fileID: 567769849}
   glowEffect4: {fileID: 1527861800}
+  audioSource: {fileID: 1937921275}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
