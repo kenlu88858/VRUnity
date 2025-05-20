@@ -24,6 +24,29 @@ public class MultipleChoiceManager1 : MonoBehaviour
     {
         selectedOptions[index] = !selectedOptions[index];
         Debug.Log("Option " + (index + 1) + " selected: " + selectedOptions[index]);
+
+        // 切換顏色
+        ColorBlock colors = optionButtons[index].colors;
+        Color targetColor = selectedOptions[index] ? Color.yellow : Color.white;
+
+        colors.normalColor = targetColor;
+        colors.selectedColor = targetColor;
+        colors.highlightedColor = targetColor;
+        colors.pressedColor = targetColor;
+        optionButtons[index].colors = colors;
+
+        // 檢查是否有任何一個被選中
+        bool anySelected = false;
+        foreach (bool selected in selectedOptions)
+        {
+            if (selected)
+            {
+                anySelected = true;
+                break;
+            }
+        }
+
+        confirmButton.gameObject.SetActive(anySelected);
     }
 
     void OnConfirm()
