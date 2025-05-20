@@ -6554,6 +6554,7 @@ GameObject:
   - component: {fileID: 386313563}
   - component: {fileID: 386313562}
   - component: {fileID: 386313561}
+  - component: {fileID: 386313565}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6675,6 +6676,22 @@ RectTransform:
   m_AnchoredPosition: {x: 10.6, y: -0.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &386313565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386313560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e8b603337e3954d82695acba0082f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!4 &386946013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cb7a53abd341634d81d4c3d07eb485b,
@@ -15587,6 +15604,7 @@ GameObject:
   - component: {fileID: 1017154465}
   - component: {fileID: 1017154464}
   - component: {fileID: 1017154463}
+  - component: {fileID: 1017154466}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -15708,6 +15726,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017154461}
   m_CullTransparentMesh: 1
+--- !u!114 &1017154466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017154461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e8b603337e3954d82695acba0082f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1 &1020030517
 GameObject:
   m_ObjectHideFlags: 0
@@ -15969,6 +16003,7 @@ GameObject:
   - component: {fileID: 1021547066}
   - component: {fileID: 1021547065}
   - component: {fileID: 1021547064}
+  - component: {fileID: 1021547068}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -16090,6 +16125,22 @@ RectTransform:
   m_AnchoredPosition: {x: 22.5, y: -0.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1021547068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021547063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e8b603337e3954d82695acba0082f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1 &1026653231
 GameObject:
   m_ObjectHideFlags: 0
@@ -17262,6 +17313,7 @@ GameObject:
   - component: {fileID: 1071232781}
   - component: {fileID: 1071232780}
   - component: {fileID: 1071232779}
+  - component: {fileID: 1071232783}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -17383,6 +17435,22 @@ RectTransform:
   m_AnchoredPosition: {x: 10.6, y: -15.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1071232783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071232778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e8b603337e3954d82695acba0082f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!4 &1077816091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5fff7a99ea31a5b4a9151cbba837f8ca,
