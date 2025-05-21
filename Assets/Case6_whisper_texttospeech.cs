@@ -8,20 +8,22 @@ using TMPro;
 public class whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
-    private Coroutine recordingCoroutine; // ��b���O�̤W��
+    private Coroutine recordingCoroutine; // 放在類別最上方
     public string savePath;
-    public string Targetsentence; //���n�[�W���I�Ÿ��B�Ů浥��
-    public string saveFileName = "recordedAudio.wav";  // ���W�O�s���ɮצW
+    public string Targetsentence; //不要加上標點符號、空格等等
+    public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
 
-    public float recordDuration = 10f; // �����ɶ�
-    public float waitTime = 2f; // �C�����ѫᵥ�ݮɶ�
+    public float recordDuration = 10f; // 錄音時間
+    public float waitTime = 2f; // 每次辨識後等待時間
 
     private bool isTrue = false;
     public GameObject nextbutton;
+    public TextMeshProUGUI errorTipText; // 顯示辨識錯誤的提示文字
 
     public AudioSource audioSource;
     public AudioSource audioSource1;
     public AudioSource audioSource2;
+    public AudioSource wrongAudioSource; // 辨識錯誤時要播的語音
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
@@ -44,9 +46,9 @@ public class whisper_texttospeech : MonoBehaviour
     {
         if (Microphone.devices.Length > 0)
         {
-            microphoneDevice = Microphone.devices[0]; // �ϥβĤ@�ӳ��J���]��
-            savePath = Path.Combine(Application.persistentDataPath, saveFileName); // �]�w�O�s���|
-            //StartCoroutine(RecordingLoop()); // �Ұʴ`������
+            microphoneDevice = Microphone.devices[0]; // 使用第一個麥克風設備
+            savePath = Path.Combine(Application.persistentDataPath, saveFileName); // 設定保存路徑
+            //StartCoroutine(RecordingLoop()); // 啟動循環錄音
         }
         else
         {
@@ -58,7 +60,7 @@ public class whisper_texttospeech : MonoBehaviour
     {
         if (recordingCoroutine != null)
         {
-            Debug.LogWarning("�����y�{�w�g�b���椤�A���L���ƱҰʡC");
+            Debug.LogWarning("錄音流程已經在執行中，跳過重複啟動。");
             return;
         }
         recordingCoroutine = StartCoroutine(RecordingLoop());
@@ -66,7 +68,7 @@ public class whisper_texttospeech : MonoBehaviour
 
     private IEnumerator RecordingLoop()
     {
-        while (!isTrue) // �L���`������
+        while (!isTrue) // 無限循環錄音
         {
             followtext.text = grab;
             followtext.fontSize = whis_FontSize;
@@ -74,34 +76,34 @@ public class whisper_texttospeech : MonoBehaviour
             followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
-                yield return null;  // ���ݪ��쭵�W���񵲧�
+                yield return null;  // 等待直到音頻播放結束
             }
 
-            Debug.Log("�ж}�l����...");
+            Debug.Log("請開始說話...");
 
-            // �}�l����
+            // 開始錄音
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
 
-            // ���� 10 ��
+            // 等待 10 秒
             yield return new WaitForSeconds(recordDuration);
 
-            // �������
+            // 停止錄音
             Microphone.End(microphoneDevice);
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
             followtext1.text = "";
             followtext1.fontSize = whis_FontSize;
-            Debug.Log("�y�����s�����A�}�l����...");
+            Debug.Log("語音錄製完成，開始辨識...");
 
-            // �O�s���W�ɮ�
+            // 保存音頻檔案
             audioSource1.Play();
             SaveAudioClipAsWav(recordedClip, savePath);
-            Debug.Log("WAV �ɮ��x�s��: " + savePath);
+            Debug.Log("WAV 檔案儲存於: " + savePath);
 
-            // �o�e���W����A������
+            // 發送音頻到伺服器辨識
             yield return StartCoroutine(SendAudioToServer(savePath));
 
-            // ���� 2 ���A�~��U�@������
+            // 等待 2 秒再繼續下一次錄音
             yield return new WaitForSeconds(waitTime);
         }
 
@@ -110,26 +112,26 @@ public class whisper_texttospeech : MonoBehaviour
         followtext1.text = "";
         followtext1.fontSize = whis_FontSize;
         nextbutton.SetActive(true);
-        Debug.Log("��������A�y�����Ѥw�����C");
+        Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
         StopRecording();
     }
 
-    // �N���s�����W�O�s�� WAV �ɮ�
+    // 將錄製的音頻保存為 WAV 檔案
     public static void SaveAudioClipAsWav(AudioClip clip, string path)
     {
-        byte[] audioData = WavUtility2.FromAudioClip(clip); // �ഫ AudioClip �� WAV �榡�� byte[]
-        File.WriteAllBytes(path, audioData); // �x�s�ɮ�
+        byte[] audioData = WavUtility2.FromAudioClip(clip); // 轉換 AudioClip 為 WAV 格式的 byte[]
+        File.WriteAllBytes(path, audioData); // 儲存檔案
     }
 
-    // �o�e���W�ɮר���A��
+    // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "http://127.0.0.1:5000/transcribe";  // ���A���� URL
+        string serverUrl = "http://127.0.0.1:5000/transcribe";  // 伺服器的 URL
         WWWForm form = new WWWForm();
-        byte[] audioData = File.ReadAllBytes(audioFilePath);  // Ū�����W�ɮ�
+        byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
-        form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");  // ���]�ɮ׬O WAV �榡
+        form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");  // 假設檔案是 WAV 格式
 
         UnityWebRequest www = UnityWebRequest.Post(serverUrl, form);
         yield return www.SendWebRequest();
@@ -137,7 +139,7 @@ public class whisper_texttospeech : MonoBehaviour
         if (www.result == UnityWebRequest.Result.Success)
         {
             string rawText = www.downloadHandler.text;
-            Debug.Log("���A���^��: " + rawText);
+            Debug.Log("伺服器回應: " + rawText);
 
             string extractedText = ExtractTextFromJson(rawText);
 
@@ -148,22 +150,30 @@ public class whisper_texttospeech : MonoBehaviour
                 {
                     audioSource1.Stop();
                 }
-                Debug.Log("�A����F!");
+                Debug.Log("你說對了!");
                 audioSource2.Play();
                 isTrue = true;
+                errorTipText.gameObject.SetActive(false); // 正確時隱藏錯誤訊息
+                nextbutton.SetActive(true);  // ✅ 把這行加在這裡！
+
             }
             else
             {
-                Debug.Log("�����W�I");
-                audioSource.Play();
+                Debug.Log("播放音頻！");
+                wrongAudioSource.Play();
+                yield return new WaitWhile(() => wrongAudioSource.isPlaying);
                 //yield return new WaitForSeconds(audioSource.clip.length);
+                // 顯示錯誤提示文字
+                // errorTipText.text = "辨識內容有誤";
+                // errorTipText.fontSize = whis_FontSize; // 跟原本一致
+                errorTipText.gameObject.SetActive(true); // 顯示出來
             }
 
-            Debug.Log("�y�����ѵ��G: " + cleanedText);
+            Debug.Log("語音辨識結果: " + cleanedText);
         }
         else
         {
-            Debug.LogError("���ѿ��~: " + www.error);
+            Debug.LogError("辨識錯誤: " + www.error);
         }
     }
 
@@ -172,18 +182,18 @@ public class whisper_texttospeech : MonoBehaviour
         try
         {
             var jsonObj = JsonUtility.FromJson<ResponseData>(jsonText);
-            return jsonObj.text; // ���]���A���^�Ǯ榡�� {"text": "�A�n�A�o�O���աI"}
+            return jsonObj.text; // 假設伺服器回傳格式為 {"text": "你好，這是測試！"}
         }
         catch
         {
-            Debug.LogError("�L�k�ѪR JSON�A�нT�{���A���^���榡");
-            return jsonText; // �p�G�ѪR���ѡA�����^�ǭ�l�r��
+            Debug.LogError("無法解析 JSON，請確認伺服器回應格式");
+            return jsonText; // 如果解析失敗，直接回傳原始字串
         }
     }
 
     private string RemovePunctuationAndWhitespace(string input)
     {
-        return Regex.Replace(input, @"\W+", ""); // \W+ ���ܲ����Ҧ��D�r���Ʀr���r��
+        return Regex.Replace(input, @"\W+", ""); // \W+ 表示移除所有非字母數字的字符
     }
 
     [System.Serializable]
@@ -202,9 +212,8 @@ public class whisper_texttospeech : MonoBehaviour
 
         if (Microphone.IsRecording(microphoneDevice))
         {
-            Microphone.End(microphoneDevice); // �קK�b�S�����ɥs End �X��
+            Microphone.End(microphoneDevice); // 避免在沒錄音時叫 End 出錯
         }
-        Debug.Log("�����y�{�w��ʰ���I");
+        Debug.Log("錄音流程已手動停止！");
     }
 }
-
