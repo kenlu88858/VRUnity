@@ -1834,7 +1834,7 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\u88DC\u5145\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86\u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427"
   saveFileName: recordedAudio.wav
-  recordDuration: 15
+  recordDuration: 20
   waitTime: 2
   nextbutton: {fileID: 1288085615}
   audioSource: {fileID: 750016693}
@@ -5580,7 +5580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 425370824}
-  playButton: {fileID: 1288085618}
+  playButton: {fileID: 0}
   whisperManager: {fileID: 0}
 --- !u!1 &433266397
 GameObject:
@@ -11279,7 +11279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 750016693}
   playButton: {fileID: 2092315889}
-  whisperManager: {fileID: 157175813}
+  whisperManager: {fileID: 0}
 --- !u!1 &757343668
 GameObject:
   m_ObjectHideFlags: 0
@@ -32286,7 +32286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2093686883}
-  playButton: {fileID: 1288085618}
+  playButton: {fileID: 0}
   whisperManager: {fileID: 0}
 --- !u!1 &2098561575
 GameObject:

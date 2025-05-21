@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI; // 引入 UI 命名空間
+using UnityEngine.UI;
+using System.Collections;
 
 public class VoiceButtonPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public AudioSource audioSource; // 參考 AudioSource
-    public Button playButton; // 參考 UI 按鈕
+    public AudioSource audioSource;
+    public Button playButton;
     public whisper_texttospeech whisperManager;
+
     void Start()
     {
         if (audioSource == null)
@@ -23,30 +23,41 @@ public class VoiceButtonPlayer : MonoBehaviour
         }
 
         Debug.Log("按鈕成功綁定 PlayVoice 方法！");
-        playButton.onClick.AddListener(PlayVoice);
+        playButton.onClick.AddListener(() => StartCoroutine(PlayVoiceCoroutine()));
     }
 
-    void PlayVoice()
+    IEnumerator PlayVoiceCoroutine()
     {
         if (audioSource == null)
         {
             Debug.LogError("AudioSource 沒有找到！");
-            return;
+            yield break;
         }
 
         if (audioSource.isPlaying)
-            audioSource.Stop(); // 停止當前播放的音頻
+        {
+            audioSource.Stop();
+        }
 
-        Debug.Log("播放音頻！");
-        audioSource.Play(); // 播放音頻
+        Debug.Log("播放語音提示！");
+        audioSource.Play();
+
+        // 稍微等待一下，確保 audioSource.isPlaying 會變 true
+        yield return new WaitForSeconds(0.1f);
+
+        // 等待語音播放完
+        yield return new WaitWhile(() => audioSource.isPlaying);
+
+        Debug.Log("語音提示播放完畢");
 
         if (whisperManager != null)
         {
-            whisperManager.StartRecording(); // 呼叫錄音
+            Debug.Log("啟動語音辨識！");
+            whisperManager.StartRecording();
         }
         else
         {
-            Debug.LogError("whisperManager 尚未綁定，無法呼叫 StartRecording！");
+            Debug.LogError("whisperManager 尚未綁定！");
         }
     }
 
@@ -58,5 +69,4 @@ public class VoiceButtonPlayer : MonoBehaviour
             audioSource.Stop();
         }
     }
-
 }
