@@ -10552,7 +10552,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\"\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\u88DC\u5145
     \n\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F
-    \n\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86 \u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427!\""
+    \u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86 \u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427!\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -10587,7 +10587,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
