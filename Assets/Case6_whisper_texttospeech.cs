@@ -161,12 +161,17 @@ public class whisper_texttospeech : MonoBehaviour
             {
                 Debug.Log("播放音頻！");
                 wrongAudioSource.Play();
+                // ⬅️ 先顯示錯誤提示與 grab / grab1
+                errorTipText.gameObject.SetActive(true); // 顯示錯誤提示
+                followtext.text = grab;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text = grab1;
+                followtext1.fontSize = whis_FontSize;
                 yield return new WaitWhile(() => wrongAudioSource.isPlaying);
                 //yield return new WaitForSeconds(audioSource.clip.length);
                 // 顯示錯誤提示文字
                 // errorTipText.text = "辨識內容有誤";
                 // errorTipText.fontSize = whis_FontSize; // 跟原本一致
-                errorTipText.gameObject.SetActive(true); // 顯示出來
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
