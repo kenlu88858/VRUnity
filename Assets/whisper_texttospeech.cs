@@ -159,6 +159,12 @@ public class whisper_texttospeech : MonoBehaviour
             }
             else
             {
+                errorTipText.gameObject.SetActive(true); // 顯示出來
+                // ⬇️ 錯誤後重新顯示 grab 和 grab1 ⬇️
+                followtext.text = grab;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text = grab1;
+                followtext1.fontSize = whis_FontSize;
                 Debug.Log("播放音頻！");
                 wrongAudioSource.Play();
                 yield return new WaitWhile(() => wrongAudioSource.isPlaying);
@@ -166,7 +172,6 @@ public class whisper_texttospeech : MonoBehaviour
                 // 顯示錯誤提示文字
                 // errorTipText.text = "辨識內容有誤";
                 // errorTipText.fontSize = whis_FontSize; // 跟原本一致
-                errorTipText.gameObject.SetActive(true); // 顯示出來
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
