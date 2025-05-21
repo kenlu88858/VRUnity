@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 157175812}
   - component: {fileID: 157175813}
   m_Layer: 0
-  m_Name: whisper_texttospeechoiceController
+  m_Name: Whisper_texttospeechoiceController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   recordDuration: 20
   waitTime: 2
   nextbutton: {fileID: 1288085615}
-  audioSource: {fileID: 750016693}
+  audioSource: {fileID: 2116004015}
   audioSource1: {fileID: 2093686883}
   audioSource2: {fileID: 425370824}
   followtext: {fileID: 1852958367}

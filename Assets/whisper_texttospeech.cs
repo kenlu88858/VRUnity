@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using System.Text.RegularExpressions;
 using TMPro;
 
-public class whisper_texttospeech : MonoBehaviour
+public class Whisper_texttospeech : MonoBehaviour
 {
     private string microphoneDevice;
     private Coroutine recordingCoroutine; // 放在類別最上方
@@ -122,7 +122,7 @@ public class whisper_texttospeech : MonoBehaviour
         nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
-        StopRecording();
+        
     }
 
     // 將錄製的音頻保存為 WAV 檔案
@@ -213,4 +213,4 @@ public class whisper_texttospeech : MonoBehaviour
         }
         Debug.Log("錄音流程已手動停止！");
     }
-}
+} 

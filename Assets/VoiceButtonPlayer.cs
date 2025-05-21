@@ -6,7 +6,7 @@ public class VoiceButtonPlayer : MonoBehaviour
 {
     public AudioSource audioSource;
     public Button playButton;
-    public whisper_texttospeech whisperManager;
+    public Whisper_texttospeech whisperManager;
 
     void Start()
     {
