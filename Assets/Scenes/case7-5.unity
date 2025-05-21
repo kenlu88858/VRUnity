@@ -556,7 +556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4E0B\u4E00\u6B65"
+  m_text: "\u4E0B\u4E00\u5E55"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -1846,7 +1846,7 @@ MonoBehaviour:
   grab: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\n\u8ACB\u8907\u8AA6"
   grab1: "\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\u88DC\u5145\n\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F\n\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86\u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
-  finish: "\u8AAA\u7684\u771F\u597D\n\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210"
+  finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86\n\u8AAA\u5F97\u771F\u597D"
 --- !u!1001 &162566567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28331,7 +28331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\n\u8ACB\u8907\u8AA6"
+  m_text: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\n\u8ACB\u958B\u59CB\u8907\u8AA6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -28341,8 +28341,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
