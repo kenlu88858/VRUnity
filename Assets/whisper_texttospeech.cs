@@ -160,10 +160,20 @@ public class Whisper_texttospeech : MonoBehaviour
                 audioSource2.Play();
                 isTrue = true;
             }
-            else{
+            else
+            {
                 Debug.Log("播放音頻！");
+
+                // 顯示錯誤提示文字
+                followtext.text = "複誦內容有誤\n" + grab;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text = grab1;
+                followtext1.fontSize = whis_FontSize;
+
+                // 播放錯誤提示音效
                 audioSource.Play();
-                //yield return new WaitForSeconds(audioSource.clip.length);
+
+    
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
