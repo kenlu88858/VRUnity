@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1001 &140021757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17310,8 +17310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  hoverSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1001 &1264634682
 PrefabInstance:
   m_ObjectHideFlags: 0

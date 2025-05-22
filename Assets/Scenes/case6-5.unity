@@ -903,6 +903,7 @@ GameObject:
   - component: {fileID: 96566879}
   - component: {fileID: 96566878}
   - component: {fileID: 96566877}
+  - component: {fileID: 96566881}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1024,6 +1025,22 @@ RectTransform:
   m_AnchoredPosition: {x: 10.6, y: -0.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &96566881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96566876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75504f8fcd9e47f49837c562d09b67e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1001 &140021757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1594,6 +1611,7 @@ GameObject:
   - component: {fileID: 179669655}
   - component: {fileID: 179669654}
   - component: {fileID: 179669653}
+  - component: {fileID: 179669657}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1715,6 +1733,22 @@ RectTransform:
   m_AnchoredPosition: {x: 10.6, y: 7.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &179669657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179669652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75504f8fcd9e47f49837c562d09b67e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1001 &181131042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11907,6 +11941,7 @@ GameObject:
   - component: {fileID: 530561385}
   - component: {fileID: 530561384}
   - component: {fileID: 530561383}
+  - component: {fileID: 530561386}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -12028,6 +12063,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530561381}
   m_CullTransparentMesh: 1
+--- !u!114 &530561386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530561381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75504f8fcd9e47f49837c562d09b67e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1 &532820521
 GameObject:
   m_ObjectHideFlags: 0
@@ -26249,6 +26300,7 @@ GameObject:
   - component: {fileID: 1483913482}
   - component: {fileID: 1483913481}
   - component: {fileID: 1483913480}
+  - component: {fileID: 1483913484}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -26370,6 +26422,22 @@ RectTransform:
   m_AnchoredPosition: {x: 10.6, y: -1.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1483913484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483913479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75504f8fcd9e47f49837c562d09b67e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1001 &1487134510
 PrefabInstance:
   m_ObjectHideFlags: 0
