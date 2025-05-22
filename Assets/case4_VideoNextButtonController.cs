@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class VideoNextButtonController : MonoBehaviour
+public class case4_VideoNextButtonController : MonoBehaviour
 {
     [Header("影片播放器")]
     public VideoPlayer videoPlayer;

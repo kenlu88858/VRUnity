@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class SelectionManager : MonoBehaviour
+public class case4_SelectionManager : MonoBehaviour
 {
     [Header("影片播放器")]
     public VideoPlayer videoPlayer;

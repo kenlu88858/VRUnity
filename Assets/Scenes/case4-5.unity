@@ -20919,6 +20919,7 @@ GameObject:
   - component: {fileID: 1444289102}
   - component: {fileID: 1444289101}
   - component: {fileID: 1444289105}
+  - component: {fileID: 1444289106}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -21027,6 +21028,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceClip: {fileID: 8300000, guid: 52860530879aa4abaa0c2071c5c54ed0, type: 3}
+--- !u!114 &1444289106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444289100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e18b1f2194e477d9b56e53d975c6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasToShow: {fileID: 1103660832}
+  planeToShow: {fileID: 1508700741}
 --- !u!1001 &1455171593
 PrefabInstance:
   m_ObjectHideFlags: 0
