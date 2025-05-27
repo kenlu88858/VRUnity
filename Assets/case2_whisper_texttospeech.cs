@@ -17,7 +17,7 @@ public class case2_whisper_texttospeech : MonoBehaviour
     public float waitTime = 2f; // 每次辨識後等待時間
 
     private bool isTrue = false;
-    public GameObject nextbutton;
+    //public GameObject nextbutton;
 
     public AudioSource audioSource;
     public AudioSource audioSource1;
@@ -105,7 +105,7 @@ public class case2_whisper_texttospeech : MonoBehaviour
         followtext.fontSize = whis_FontSize;
         followtext1.text = "";
         followtext1.fontSize = whis_FontSize;
-        nextbutton.SetActive(true);
+        //nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
         StopRecording();

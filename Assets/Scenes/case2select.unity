@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 185735689}
   - component: {fileID: 185735688}
   - component: {fileID: 185735687}
+  - component: {fileID: 185735690}
   m_Layer: 5
   m_Name: situation6
   m_TagString: Untagged
@@ -401,6 +402,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185735685}
   m_CullTransparentMesh: 1
+--- !u!114 &185735690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185735685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db52387aaaaf6ea47a66dad25240f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
+  clickSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &203904395
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +565,7 @@ GameObject:
   - component: {fileID: 263466511}
   - component: {fileID: 263466510}
   - component: {fileID: 263466509}
+  - component: {fileID: 263466512}
   m_Layer: 5
   m_Name: situation5
   m_TagString: Untagged
@@ -657,6 +675,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263466507}
   m_CullTransparentMesh: 1
+--- !u!114 &263466512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263466507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db52387aaaaf6ea47a66dad25240f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
+  clickSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &497721025
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +1007,7 @@ GameObject:
   - component: {fileID: 839160720}
   - component: {fileID: 839160719}
   - component: {fileID: 839160718}
+  - component: {fileID: 839160721}
   m_Layer: 5
   m_Name: situation2
   m_TagString: Untagged
@@ -1082,6 +1117,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839160716}
   m_CullTransparentMesh: 1
+--- !u!114 &839160721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839160716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db52387aaaaf6ea47a66dad25240f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
+  clickSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &868010762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1263,7 @@ GameObject:
   - component: {fileID: 1061657330}
   - component: {fileID: 1061657329}
   - component: {fileID: 1061657328}
+  - component: {fileID: 1061657331}
   m_Layer: 5
   m_Name: confirm
   m_TagString: Untagged
@@ -1321,6 +1373,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061657326}
   m_CullTransparentMesh: 1
+--- !u!114 &1061657331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061657326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db70512684e91364d8954cb15356f0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &1113827112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1901,7 @@ GameObject:
   - component: {fileID: 1238269830}
   - component: {fileID: 1238269829}
   - component: {fileID: 1238269828}
+  - component: {fileID: 1238269832}
   m_Layer: 5
   m_Name: situation1
   m_TagString: Untagged
@@ -1945,6 +2011,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238269826}
   m_CullTransparentMesh: 1
+--- !u!114 &1238269832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238269826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db52387aaaaf6ea47a66dad25240f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
+  clickSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &1383536968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,6 +3112,7 @@ GameObject:
   - component: {fileID: 1726809439}
   - component: {fileID: 1726809438}
   - component: {fileID: 1726809437}
+  - component: {fileID: 1726809440}
   m_Layer: 5
   m_Name: situation3
   m_TagString: Untagged
@@ -3139,6 +3222,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726809435}
   m_CullTransparentMesh: 1
+--- !u!114 &1726809440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726809435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db52387aaaaf6ea47a66dad25240f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
+  clickSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &1728529371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3606,6 +3705,7 @@ GameObject:
   - component: {fileID: 2117744507}
   - component: {fileID: 2117744506}
   - component: {fileID: 2117744505}
+  - component: {fileID: 2117744508}
   m_Layer: 5
   m_Name: situation4
   m_TagString: Untagged
@@ -3715,6 +3815,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117744503}
   m_CullTransparentMesh: 1
+--- !u!114 &2117744508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117744503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db52387aaaaf6ea47a66dad25240f098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
+  clickSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &2135274281
 GameObject:
   m_ObjectHideFlags: 0

@@ -10525,6 +10525,7 @@ GameObject:
   - component: {fileID: 909816275}
   - component: {fileID: 909816274}
   - component: {fileID: 909816273}
+  - component: {fileID: 909816276}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -10646,6 +10647,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909816271}
   m_CullTransparentMesh: 1
+--- !u!114 &909816276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909816271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db70512684e91364d8954cb15356f0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 5b30e865cd80db249b2d758310cb499d, type: 3}
 --- !u!1 &910846951
 GameObject:
   m_ObjectHideFlags: 0
@@ -12447,6 +12461,7 @@ GameObject:
   - component: {fileID: 1071265550}
   - component: {fileID: 1071265549}
   - component: {fileID: 1071265548}
+  - component: {fileID: 1071265553}
   m_Layer: 5
   m_Name: Canvas (2)
   m_TagString: Untagged
@@ -12557,6 +12572,20 @@ RectTransform:
   m_AnchoredPosition: {x: 29.425, y: 38.873}
   m_SizeDelta: {x: 1063.5, y: 557.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1071265553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071265547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f610933602e53842807588daf0ed86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1479977585}
+  button: {fileID: 909816271}
 --- !u!1 &1084236929
 GameObject:
   m_ObjectHideFlags: 0
