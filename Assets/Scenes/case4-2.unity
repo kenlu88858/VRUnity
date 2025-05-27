@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 31504225db20340b69a13773c0440acb, type: 3}
 --- !u!1 &1427215782
 GameObject:
   m_ObjectHideFlags: 0

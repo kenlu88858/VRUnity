@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 31504225db20340b69a13773c0440acb, type: 3}
 --- !u!1001 &36637776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3518,7 +3518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 31504225db20340b69a13773c0440acb, type: 3}
 --- !u!1 &322826959
 GameObject:
   m_ObjectHideFlags: 0
@@ -9739,7 +9739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 31504225db20340b69a13773c0440acb, type: 3}
 --- !u!1 &729581967
 GameObject:
   m_ObjectHideFlags: 0
@@ -22609,7 +22609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 31504225db20340b69a13773c0440acb, type: 3}
 --- !u!1 &1562913269
 GameObject:
   m_ObjectHideFlags: 0
