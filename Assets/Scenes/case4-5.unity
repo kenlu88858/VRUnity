@@ -7125,6 +7125,7 @@ GameObject:
   - component: {fileID: 532847108}
   - component: {fileID: 532847107}
   - component: {fileID: 532847106}
+  - component: {fileID: 532847112}
   m_Layer: 5
   m_Name: heading5
   m_TagString: Untagged
@@ -7333,6 +7334,21 @@ RectTransform:
   m_AnchoredPosition: {x: 30.344, y: 38.84}
   m_SizeDelta: {x: 1079.5, y: 545.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &532847112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532847105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2af66e65e82480eb17bfc28137f701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1606792594}
+  buttonObject: {fileID: 16172226}
+  autoPlayClip: 0
 --- !u!1 &540038275
 GameObject:
   m_ObjectHideFlags: 0
@@ -15448,6 +15464,7 @@ GameObject:
   - component: {fileID: 1103660835}
   - component: {fileID: 1103660834}
   - component: {fileID: 1103660833}
+  - component: {fileID: 1103660838}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -15558,6 +15575,21 @@ RectTransform:
   m_AnchoredPosition: {x: 26.239233, y: 38.67}
   m_SizeDelta: {x: 1063.5, y: 557.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1103660838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103660832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2af66e65e82480eb17bfc28137f701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 2058606981}
+  buttonObject: {fileID: 1553502065}
+  autoPlayClip: 0
 --- !u!1 &1109033903
 GameObject:
   m_ObjectHideFlags: 0
@@ -15655,6 +15687,7 @@ GameObject:
   - component: {fileID: 1130120679}
   - component: {fileID: 1130120678}
   - component: {fileID: 1130120683}
+  - component: {fileID: 1130120684}
   m_Layer: 5
   m_Name: heading3
   m_TagString: Untagged
@@ -15863,6 +15896,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1130120684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130120677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2af66e65e82480eb17bfc28137f701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1130120683}
+  buttonObject: {fileID: 318447042}
+  autoPlayClip: 1
 --- !u!1001 &1170520198
 PrefabInstance:
   m_ObjectHideFlags: 0
