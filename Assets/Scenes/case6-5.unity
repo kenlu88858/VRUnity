@@ -20680,7 +20680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetButton: {fileID: 96566877}
-  delayTime: 3
+  delayTime: 20
 --- !u!114 &1176355300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20694,7 +20694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetButton: {fileID: 1483913480}
-  delayTime: 3
+  delayTime: 15
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
