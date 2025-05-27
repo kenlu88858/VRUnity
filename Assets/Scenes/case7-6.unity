@@ -17644,7 +17644,7 @@ MonoBehaviour:
   recordDuration: 10
   waitTime: 2
   nextbutton: {fileID: 1868931176}
-  audioSource: {fileID: 2098369722}
+  audioSource: {fileID: 1745976254}
   audioSource1: {fileID: 1042439420}
   audioSource2: {fileID: 1948257533}
   followtext: {fileID: 1805703533}
