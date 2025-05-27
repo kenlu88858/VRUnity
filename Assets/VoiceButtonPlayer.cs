@@ -26,16 +26,13 @@ public class VoiceButtonPlayer : MonoBehaviour
         playButton.onClick.AddListener(() => StartCoroutine(PlayVoiceCoroutine()));
     }
 
-    public IEnumerator PlayVoiceCoroutine()
+   public IEnumerator PlayVoiceCoroutine()
     {
         if (audioSource == null)
         {
             Debug.LogError("AudioSource 沒有找到！");
             yield break;
         }
-
-        // 隱藏按鈕直到語音播放完畢
-        playButton.gameObject.SetActive(false);
 
         if (audioSource.isPlaying)
         {
@@ -45,13 +42,13 @@ public class VoiceButtonPlayer : MonoBehaviour
         Debug.Log("播放語音提示！");
         audioSource.Play();
 
+        // 稍微等待一下，確保 audioSource.isPlaying 會變 true
         yield return new WaitForSeconds(0.1f);
+
+        // 等待語音播放完
         yield return new WaitWhile(() => audioSource.isPlaying);
 
         Debug.Log("語音提示播放完畢");
-
-        // 再次顯示按鈕（或其他動作）
-        playButton.gameObject.SetActive(true);
 
         if (whisperManager != null)
         {
