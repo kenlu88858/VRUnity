@@ -7,7 +7,7 @@ using TMPro;
 
 public class case2grabphoto : MonoBehaviour
 {
-    private Vector3 targetPosition = new Vector3(32.66f, 39.04f, 30.89f);  // 物品要回到的目標位置
+    private Vector3 targetPosition = new Vector3(32.2f, 39.04f, 30.89f);  // 物品要回到的目標位置
     private Quaternion targetRotation = Quaternion.Euler(-90, 0, 180);  // 物品回到目標位置時的目標旋轉（根據需要修改）
     public float moveSpeed = 5f;      // 物品回到指定位置的速度
     public float rotationSpeed = 50000;  // 旋轉速度，控制物品旋轉的平滑度

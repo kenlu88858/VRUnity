@@ -7,12 +7,19 @@ public class case2_Incasebuttoncolorchange : MonoBehaviour, IPointerEnterHandler
     private Button button;
     private Color originalColor;
     private AudioSource audioSource;
-    public AudioClip hoverSound;
+    public AudioClip hoverSound;  // 指到時的音效
+    //public AudioClip clickSound;  // 點擊時的音效
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         button = GetComponent<Button>();
         originalColor = button.image.color;
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -21,6 +28,7 @@ public class case2_Incasebuttoncolorchange : MonoBehaviour, IPointerEnterHandler
         Debug.Log($"{gameObject.name} ➤ 滑入");
         if (hoverSound != null)
             audioSource.PlayOneShot(hoverSound);
+            Debug.Log("按鈕音效");
     }
 
     public void OnPointerExit(PointerEventData eventData)
