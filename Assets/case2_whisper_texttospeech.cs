@@ -17,7 +17,7 @@ public class case2_whisper_texttospeech : MonoBehaviour
     public float waitTime = 2f; // 每次辨識後等待時間
 
     private bool isTrue = false;
-    //public GameObject nextbutton;
+    public GameObject nextbutton;
 
     public AudioSource audioSource;
     public AudioSource audioSource1;
@@ -101,10 +101,6 @@ public class case2_whisper_texttospeech : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
 
-        followtext.text = finish;
-        followtext.fontSize = whis_FontSize;
-        followtext1.text = "";
-        followtext1.fontSize = whis_FontSize;
         //nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
@@ -145,6 +141,17 @@ public class case2_whisper_texttospeech : MonoBehaviour
                 }
                 Debug.Log("你說對了!");
                 audioSource2.Play();
+                while (audioSource2.isPlaying)
+                {
+                    yield return null;  // 等待直到音頻播放結束
+                }
+                
+                followtext.text = finish;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text = "";
+                followtext1.fontSize = whis_FontSize;
+
+                nextbutton.SetActive(true);
                 isTrue = true;
             }
             else{

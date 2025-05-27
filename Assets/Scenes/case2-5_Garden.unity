@@ -12585,7 +12585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1479977585}
-  button: {fileID: 909816271}
+  buttonToShow: {fileID: 909816271}
+  playOnStart: 1
 --- !u!1 &1084236929
 GameObject:
   m_ObjectHideFlags: 0

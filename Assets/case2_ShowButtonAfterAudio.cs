@@ -1,32 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class case2_ShowButtonAfterAudio : MonoBehaviour
 {
-    public AudioSource audioSource;  // 指向你的 AudioSource
-    public GameObject button;        // 指向你要顯示的按鈕
+    [Header("要播放的 AudioSource")]
+    public AudioSource audioSource;
+
+    [Header("播完才顯示的按鈕")]
+    public GameObject buttonToShow;
+
+    [Header("如果勾選 → 進場自動播放；否則就要手動呼叫 PlayThenShow()")]
+    public bool playOnStart = false;
+
+    void Awake()
+    {
+        // 一開始先把按鈕隱藏
+        if (buttonToShow != null)
+            buttonToShow.SetActive(false);
+    }
 
     void Start()
     {
-        // 一開始先隱藏按鈕
-        button.SetActive(false);
-
-        // 如果 AudioSource 一開始就播放，直接等它播完
-        StartCoroutine(WaitForAudioEnd());
+        // 如果開了 playOnStart，場景一開始就播
+        if (playOnStart)
+            PlayThenShow();
     }
 
-    IEnumerator WaitForAudioEnd()
+    /// <summary>
+    /// 公開方法：播放音頻，等播完再顯示按鈕。
+    /// Inspector 可以把它加到 OnClick 裡。
+    /// </summary>
+    public void PlayThenShow()
     {
-        // 等到 AudioSource 開始播放
-        while (!audioSource.isPlaying)
-            yield return null;
+        if (audioSource == null || buttonToShow == null)
+        {
+            Debug.LogWarning("請先在 Inspector 指派 audioSource 與 buttonToShow！");
+            return;
+        }
 
-        // 等到它播放結束
-        while (audioSource.isPlaying)
-            yield return null;
+        // 隱藏按鈕（防重複呼叫）
+        buttonToShow.SetActive(false);
 
+        // 播放
+        audioSource.Play();
+
+        // 啟協程等結束
+        StartCoroutine(WaitAndShow());
+    }
+
+    IEnumerator WaitAndShow()
+    {
+        // 等到真正開始播放
+        yield return new WaitUntil(() => audioSource.isPlaying);
+        // 等到播完
+        yield return new WaitWhile(() => audioSource.isPlaying);
         // 顯示按鈕
-        button.SetActive(true);
+        buttonToShow.SetActive(true);
     }
 }
