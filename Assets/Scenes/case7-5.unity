@@ -4053,9 +4053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11bba3a5f18cc1c45ae663a2e16f6dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  buttonToShow: {fileID: 1288085615}
-  nextHeading: {fileID: 0}
 --- !u!1 &314828261
 GameObject:
   m_ObjectHideFlags: 0
@@ -23240,6 +23237,7 @@ GameObject:
   - component: {fileID: 1541151296}
   - component: {fileID: 1541151295}
   - component: {fileID: 1541151294}
+  - component: {fileID: 1541151299}
   m_Layer: 5
   m_Name: heading4
   m_TagString: Untagged
@@ -23352,6 +23350,21 @@ RectTransform:
   m_AnchoredPosition: {x: 32.406, y: 38.62}
   m_SizeDelta: {x: 1079.5, y: 545.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1541151299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541151292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61552e12870b5744b98a3a4a7ff8c7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 750016693}
+  buttonObject: {fileID: 1827229651}
+  autoPlayClip: 0
 --- !u!1 &1542502009
 GameObject:
   m_ObjectHideFlags: 0
@@ -27228,7 +27241,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 728ddc488611d8645a603e0a0978cbb6, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -27322,11 +27335,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1792896047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f0336ca64b09141b9b837e592b8af7, type: 3}
+  m_Script: {fileID: 11500000, guid: 61552e12870b5744b98a3a4a7ff8c7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1792896053}
-  buttonToShow: {fileID: 2092315888}
+  buttonObject: {fileID: 2092315888}
+  autoPlayClip: 1
 --- !u!1001 &1794721116
 PrefabInstance:
   m_ObjectHideFlags: 0
