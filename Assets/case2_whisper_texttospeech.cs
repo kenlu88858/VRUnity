@@ -140,16 +140,18 @@ public class case2_whisper_texttospeech : MonoBehaviour
                     audioSource1.Stop();
                 }
                 Debug.Log("你說對了!");
-                audioSource2.Play();
-                while (audioSource2.isPlaying)
-                {
-                    yield return null;  // 等待直到音頻播放結束
-                }
                 
                 followtext.text = finish;
                 followtext.fontSize = whis_FontSize;
                 followtext1.text = "";
                 followtext1.fontSize = whis_FontSize;
+
+                audioSource2.Play();
+
+                while (audioSource2.isPlaying)
+                {
+                    yield return null;  // 等待直到音頻播放結束
+                }
 
                 nextbutton.SetActive(true);
                 isTrue = true;
