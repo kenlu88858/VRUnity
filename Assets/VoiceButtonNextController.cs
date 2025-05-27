@@ -11,6 +11,9 @@ public class VideoNextButtonController : MonoBehaviour
     [Header("下一幕按鈕")]
     public GameObject nextSceneButton;
 
+    [Header("語音提示播放器")]
+    public AudioSource audioSource; // 用來播放語音提示
+
     void Start()
     {
         // 一開始先隱藏「下一幕」按鈕
@@ -23,6 +26,15 @@ public class VideoNextButtonController : MonoBehaviour
     void OnVideoFinished(VideoPlayer vp)
     {
         nextSceneButton.SetActive(true); // 顯示「下幕」按鈕
+
+        // 播放語音提示
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.Play(); // 播放語音提示
+        }
+        else
+        {
+            Debug.LogError("AudioSource 或語音剪輯沒有設定！");
+        }
     }
 }
-
