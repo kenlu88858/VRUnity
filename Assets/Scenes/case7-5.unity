@@ -1846,7 +1846,7 @@ MonoBehaviour:
   grab: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\n\n\u8ACB\u8907\u8AA6"
   grab1: "\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\u88DC\u5145\n\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F\n\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86\u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
-  finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86\n\u8AAA\u5F97\u771F\u597D"
+  finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\n\u8AAA\u5F97\u771F\u597D"
 --- !u!1001 &162566567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4628,7 +4628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u8ACB\u9EDE\u64CA\u51B0\u7BB1\u4E0A\u5C64\u5167\u88AB\u91CD\u8907\u8CFC\u8CB7\u7684\u9AD8\u9E97\u83DC\u96C6\u4E2D\u64FA\u653E\u5230\u4E0B\u5C64\u4E26\u4E14\u9EDE\u64CA\u65C1\u908A\u684C\u4E0A\u7684\u767C\u4EAE\u7684\u8CFC\u7269\u6E05\u55AE\u53CA\u7B46"
+  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u8ACB\u9EDE\u64CA\u51B0\u7BB1\u4E0A\u5C64\u5167\u88AB\u91CD\u8907\u8CFC\u8CB7\u7684\u9AD8\u9E97\u83DC\u96C6\u4E2D\u64FA\u653E\u5230\u4E0B\u5C64\u4E26\u4E14\u9EDE\u64CA\u65C1\u908A\u684C\u4E0A\u7684\u767C\u4EAE\u7684\u8CFC\u7269\u6E05\u55AE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -9411,7 +9411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &584387912
 Transform:
   m_ObjectHideFlags: 0
@@ -17961,22 +17961,22 @@ PrefabInstance:
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9725
+      value: 0.9724816
       objectReference: {fileID: 0}
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0127
+      value: -0.010108948
       objectReference: {fileID: 0}
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.26977
+      value: 0.26976967
       objectReference: {fileID: 0}
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9987696
+      value: -0.99998164
       objectReference: {fileID: 0}
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
@@ -17991,12 +17991,12 @@ PrefabInstance:
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.04959312
+      value: -0.006065754
       objectReference: {fileID: 0}
     - target: {fileID: -1574062629596954623, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -354.315
+      value: -359.305
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1ed2363b3154218428d071a88cf6f1b4,
         type: 3}
@@ -21750,6 +21750,7 @@ GameObject:
   - component: {fileID: 1419147194}
   - component: {fileID: 1419147193}
   - component: {fileID: 1419147197}
+  - component: {fileID: 1419147198}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -21860,6 +21861,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &1419147198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419147192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61552e12870b5744b98a3a4a7ff8c7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1820488704}
+  buttonObject: {fileID: 530561381}
+  autoPlayClip: 0
 --- !u!1001 &1424960527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32674,7 +32690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2116004015}
   playButton: {fileID: 1827229652}
-  whisperManager: {fileID: 0}
+  whisperManager: {fileID: 157175813}
 --- !u!82 &2116004015
 AudioSource:
   m_ObjectHideFlags: 0

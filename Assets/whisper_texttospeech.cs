@@ -7,7 +7,7 @@ using TMPro;
 
 public class Whisper_texttospeech : MonoBehaviour
 {
-    private string microphoneDevice;
+   private string microphoneDevice;
     private Coroutine recordingCoroutine; // 放在類別最上方
     public string savePath;
     public string Targetsentence; //不要加上標點符號、空格等等
@@ -28,10 +28,12 @@ public class Whisper_texttospeech : MonoBehaviour
 
     public float whis_FontSize ;
 
+    private bool showErrorMessage = false;
+
     [TextArea]
     public string grab;
 
-     [TextArea]
+    [TextArea]
     public string grab1;
     
     [TextArea]
@@ -42,11 +44,7 @@ public class Whisper_texttospeech : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Microphone count: " + Microphone.devices.Length);
-        foreach (var device in Microphone.devices)
-        {
-        Debug.Log("Microphone device found: " + device);
-        }
+        nextbutton.SetActive(false);
         if (Microphone.devices.Length > 0)
         {
             microphoneDevice = Microphone.devices[0]; // 使用第一個麥克風設備
@@ -57,7 +55,6 @@ public class Whisper_texttospeech : MonoBehaviour
         {
             Debug.LogError("No microphone detected!");
         }
-        
     }
 
     public void StartRecording()
@@ -69,15 +66,28 @@ public class Whisper_texttospeech : MonoBehaviour
         }
         recordingCoroutine = StartCoroutine(RecordingLoop());
     }
-    
+
     private IEnumerator RecordingLoop()
     {
         while (!isTrue) // 無限循環錄音
         {
-            followtext.text = grab;
+            if (showErrorMessage)
+            {
+                followtext.text = "複誦內容有誤\n" + grab;
+                followtext1.text = "\n" + grab1;
+            }
+            else
+            {
+                followtext.text = grab;
+                followtext1.text = grab1;
+            }
             followtext.fontSize = whis_FontSize;
-            followtext1.text = grab1;
             followtext1.fontSize = whis_FontSize;
+
+            //followtext.text = grab;
+            //followtext.fontSize = whis_FontSize;
+            //followtext1.text = grab1;
+            //followtext1.fontSize = whis_FontSize;
             while (audioSource.isPlaying)
             {
                 yield return null;  // 等待直到音頻播放結束
@@ -91,10 +101,6 @@ public class Whisper_texttospeech : MonoBehaviour
             // 等待 10 秒
             yield return new WaitForSeconds(recordDuration);
 
-            
-            Debug.Log("錄音長度 (samples): " + recordedClip.samples + ", 頻率: " + recordedClip.frequency);
-        
-
             // 停止錄音
             Microphone.End(microphoneDevice);
             followtext.text = recongnize;
@@ -106,7 +112,7 @@ public class Whisper_texttospeech : MonoBehaviour
             // 保存音頻檔案
             audioSource1.Play();
             SaveAudioClipAsWav(recordedClip, savePath);
-             Debug.Log("WAV 檔案儲存於: " + savePath);
+            Debug.Log("WAV 檔案儲存於: " + savePath);
 
             // 發送音頻到伺服器辨識
             yield return StartCoroutine(SendAudioToServer(savePath));
@@ -119,10 +125,10 @@ public class Whisper_texttospeech : MonoBehaviour
         followtext.fontSize = whis_FontSize;
         followtext1.text = "";
         followtext1.fontSize = whis_FontSize;
-        nextbutton.SetActive(true);
+        //nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
-        
+        StopRecording();
     }
 
     // 將錄製的音頻保存為 WAV 檔案
@@ -135,7 +141,7 @@ public class Whisper_texttospeech : MonoBehaviour
     // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
     {
-        string serverUrl = "http://127.0.0.1:5000/transcribe";  // 本地伺服器 URL
+        string serverUrl = "http://127.0.0.1:5000/transcribe";  // 伺服器的 URL
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
@@ -152,28 +158,24 @@ public class Whisper_texttospeech : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
 
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
-            if(Targetsentence == cleanedText){
-                if(audioSource1.isPlaying){
+            if (Targetsentence == cleanedText)
+            {
+                if (audioSource1.isPlaying)
+                {
                     audioSource1.Stop();
                 }
                 Debug.Log("你說對了!");
                 audioSource2.Play();
                 isTrue = true;
+                showErrorMessage = false;
+                nextbutton.SetActive(true);
             }
             else
             {
                 Debug.Log("播放音頻！");
-
-                // 顯示錯誤提示文字
-                followtext.text = "複誦內容有誤\n" + grab;
-                followtext.fontSize = whis_FontSize;
-                followtext1.text = grab1;
-                followtext1.fontSize = whis_FontSize;
-
-                // 播放錯誤提示音效
+                showErrorMessage = true; //
                 audioSource.Play();
-
-    
+                //yield return new WaitForSeconds(audioSource.clip.length);
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
