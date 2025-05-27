@@ -9647,7 +9647,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 33d06b587e592df43a1ba833d7f98657, type: 3}
+  m_audioClip: {fileID: 8300000, guid: afe8f9b4ba6ae814dbe3220e11aad026, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -17641,7 +17641,7 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u4ECA\u5929\u4F86\u8A66\u8A66\u8CB7\u4E00\u4E9B\u4E0D\u540C\u7684\u852C\u83DC\u597D\u55CE\u9019\u6A23\u53EF\u4EE5\u6709\u66F4\u591A\u9078\u64C7\u4F60\u770B\u9019\u4E9B\u6C34\u679C\u4E5F\u4E0D\u932F\u6211\u5011\u4F86\u6311\u4E00\u4E9B\u5427"
   saveFileName: recordedAudio.wav
-  recordDuration: 10
+  recordDuration: 15
   waitTime: 2
   nextbutton: {fileID: 1868931176}
   audioSource: {fileID: 1745976254}
@@ -32710,7 +32710,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aa8729275ad8ca144ae560dfe45a8077, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 702e20a1559fc7b4795187f234561249, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -35275,7 +35275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2098369722}
   playButton: {fileID: 371880678}
-  whisperManager: {fileID: 1176764645}
+  whisperManager: {fileID: 0}
 --- !u!82 &2098369722
 AudioSource:
   m_ObjectHideFlags: 0
