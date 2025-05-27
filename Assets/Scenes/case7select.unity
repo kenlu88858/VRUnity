@@ -3784,9 +3784,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2032243035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcec280a1c7486b4cb72654283b0f961, type: 3}
+  m_Script: {fileID: 11500000, guid: c18a6154bc8ad6849aaf2444537dbfad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1208359652}
+  buttonsGroup: {fileID: 1427215782}
+  optionButtons:
+  - {fileID: 1238269828}
+  - {fileID: 839160718}
+  - {fileID: 1726809437}
+  - {fileID: 2117744505}
+  - {fileID: 263466509}
+  - {fileID: 185735687}
+  confirmButton: {fileID: 1061657326}
+  instructionAudio: {fileID: 1246265937}
 --- !u!4 &2032243037
 Transform:
   m_ObjectHideFlags: 0
