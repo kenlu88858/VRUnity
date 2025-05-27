@@ -106,11 +106,11 @@ public class case1whisper_texttospeech : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
 
-        followtext.text = finish;
+        /*followtext.text = finish;
         followtext.fontSize = whis_FontSize;
         followtext1.text ="";
-        
-        nextbutton.SetActive(true);
+        */
+        //nextbutton.SetActive(true);
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
         StopRecording();
@@ -150,7 +150,15 @@ public class case1whisper_texttospeech : MonoBehaviour
                 if (audioSource2.isPlaying){
                     audioSource2.Stop();
                 }
+                followtext.text = finish;
+                followtext.fontSize = whis_FontSize;
+                followtext1.text ="";
                 audioSource1.Play();
+                while (audioSource1.isPlaying)
+                {
+                    yield return null;  // 等待直到音頻播放結束
+                }
+                nextbutton.SetActive(true);
                 isTrue = true;
             }
             else{

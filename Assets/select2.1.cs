@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MultipleChoiceManager1 : MonoBehaviour
 {
@@ -88,6 +89,21 @@ public class MultipleChoiceManager1 : MonoBehaviour
             selectedOptions[i] = false;
         }
         currentIndex = 0;
+    }
+    
+    public void UpdateConfirmButton()
+    {
+        bool anySelected = false;
+        foreach (bool selected in selectedOptions)
+        {
+            if (selected)
+            {
+                anySelected = true;
+                break;
+            }
+        }
+
+        confirmButton.gameObject.SetActive(anySelected);
     }
 }
 
