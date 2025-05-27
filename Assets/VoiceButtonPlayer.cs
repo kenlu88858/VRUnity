@@ -22,11 +22,15 @@ public class VoiceButtonPlayer : MonoBehaviour
             return;
         }
 
-        Debug.Log("按鈕成功綁定 PlayVoice 方法！");
-        playButton.onClick.AddListener(() => StartCoroutine(PlayVoiceCoroutine()));
+        // 先隱藏按鈕或禁用互動
+        playButton.gameObject.SetActive(false);
+        // 或：playButton.interactable = false;
+
+        // 開始播放語音與控制顯示按鈕
+        StartCoroutine(PlayVoiceCoroutine());
     }
 
-    IEnumerator PlayVoiceCoroutine()
+   public IEnumerator PlayVoiceCoroutine()
     {
         if (audioSource == null)
         {
@@ -42,10 +46,8 @@ public class VoiceButtonPlayer : MonoBehaviour
         Debug.Log("播放語音提示！");
         audioSource.Play();
 
-        // 稍微等待一下，確保 audioSource.isPlaying 會變 true
         yield return new WaitForSeconds(0.1f);
 
-        // 等待語音播放完
         yield return new WaitWhile(() => audioSource.isPlaying);
 
         Debug.Log("語音提示播放完畢");
@@ -59,6 +61,14 @@ public class VoiceButtonPlayer : MonoBehaviour
         {
             Debug.LogError("whisperManager 尚未綁定！");
         }
+
+        // 播放完後顯示按鈕
+        playButton.gameObject.SetActive(true);
+        // 或：playButton.interactable = true;
+
+        // 綁定按鈕點擊事件
+        Debug.Log("按鈕成功綁定 PlayVoice 方法！");
+        playButton.onClick.AddListener(() => StartCoroutine(PlayVoiceCoroutine()));
     }
 
     void StopVoice()
