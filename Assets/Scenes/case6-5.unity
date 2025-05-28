@@ -4151,7 +4151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u9EDE\u64CA\u51B0\u7BB1\u88E1\u9762\u904E\u671F\u6216\u58DE\u6389\u7684\u98DF\u7269\n\u518D\u9EDE\u64CA\u7BB1\u5B50\u88E1\u65B0\u9BAE\u7684\u98DF\u7269\n\u5B8C\u6210\u51B0\u7BB1\u6574\u7406"
+  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u9EDE\u64CA\u51B0\u7BB1\u88E1\u9762\u904E\u671F\u6216\u58DE\u6389\u7684\u98DF\u7269\n\u5B8C\u6210\u51B0\u7BB1\u6574\u7406"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -11966,7 +11966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.4}
+  m_AnchoredPosition: {x: 0, y: 24.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530561383
@@ -20630,7 +20630,8 @@ GameObject:
   - component: {fileID: 1176355298}
   - component: {fileID: 1176355297}
   - component: {fileID: 1176355300}
-  - component: {fileID: 1176355299}
+  - component: {fileID: 1176355301}
+  - component: {fileID: 1176355302}
   m_Layer: 0
   m_Name: scenecontroller
   m_TagString: Untagged
@@ -20667,20 +20668,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1176355299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176355296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b2efc16107f7440ab69a6827f012d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetButton: {fileID: 96566877}
-  delayTime: 20
 --- !u!114 &1176355300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20695,6 +20682,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetButton: {fileID: 1483913480}
   delayTime: 15
+--- !u!114 &1176355301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176355296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697b628405bd9c940aaa660a644629f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 357372063}
+  targetPosition: {x: 32.43, y: 38.124, z: 28.788}
+  threshold: 0.1
+  buttonToShow: {fileID: 530561383}
+--- !u!114 &1176355302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176355296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13827f849cd1c71458ddb2857c067c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonA: {fileID: 1483913480}
+  buttonB: {fileID: 96566877}
+  delayTime: 8
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
@@ -27995,7 +28013,7 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u4E00\u8D77\u4F86\u6E05\u7406\u51B0\u7BB1\u9019\u6A23\u98DF\u7269\u6703\u4FDD\u6301\u65B0\u9BAE\u6211\u5011\u4E00\u8D77\u4F86\u6574\u7406\u5427"
   saveFileName: recordedAudio.wav
-  recordDuration: 20
+  recordDuration: 15
   waitTime: 2
   nextbutton: {fileID: 179669652}
   errorTipText: {fileID: 1696009927}

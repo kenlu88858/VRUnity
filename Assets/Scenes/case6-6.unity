@@ -13040,7 +13040,7 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u6BCF\u9031\u4E00\u8D77\u6AA2\u67E5\u51B0\u7BB1 \u4F86\u6E05\u7406\u904E\u671F\u7684\u98DF\u7269\u5427"
   saveFileName: recordedAudio.wav
-  recordDuration: 5
+  recordDuration: 10
   waitTime: 2
   nextbutton: {fileID: 368109726}
   errorTipText: {fileID: 695653837}
@@ -15150,7 +15150,7 @@ GameObject:
   - component: {fileID: 1176355298}
   - component: {fileID: 1176355297}
   - component: {fileID: 1176355300}
-  - component: {fileID: 1176355299}
+  - component: {fileID: 1176355301}
   m_Layer: 0
   m_Name: scenecontroller
   m_TagString: Untagged
@@ -15187,20 +15187,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1176355299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176355296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b2efc16107f7440ab69a6827f012d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetButton: {fileID: 1259206744}
-  delayTime: 20
 --- !u!114 &1176355300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15215,6 +15201,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetButton: {fileID: 98587800}
   delayTime: 15
+--- !u!114 &1176355301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176355296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13827f849cd1c71458ddb2857c067c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonA: {fileID: 98587800}
+  buttonB: {fileID: 1259206744}
+  delayTime: 8
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
