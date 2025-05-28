@@ -3361,8 +3361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f88d587184120c4286d3d796f10a025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonToShow: {fileID: 1784935469}
-  delaySeconds: 12
+  buttonA: {fileID: 0}
+  buttonB: {fileID: 0}
+  delayTime: 3
 --- !u!1 &376273819
 GameObject:
   m_ObjectHideFlags: 0
@@ -10426,6 +10427,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807994303}
   m_CullTransparentMesh: 1
+--- !u!1 &816306597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816306599}
+  - component: {fileID: 816306598}
+  m_Layer: 0
+  m_Name: buttoncontroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &816306598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816306597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f88d587184120c4286d3d796f10a025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonA: {fileID: 1784935470}
+  buttonB: {fileID: 364888053}
+  delayTime: 12
+--- !u!4 &816306599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816306597}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.039793, y: 38.560646, z: 30.678268}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821310401
 GameObject:
   m_ObjectHideFlags: 0
@@ -24816,7 +24864,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -29308,6 +29356,7 @@ SceneRoots:
   - {fileID: 774213452}
   - {fileID: 924284398}
   - {fileID: 54641864}
+  - {fileID: 816306599}
   - {fileID: 1176355298}
   - {fileID: 1894735740}
   - {fileID: 2031361061}

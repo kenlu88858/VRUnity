@@ -30057,6 +30057,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038234480}
   m_Mesh: {fileID: 4493585093827132993, guid: 5a6a2dea8895cc34e8dfd46da06440a3, type: 3}
+--- !u!1 &2055687643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055687645}
+  - component: {fileID: 2055687644}
+  m_Layer: 0
+  m_Name: buttoncontroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2055687644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055687643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f88d587184120c4286d3d796f10a025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonA: {fileID: 1505222603}
+  buttonB: {fileID: 1830226218}
+  delayTime: 13
+--- !u!4 &2055687645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055687643}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9999859, z: -0, w: 0.00532715}
+  m_LocalPosition: {x: 30.728971, y: 38.85444, z: 35.88641}
+  m_LocalScale: {x: 1.5430676, y: 1.4263511, z: 1.4667013}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060606414
 GameObject:
   m_ObjectHideFlags: 0
@@ -31964,4 +32011,5 @@ SceneRoots:
   - {fileID: 208928668}
   - {fileID: 1222466351}
   - {fileID: 1691143847}
+  - {fileID: 2055687645}
   - {fileID: 2127102494}

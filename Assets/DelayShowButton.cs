@@ -1,23 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
-public class DelayShowButton : MonoBehaviour
+public class DelayedButtonActivator : MonoBehaviour
 {
-    public GameObject buttonToShow;  // 👉 第二個按鈕（目標）
-    public float delaySeconds = 3f;  // ⏱️ 延遲幾秒
+    public Button buttonA;        // 要延遲顯示的按鈕 A
+    public Button buttonB;        // 觸發事件的按鈕 B
+    public float delayTime = 3f;  // 延遲秒數
 
-    public void OnFirstButtonClick()
+    private void Start()
     {
-        StartCoroutine(ShowAfterDelay());
+        // 一開始先隱藏 A
+        if (buttonA != null)
+            buttonA.gameObject.SetActive(false);
+
+        // 綁定 B 的點擊事件
+        if (buttonB != null)
+            buttonB.onClick.AddListener(StartDelayToShowA);
     }
 
-    System.Collections.IEnumerator ShowAfterDelay()
+    void StartDelayToShowA()
     {
-        yield return new WaitForSeconds(delaySeconds);
-        if (buttonToShow != null)
-        {
-            buttonToShow.SetActive(true); // ✅ 顯示第二個按鈕
-        }
+        StartCoroutine(DelayToShowA());
+    }
+
+    IEnumerator DelayToShowA()
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        if (buttonA != null)
+            buttonA.gameObject.SetActive(true);
     }
 }
+
 
