@@ -34,7 +34,7 @@ public class case4_VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointer
 
         if (hoverSound != null)
         {
-            audioSource.PlayOneShot(hoverSound); // 播放音效
+            audioSource.PlayOneShot(hoverSound); // ✅ 滑過音效
         }
     }
 

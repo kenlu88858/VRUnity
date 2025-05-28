@@ -93,6 +93,12 @@ public class case4_SelectionManager : MonoBehaviour
         }
 
         confirmButton.SetActive(anySelected);
+
+        // ✅ 點擊時播放音效
+        if (hoverSound != null && hoverAudioSource != null)
+        {
+            hoverAudioSource.PlayOneShot(hoverSound);
+        }
     }
 
     void AddHoverEvents(Button btn)
