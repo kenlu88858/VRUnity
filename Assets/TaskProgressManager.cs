@@ -13,19 +13,24 @@ public class TaskProgressManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("✅ TaskProgressManager 已經啟動");
         Instance = this;
         if (nextButton != null)
             nextButton.SetActive(false);
     }
 
     void Update()
+{
+    Debug.Log($"cabbageMoved: {cabbageMoved}, itemFlownToTarget: {itemFlownToTarget}");
+
+    if (cabbageMoved && itemFlownToTarget)
     {
-        if (cabbageMoved && itemFlownToTarget)
+        if (!nextButton.activeSelf)
         {
-            if (nextButton != null && !nextButton.activeSelf)
-            {
-                nextButton.SetActive(true);
-            }
+            nextButton.SetActive(true);
+            Debug.Log("✅ 顯示下一幕按鈕");
         }
     }
 }
+}
+

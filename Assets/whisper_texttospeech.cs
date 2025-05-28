@@ -177,7 +177,7 @@ public class Whisper_texttospeech : MonoBehaviour
     showErrorMessage = true;
 
     // 顯示錯誤提示
-    followtext.text = "複誦內容有誤\n";
+    followtext.text = "辨識內容有誤\n";
 
     // 播放錯誤語音提示（例如：「請再說一次」）
     if (errorAudioSource != null)

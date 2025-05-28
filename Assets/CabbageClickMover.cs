@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class CabbageClickMover : MonoBehaviour
 {
@@ -16,18 +14,19 @@ public class CabbageClickMover : MonoBehaviour
     }
 
     void Update()
-{
-    if (shouldMove)
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, targetPosition.position) < 0.01f)
+        if (shouldMove)
         {
-            shouldMove = false;
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
 
-            // ✅ 告訴任務管理器，任務完成
-            TaskProgressManager.Instance.cabbageMoved = true;
+            if (Vector3.Distance(transform.position, targetPosition.position) < 0.01f)
+            {
+                shouldMove = false;
+
+                // ✅ 標記已完成
+                TaskProgressManager.Instance.cabbageMoved = true;
+                Debug.Log("✅ 高麗菜移動完成");
+            }
         }
     }
 }
-}
-
