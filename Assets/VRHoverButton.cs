@@ -5,10 +5,10 @@ using UnityEngine.EventSystems;
 public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public Color hoverColor = Color.red;        // 🔴 碰到時的紅色
-    public Color clickedColor = Color.yellow;   // 🟡 點擊後的黃色（保持）
-
+    public Color clickedColor = Color.yellow;   // 🟡 點擊後的黃色（可切換）
+    
     private Color originalColor;
-    private bool isClicked = false;
+    private bool isClicked = false;             // 用來切換點擊狀態
     private Image btnImage;
 
     public AudioClip hoverSound;
@@ -36,7 +36,7 @@ public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
             if (hoverSound != null)
             {
-                audioSource.PlayOneShot(hoverSound); // 播放 hover 音效
+                audioSource.PlayOneShot(hoverSound);
             }
         }
     }
@@ -51,16 +51,17 @@ public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        isClicked = true;
+        isClicked = !isClicked; // 每次點擊切換狀態
 
         if (btnImage != null)
         {
-            btnImage.color = clickedColor; // 🟡 點擊後變黃色，永久保持
+            btnImage.color = isClicked ? clickedColor : originalColor;
         }
 
         if (clickSound != null)
         {
-            audioSource.PlayOneShot(clickSound); // 播放 click 音效
+            audioSource.PlayOneShot(clickSound);
         }
     }
 }
+

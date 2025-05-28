@@ -3199,6 +3199,7 @@ GameObject:
   - component: {fileID: 364888054}
   - component: {fileID: 364888053}
   - component: {fileID: 364888057}
+  - component: {fileID: 364888058}
   m_Layer: 5
   m_Name: Button_3-2
   m_TagString: Untagged
@@ -3253,6 +3254,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2126755494}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 364888058}
+        m_TargetAssemblyTypeName: DelayShowButton, Assembly-CSharp
+        m_MethodName: OnFirstButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3336,6 +3349,20 @@ MonoBehaviour:
   clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
   clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+--- !u!114 &364888058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364888052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f88d587184120c4286d3d796f10a025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonToShow: {fileID: 1784935469}
+  delaySeconds: 12
 --- !u!1 &376273819
 GameObject:
   m_ObjectHideFlags: 0
@@ -26669,7 +26696,6 @@ GameObject:
   - component: {fileID: 1992984692}
   - component: {fileID: 1992984691}
   - component: {fileID: 1992984690}
-  - component: {fileID: 1992984695}
   m_Layer: 5
   m_Name: heading3
   m_TagString: Untagged
@@ -26783,20 +26809,6 @@ RectTransform:
   m_AnchoredPosition: {x: 32.151, y: 38.637}
   m_SizeDelta: {x: 1079.5, y: 545.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1992984695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992984689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99dd5b257ce09d34c8871253c6993526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetButton: {fileID: 1784935470}
-  delayTime: 29
 --- !u!1001 &1998196185
 PrefabInstance:
   m_ObjectHideFlags: 0
