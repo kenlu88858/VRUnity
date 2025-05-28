@@ -22,6 +22,7 @@ public class Whisper_texttospeech : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource audioSource1;
     public AudioSource audioSource2;
+    public AudioSource errorAudioSource; // 撥放「請再說一次」之類的語音提示
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
@@ -170,13 +171,40 @@ public class Whisper_texttospeech : MonoBehaviour
                 showErrorMessage = false;
                 nextbutton.SetActive(true);
             }
-            else
-            {
-                Debug.Log("播放音頻！");
-                showErrorMessage = true; //
-                audioSource.Play();
-                //yield return new WaitForSeconds(audioSource.clip.length);
-            }
+          else
+{
+    Debug.Log("播放音頻提示使用者說錯了！");
+    showErrorMessage = true;
+
+    // 顯示錯誤提示
+    followtext.text = "複誦內容有誤\n" + grab;
+    followtext.fontSize = whis_FontSize;
+    followtext1.text = "\n" + grab1;
+    followtext1.fontSize = whis_FontSize;
+
+    // 播放錯誤語音提示（例如：「請再說一次」）
+    if (errorAudioSource != null)
+    {
+        errorAudioSource.Play();
+        yield return new WaitWhile(() => errorAudioSource.isPlaying); // 等錯誤語音播完
+    }
+
+    // 重新播放原本提示語音（「請跟我複誦……」）
+    if (audioSource != null)
+    {
+        // 顯示提示句
+        followtext.text = grab;
+        followtext1.text = grab1;
+        followtext.fontSize = whis_FontSize;
+        followtext1.fontSize = whis_FontSize;
+
+        audioSource.Play();
+        yield return new WaitWhile(() => audioSource.isPlaying); // 等提示語音播完再錄音
+    }
+
+    // 下一輪錄音會由 RecordingLoop 自動執行
+}
+
 
             Debug.Log("語音辨識結果: " + cleanedText);
         }

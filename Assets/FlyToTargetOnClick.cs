@@ -12,26 +12,34 @@ public class FlyToTargetOnClick : MonoBehaviour
     public float moveSpeed = 5f;
 
     private bool shouldMove = false;
+    private bool hasReachedTarget = false;
 
     void Update()
+{
+    if (triggerAction.action.WasPressedThisFrame())
     {
-        // 按下 trigger 時檢查射線是否點到自己
-        if (triggerAction.action.WasPressedThisFrame())
+        if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
+            if (hit.transform == this.transform)
             {
-                if (hit.transform == this.transform)
-                {
-                    shouldMove = true; // 開始移動
-                }
+                shouldMove = true;
             }
         }
+    }
 
-        if (shouldMove)
+    if (shouldMove && !hasReachedTarget)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetPoint.rotation, 360 * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, targetPoint.position) < 0.01f)
         {
-            // 線性插值靠近目標位置
-            transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, moveSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetPoint.rotation, 360 * Time.deltaTime);
+            hasReachedTarget = true;
+            shouldMove = false;
+
+            // ✅ 告訴任務管理器，任務完成
+            TaskProgressManager.Instance.itemFlownToTarget = true;
         }
     }
+}
 }

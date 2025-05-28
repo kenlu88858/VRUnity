@@ -16,15 +16,18 @@ public class CabbageClickMover : MonoBehaviour
     }
 
     void Update()
+{
+    if (shouldMove)
     {
-        if (shouldMove)
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, targetPosition.position) < 0.01f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, targetPosition.position) < 0.01f)
-            {
-                shouldMove = false;
-            }
+            shouldMove = false;
+
+            // ✅ 告訴任務管理器，任務完成
+            TaskProgressManager.Instance.cabbageMoved = true;
         }
     }
+}
 }
 
