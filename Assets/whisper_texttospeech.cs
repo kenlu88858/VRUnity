@@ -74,7 +74,7 @@ public class Whisper_texttospeech : MonoBehaviour
         {
             if (showErrorMessage)
             {
-                followtext.text = "複誦內容有誤\n" + grab;
+                followtext.text = grab;
                 followtext1.text = "\n" + grab1;
             }
             else
@@ -177,10 +177,7 @@ public class Whisper_texttospeech : MonoBehaviour
     showErrorMessage = true;
 
     // 顯示錯誤提示
-    followtext.text = "複誦內容有誤\n" + grab;
-    followtext.fontSize = whis_FontSize;
-    followtext1.text = "\n" + grab1;
-    followtext1.fontSize = whis_FontSize;
+    followtext.text = "複誦內容有誤\n";
 
     // 播放錯誤語音提示（例如：「請再說一次」）
     if (errorAudioSource != null)
