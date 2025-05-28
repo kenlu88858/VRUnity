@@ -20710,8 +20710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13827f849cd1c71458ddb2857c067c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonA: {fileID: 1483913480}
-  buttonB: {fileID: 96566877}
+  buttonA: {fileID: 96566877}
+  buttonB: {fileID: 1483913480}
   delayTime: 8
 --- !u!1 &1185015749
 GameObject:
