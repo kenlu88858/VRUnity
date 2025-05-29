@@ -3742,7 +3742,7 @@ RectTransform:
   m_GameObject: {fileID: 305706219}
   m_LocalRotation: {x: -0, y: 0.99920064, z: -0, w: -0.039975718}
   m_LocalPosition: {x: 0, y: 0, z: 30.086}
-  m_LocalScale: {x: 0.0044123353, y: 0.006363138, z: 0.008019283}
+  m_LocalScale: {x: 0.0038992267, y: 0.006363138, z: 0.008019283}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6876734}
@@ -4345,7 +4345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u8ACB\u9EDE\u64CA\u51B0\u7BB1\u4E0A\u5C64\u5167\u88AB\u91CD\u8907\u8CFC\u8CB7\u7684\u9AD8\u9E97\u83DC\u4EE5\u53CA\u9EDE\u64CA\u65C1\u908A\u684C\u4E0A\u7684\u767C\u4EAE\u7684\u8CFC\u7269\u6E05\u55AE"
+  m_text: "\u64CD\u4F5C\u624B\u67C4\n\u8ACB\u9EDE\u64CA\u51B0\u7BB1\u4E0A\u5C64\u5167\u88AB\u91CD\u8907\u8CFC\u8CB7\u7684\u9AD8\u9E97\u83DC\u4E26\u4E14\u9EDE\u64CA\u65C1\u908A\u684C\u4E0A\u7684\u767C\u4EAE\u7684\u8CFC\u7269\u6E05\u55AE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -11149,7 +11149,7 @@ PrefabInstance:
     - target: {fileID: 9011486334982592722, guid: 1d211d1fa4f6ecc4e91a8a32432546ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.24
+      value: 0.508
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
