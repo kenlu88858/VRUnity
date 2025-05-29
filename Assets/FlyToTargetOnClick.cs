@@ -21,6 +21,7 @@ public class FlyToTargetOnClick : MonoBehaviour
                 if (hit.transform == this.transform)
                 {
                     shouldMove = true;
+                     
                 }
             }
         }
@@ -35,9 +36,7 @@ public class FlyToTargetOnClick : MonoBehaviour
                 hasReachedTarget = true;
                 shouldMove = false;
 
-                // ✅ 標記已完成
-                TaskProgressManager.Instance.itemFlownToTarget = true;
-                Debug.Log("✅ 購物清單移動完成");
+               
             }
         }
     }

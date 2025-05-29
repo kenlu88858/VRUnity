@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
+
+
 public class CabbageClickMover : MonoBehaviour
 {
     public Transform targetPosition;
     public float moveSpeed = 3f;
-
+    
     private bool shouldMove = false;
 
     public void OnClicked()
@@ -23,9 +25,8 @@ public class CabbageClickMover : MonoBehaviour
             {
                 shouldMove = false;
 
-                // ✅ 標記已完成
-                TaskProgressManager.Instance.cabbageMoved = true;
-                Debug.Log("✅ 高麗菜移動完成");
+              
+
             }
         }
     }
