@@ -1739,22 +1739,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePath: 
-  Targetsentence: "\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\u88DC\u5145\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86\u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427"
+  Targetsentence: 
   saveFileName: recordedAudio.wav
-  recordDuration: 20
+  recordDuration: 10
   waitTime: 2
-  nextbutton: {fileID: 1288085615}
-  audioSource: {fileID: 2116004015}
-  audioSource1: {fileID: 2093686883}
-  audioSource2: {fileID: 425370824}
-  errorAudioSource: {fileID: 831083603}
-  followtext: {fileID: 1852958367}
-  followtext1: {fileID: 718564732}
-  whis_FontSize: 20
-  grab: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\n\n\u8ACB\u8907\u8AA6"
-  grab1: "\"\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\n\u88DC\u5145\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F\n\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86\u6211\u5011\u4F86\u8CB7\u4E9B\n\u5176\u4ED6\u7684\u5427\"\n"
-  recongnize: "\n\n\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\n\n\u8ACB\u7A0D\u5F8C"
-  finish: "\n\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\n\u4F60\u8AAA\u5C0D\u4E86\n\u8AAA\u5F97\u771F\u597D"
+  nextbutton: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioSource1: {fileID: 0}
+  audioSource2: {fileID: 0}
+  errorAudioSource: {fileID: 0}
+  followtext: {fileID: 0}
+  followtext1: {fileID: 0}
+  whis_FontSize: 0
+  grab: 
+  grab1: 
+  recongnize: 
+  finish: 
 --- !u!1001 &162566567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5307,7 +5307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2371966da6e404c8716a2ca5736853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 425370824}
+  audioSource: {fileID: 0}
   playButton: {fileID: 0}
   whisperManager: {fileID: 0}
 --- !u!1 &433266397
@@ -6456,8 +6456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5131f1646fd5d6942bf298f09eb956f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 305706219}
-  button: {fileID: 1288085618}
+  canvas: {fileID: 0}
+  button: {fileID: 0}
   delayTime: 3
 --- !u!1 &507051829 stripped
 GameObject:
@@ -6800,7 +6800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1894735739}
+  m_InteractionManager: {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6837,7 +6837,7 @@ MonoBehaviour:
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls: []
-  m_SelectActionTrigger: 0
+  m_SelectActionTrigger: 1
   m_HideControllerOnSelect: 0
   m_AllowHoveredActivate: 0
   m_TargetPriorityMode: 0
@@ -7855,7 +7855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 0}
-  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
+  HoverSound: {fileID: 0}
 --- !u!1 &532820521
 GameObject:
   m_ObjectHideFlags: 0
@@ -8280,7 +8280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1894735739}
+  m_InteractionManager: {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10666,8 +10666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2371966da6e404c8716a2ca5736853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 750016693}
-  playButton: {fileID: 2092315889}
+  audioSource: {fileID: 0}
+  playButton: {fileID: 0}
   whisperManager: {fileID: 0}
 --- !u!1 &757343668
 GameObject:
@@ -12663,7 +12663,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857698335}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 30.408}
+  m_LocalPosition: {x: 0, y: 0, z: 30.709}
   m_LocalScale: {x: 0.008019283, y: 0.008019283, z: 0.008019283}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14825,7 +14825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0.67058825, b: 0.67058825, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14894,8 +14894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5131f1646fd5d6942bf298f09eb956f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1792896047}
-  button: {fileID: 2092315889}
+  canvas: {fileID: 0}
+  button: {fileID: 0}
   delayTime: 3
 --- !u!1 &1046558644
 GameObject:
@@ -18070,8 +18070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cc8418faf299441b7c53c2f4953db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickedSound: {fileID: 8300000, guid: 14e0d4553bb17c24c9e31917b019d2f5, type: 3}
-  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
+  ClickedSound: {fileID: 0}
+  HoverSound: {fileID: 0}
 --- !u!114 &1288085618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18854,7 +18854,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318287191}
   m_LocalRotation: {x: -0, y: 0.9992323, z: -0, w: 0.039177362}
-  m_LocalPosition: {x: 0, y: 0, z: 30.23}
+  m_LocalPosition: {x: 0, y: 0, z: 30.552}
   m_LocalScale: {x: 0.008019283, y: 0.008019283, z: 0.008019283}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18863,7 +18863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 175.509, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 32.444, y: 38.62}
+  m_AnchoredPosition: {x: 32.419, y: 38.62}
   m_SizeDelta: {x: 1079.5, y: 545.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1325663046
@@ -26025,8 +26025,8 @@ GameObject:
   - component: {fileID: 1792896050}
   - component: {fileID: 1792896049}
   - component: {fileID: 1792896048}
-  - component: {fileID: 1792896053}
   - component: {fileID: 1792896054}
+  - component: {fileID: 1792896053}
   m_Layer: 5
   m_Name: heading3
   m_TagString: Untagged
@@ -26124,22 +26124,37 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792896047}
   m_LocalRotation: {x: -0, y: 0.99985147, z: -0, w: 0.017235499}
-  m_LocalPosition: {x: 0, y: 0, z: 30.066}
+  m_LocalPosition: {x: 0, y: 0, z: 30.213}
   m_LocalScale: {x: 0.008019283, y: 0.008019283, z: 0.008019283}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1023044126}
   - {fileID: 479534507}
-  - {fileID: 2092315892}
   - {fileID: 1041488783}
+  - {fileID: 2092315892}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 178.025, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 32.412, y: 38.497}
+  m_AnchoredPosition: {x: 32.407, y: 38.497}
   m_SizeDelta: {x: 1079.5, y: 545.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!82 &1792896053
+--- !u!114 &1792896053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792896047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61552e12870b5744b98a3a4a7ff8c7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1792896054}
+  buttonObject: {fileID: 2092315888}
+  autoPlayClip: 1
+--- !u!82 &1792896054
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26235,21 +26250,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1792896054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792896047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61552e12870b5744b98a3a4a7ff8c7fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 1792896053}
-  buttonObject: {fileID: 2092315888}
-  autoPlayClip: 1
 --- !u!1001 &1794721116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26574,8 +26574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2371966da6e404c8716a2ca5736853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1820488704}
-  playButton: {fileID: 1288085618}
+  audioSource: {fileID: 0}
+  playButton: {fileID: 0}
   whisperManager: {fileID: 0}
 --- !u!82 &1820488704
 AudioSource:
@@ -26907,8 +26907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cc8418faf299441b7c53c2f4953db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickedSound: {fileID: 8300000, guid: 14e0d4553bb17c24c9e31917b019d2f5, type: 3}
-  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
+  ClickedSound: {fileID: 0}
+  HoverSound: {fileID: 0}
 --- !u!222 &1827229655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28282,7 +28282,7 @@ Transform:
   m_GameObject: {fileID: 1943140034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0.77, z: -0.8}
+  m_LocalPosition: {x: 0.16, y: 0.77, z: -1.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29925,7 +29925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 79a9dfee9f81486478397ea9c6577d07, type: 2}
+  sharedProfile: {fileID: 0}
   isGlobal: 0
   blendDistance: 0
   weight: 1
@@ -29942,7 +29942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 2035249695}
+  volumeTrigger: {fileID: 0}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -29983,7 +29983,7 @@ MonoBehaviour:
       motionGridSize: 64
       colorBlindnessType: 0
       colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_Resources: {fileID: 0}
   m_ShowToolkit: 0
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
@@ -30803,8 +30803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5131f1646fd5d6942bf298f09eb956f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1541151292}
-  button: {fileID: 1827229652}
+  canvas: {fileID: 0}
+  button: {fileID: 0}
   delayTime: 3
 --- !u!1 &2092315888
 GameObject:
@@ -30976,8 +30976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cc8418faf299441b7c53c2f4953db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickedSound: {fileID: 8300000, guid: 14e0d4553bb17c24c9e31917b019d2f5, type: 3}
-  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
+  ClickedSound: {fileID: 0}
+  HoverSound: {fileID: 0}
 --- !u!1 &2093686881
 GameObject:
   m_ObjectHideFlags: 0
@@ -31119,7 +31119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2371966da6e404c8716a2ca5736853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 2093686883}
+  audioSource: {fileID: 0}
   playButton: {fileID: 0}
   whisperManager: {fileID: 0}
 --- !u!1 &2098561575
@@ -31558,9 +31558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2371966da6e404c8716a2ca5736853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 2116004015}
-  playButton: {fileID: 1827229652}
-  whisperManager: {fileID: 157175813}
+  audioSource: {fileID: 0}
+  playButton: {fileID: 0}
+  whisperManager: {fileID: 0}
 --- !u!82 &2116004015
 AudioSource:
   m_ObjectHideFlags: 0
