@@ -89,6 +89,7 @@ public class whisper_texttospeech : MonoBehaviour
 
             // 停止錄音
             Microphone.End(microphoneDevice);
+            errorTipText.gameObject.SetActive(false);
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
             followtext1.text = "";
