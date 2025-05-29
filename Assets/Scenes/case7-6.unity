@@ -17687,7 +17687,7 @@ MonoBehaviour:
   followtext: {fileID: 1805703533}
   followtext1: {fileID: 1412261763}
   whis_FontSize: 20
-  grab: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\u8ACB\u8907\u8AA6"
+  grab: "\u8ACB\u8DDF\u6211\u8907\u8AA6\u4EE5\u4E0B\u53E5\u5B50:\n\n\n\n\n\n\u8ACB\u8907\u8AA6"
   grab1: "\"\u6211\u5011\u4ECA\u5929\u4F86\u8A66\u8A66\u8CB7\u4E00\u4E9B\u4E0D\u540C\u7684\u852C\u83DC\u597D\u55CE\u9019\u6A23\u53EF\u4EE5\u6709\u66F4\u591A\u9078\u64C7\u4F60\u770B\u9019\u4E9B\u6C34\u679C\u4E5F\u4E0D\u932F\u6211\u5011\u4F86\u6311\u4E00\u4E9B\u5427\""
   recongnize: "\n\n\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\n\n\u8ACB\u7A0D\u5F8C"
   finish: "\n\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\n\u4F60\u8AAA\u5C0D\u4E86\n\u8AAA\u7684\u771F\u597D\n\n\n\n"
@@ -23848,7 +23848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
