@@ -13,6 +13,8 @@ public class case4_whisper_texttospeech : MonoBehaviour
     public string Targetsentence; //不要加上標點符號、空格等等
     public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
 
+    public AudioSource errorAudioSource; // 撥放「請再說一次」之類的語音提示
+
     public float recordDuration = 10f; // 錄音時間
     public float waitTime = 2f; // 每次辨識後等待時間
 
@@ -73,7 +75,7 @@ public class case4_whisper_texttospeech : MonoBehaviour
         {
             if (showErrorMessage)
             {
-                followtext.text = "複誦內容有誤\n" + grab;
+                followtext.text = "複誦內容有誤 請再試一次\n" + grab;
                 followtext1.text = "\n" + grab1;
             }
             else
@@ -172,10 +174,15 @@ public class case4_whisper_texttospeech : MonoBehaviour
             }
             else
             {
-                Debug.Log("播放音頻！");
-                showErrorMessage = true; //
-                audioSource.Play();
-                //yield return new WaitForSeconds(audioSource.clip.length);
+                if (errorAudioSource != null)
+                {
+                    errorAudioSource.Play();
+                    yield return new WaitWhile(() => errorAudioSource.isPlaying); // 等錯誤語音播完
+                    Debug.Log("播放音頻！");
+                    showErrorMessage = true; //
+                    audioSource.Play();
+                    //yield return new WaitForSeconds(audioSource.clip.length);
+                }               
             }
 
             Debug.Log("語音辨識結果: " + cleanedText);
