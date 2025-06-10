@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine.Networking;
 using System.Text.RegularExpressions;
 using TMPro;
+using UnityEngine.UI;
 
 public class whisper_texttospeech : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class whisper_texttospeech : MonoBehaviour
     public string Targetsentence; //不要加上標點符號、空格等等
     public string saveFileName = "recordedAudio.wav";  // 音頻保存的檔案名
 
-    public float recordDuration = 10f; // 錄音時間
+    public float recordDuration = 8f; // 錄音時間
     public float waitTime = 2f; // 每次辨識後等待時間
 
     private bool isTrue = false;
@@ -27,8 +28,11 @@ public class whisper_texttospeech : MonoBehaviour
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
+    public TextMeshProUGUI countdownTitleText;
+    public Image recordingProgressBar;
+    public TextMeshProUGUI countdownText;
 
-    public float whis_FontSize ;
+    public float whis_FontSize;
 
     [TextArea]
     public string grab;
@@ -54,6 +58,10 @@ public class whisper_texttospeech : MonoBehaviour
         {
             Debug.LogError("No microphone detected!");
         }
+        //一開始隱藏倒數的告知
+        countdownTitleText.gameObject.SetActive(false);
+        recordingProgressBar.gameObject.SetActive(false);
+        countdownText.gameObject.SetActive(false);
     }
 
     public void StartRecording()
@@ -80,7 +88,11 @@ public class whisper_texttospeech : MonoBehaviour
             }
             
             Debug.Log("請開始說話...");
-            
+            //開始錄音時顯示剩餘秒數和其他通知
+            countdownTitleText.gameObject.SetActive(true);
+            recordingProgressBar.gameObject.SetActive(true);
+            countdownText.gameObject.SetActive(true);
+            StartCoroutine(ShowRecordingCountdown(recordDuration));
             // 開始錄音
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
 
@@ -89,6 +101,13 @@ public class whisper_texttospeech : MonoBehaviour
 
             // 停止錄音
             Microphone.End(microphoneDevice);
+
+            //結束錄音時將通知關閉
+            countdownTitleText.gameObject.SetActive(false);
+            recordingProgressBar.gameObject.SetActive(false);
+            countdownText.gameObject.SetActive(false);
+
+
             errorTipText.gameObject.SetActive(false);
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
@@ -116,6 +135,27 @@ public class whisper_texttospeech : MonoBehaviour
         Debug.Log("停止錄音，語音辨識已結束。");
         recordingCoroutine = null;
         StopRecording();
+    }
+    //showrecordingcountdown是新增的function
+    private IEnumerator ShowRecordingCountdown(float duration)
+    {
+        float timeLeft = duration;
+        while (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+
+            // 更新條形圖從右往左（記得 Image 設定 FillOrigin=Right）
+            float fillAmount = timeLeft / duration;
+            recordingProgressBar.fillAmount = fillAmount;
+
+            // 更新倒數文字
+            countdownText.text = Mathf.CeilToInt(timeLeft).ToString() + " 秒";
+
+            yield return null;
+        }
+
+        recordingProgressBar.fillAmount = 0;
+        countdownText.text = "0 秒";
     }
 
     // 將錄製的音頻保存為 WAV 檔案
