@@ -28,6 +28,7 @@ public class whisper_texttospeech : MonoBehaviour
 
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
+    public GameObject recordingPanel; // 🔺新增：統一管理倒數錄音的整塊 UI Panel
     public TextMeshProUGUI countdownTitleText;
     public Image recordingProgressBar;
     public TextMeshProUGUI countdownText;
@@ -59,6 +60,7 @@ public class whisper_texttospeech : MonoBehaviour
             Debug.LogError("No microphone detected!");
         }
         //一開始隱藏倒數的告知
+        recordingPanel?.SetActive(false);
         countdownTitleText.gameObject.SetActive(false);
         recordingProgressBar.gameObject.SetActive(false);
         countdownText.gameObject.SetActive(false);
@@ -89,6 +91,7 @@ public class whisper_texttospeech : MonoBehaviour
             
             Debug.Log("請開始說話...");
             //開始錄音時顯示剩餘秒數和其他通知
+            recordingPanel?.SetActive(true);
             countdownTitleText.gameObject.SetActive(true);
             recordingProgressBar.gameObject.SetActive(true);
             countdownText.gameObject.SetActive(true);
@@ -103,6 +106,7 @@ public class whisper_texttospeech : MonoBehaviour
             Microphone.End(microphoneDevice);
 
             //結束錄音時將通知關閉
+            recordingPanel?.SetActive(false);
             countdownTitleText.gameObject.SetActive(false);
             recordingProgressBar.gameObject.SetActive(false);
             countdownText.gameObject.SetActive(false);
