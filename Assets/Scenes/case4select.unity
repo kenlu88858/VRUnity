@@ -1015,7 +1015,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 577261665}
   canvasGroup:
-  - {fileID: 2064411286}
   - {fileID: 1980251318}
 --- !u!4 &517667878
 Transform:
@@ -1169,8 +1168,8 @@ Transform:
   m_GameObject: {fileID: 577261664}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
-  m_LocalPosition: {x: -1.0959, y: 1.4351, z: -7.54}
-  m_LocalScale: {x: 0.32229114, y: 0.52979976, z: 0.18883455}
+  m_LocalPosition: {x: -1.0959, y: 1.4204, z: -7.54}
+  m_LocalScale: {x: 0.32229114, y: 0.52979976, z: 0.19176148}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1389,6 +1388,7 @@ MonoBehaviour:
   instructionAudio: {fileID: 363041412}
   hoverColor: {r: 1, g: 0, b: 0, a: 1}
   hoverSound: {fileID: 8300000, guid: 31504225db20340b69a13773c0440acb, type: 3}
+  resultCanvas: {fileID: 2064411286}
 --- !u!4 &783070628
 Transform:
   m_ObjectHideFlags: 0

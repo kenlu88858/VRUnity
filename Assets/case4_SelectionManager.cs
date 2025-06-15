@@ -26,6 +26,9 @@ public class case4_SelectionManager : MonoBehaviour
     public Color hoverColor = Color.red;
     public AudioClip hoverSound;
 
+    [Header("音效播完後要顯示的 Canvas")]
+    public GameObject resultCanvas; // ✅ 新增欄位
+
     private Dictionary<Button, bool> buttonSelections = new Dictionary<Button, bool>();
     private Dictionary<Button, Color> originalColors = new Dictionary<Button, Color>();
     private AudioSource hoverAudioSource;
@@ -35,7 +38,11 @@ public class case4_SelectionManager : MonoBehaviour
         buttonsGroup.SetActive(false);
         confirmButton.SetActive(false);
 
-        // 播放 hover 音效的 AudioSource（用共用的）
+        // ✅ 預設隱藏 resultCanvas
+        if (resultCanvas != null)
+            resultCanvas.SetActive(false);
+
+        // 共用的 AudioSource 用來播放 hover/click 音效
         hoverAudioSource = gameObject.AddComponent<AudioSource>();
         hoverAudioSource.playOnAwake = false;
 
@@ -51,7 +58,7 @@ public class case4_SelectionManager : MonoBehaviour
             // 點擊事件
             btn.onClick.AddListener(() => OnOptionClicked(btn));
 
-            // 加入事件觸發器 for Hover
+            // 加入滑過/離開事件
             AddHoverEvents(btn);
         }
 
@@ -67,6 +74,8 @@ public class case4_SelectionManager : MonoBehaviour
         else
         {
             buttonsGroup.SetActive(true);
+            if (resultCanvas != null)
+                resultCanvas.SetActive(true); // 若沒語音也顯示 Canvas
         }
     }
 
@@ -74,14 +83,28 @@ public class case4_SelectionManager : MonoBehaviour
     {
         instructionAudio.Play();
         yield return new WaitWhile(() => instructionAudio.isPlaying);
+
         buttonsGroup.SetActive(true);
+
+        // ✅ 語音播完後顯示 Canvas
+        if (resultCanvas != null)
+            resultCanvas.SetActive(true);
     }
 
     void OnOptionClicked(Button btn)
     {
         buttonSelections[btn] = !buttonSelections[btn];
+
+        // ✅ 若選中變黃，否則還原
         btn.GetComponent<Image>().color = buttonSelections[btn] ? Color.yellow : originalColors[btn];
 
+        // ✅ 播放點擊音效
+        if (hoverSound != null && hoverAudioSource != null)
+        {
+            hoverAudioSource.PlayOneShot(hoverSound);
+        }
+
+        // ✅ 顯示確認按鈕（若至少一個選中）
         bool anySelected = false;
         foreach (var selected in buttonSelections.Values)
         {
@@ -93,12 +116,6 @@ public class case4_SelectionManager : MonoBehaviour
         }
 
         confirmButton.SetActive(anySelected);
-
-        // ✅ 點擊時播放音效
-        if (hoverSound != null && hoverAudioSource != null)
-        {
-            hoverAudioSource.PlayOneShot(hoverSound);
-        }
     }
 
     void AddHoverEvents(Button btn)
@@ -109,26 +126,31 @@ public class case4_SelectionManager : MonoBehaviour
             trigger = btn.gameObject.AddComponent<EventTrigger>();
         }
 
-        // 指標進入：變紅 + 播音效
+        // ✅ 滑過：只有未被選中才變紅
         EventTrigger.Entry entryEnter = new EventTrigger.Entry();
         entryEnter.eventID = EventTriggerType.PointerEnter;
         entryEnter.callback.AddListener((data) =>
         {
-            Image img = btn.GetComponent<Image>();
-            if (img != null)
-                img.color = hoverColor;
+            if (!buttonSelections[btn])
+            {
+                Image img = btn.GetComponent<Image>();
+                if (img != null)
+                    img.color = hoverColor;
+            }
 
             if (hoverSound != null && hoverAudioSource != null)
+            {
                 hoverAudioSource.PlayOneShot(hoverSound);
+            }
         });
         trigger.triggers.Add(entryEnter);
 
-        // 指標離開：恢復原色（若沒被選）
+        // ✅ 離開：若未選中，恢復原色
         EventTrigger.Entry entryExit = new EventTrigger.Entry();
         entryExit.eventID = EventTriggerType.PointerExit;
         entryExit.callback.AddListener((data) =>
         {
-            if (!buttonSelections[btn]) // 沒被選中才恢復
+            if (!buttonSelections[btn])
             {
                 Image img = btn.GetComponent<Image>();
                 if (img != null)
