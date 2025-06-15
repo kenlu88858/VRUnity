@@ -17,6 +17,9 @@ public class whisper_texttospeech : MonoBehaviour
     public float waitTime = 2f;
 
     private bool isTrue = false;
+    private int failCount = 0; // 新增失敗次數計數器
+    public int maxFailCount = 1; // 允許的最大失敗次數
+
     public GameObject nextbutton;
     public TextMeshProUGUI errorTipText;
 
@@ -35,7 +38,7 @@ public class whisper_texttospeech : MonoBehaviour
     [TextArea] public string recongnize;
     [TextArea] public string finish;
 
-    public CountdownBarController countdownBar; // <<<< 加入倒數條控制器
+    public CountdownBarController countdownBar;
 
     void Start()
     {
@@ -76,7 +79,6 @@ public class whisper_texttospeech : MonoBehaviour
 
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
 
-            // 顯示倒數條
             if (countdownBar != null)
             {
                 countdownBar.StartCountdown(recordDuration);
@@ -133,7 +135,7 @@ public class whisper_texttospeech : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
 
-            if (Targetsentence == cleanedText)
+            if (Targetsentence == cleanedText || failCount > maxFailCount)
             {
                 if (audioSource1.isPlaying)
                     audioSource1.Stop();
@@ -153,6 +155,7 @@ public class whisper_texttospeech : MonoBehaviour
                 followtext.fontSize = whis_FontSize;
                 followtext1.text = grab1;
                 followtext1.fontSize = whis_FontSize;
+                failCount++; // 累加錯誤次數
                 yield return new WaitWhile(() => wrongAudioSource.isPlaying);
             }
 
@@ -204,7 +207,7 @@ public class whisper_texttospeech : MonoBehaviour
 
         if (countdownBar != null)
         {
-            countdownBar.StopCountdown(); // 停止倒數條顯示
+            countdownBar.StopCountdown();
         }
 
         Debug.Log("錄音流程已手動停止！");
