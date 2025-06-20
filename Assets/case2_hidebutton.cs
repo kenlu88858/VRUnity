@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
-using System.IO;
-using UnityEngine.UI;
 
 public class case2_hidebutton : MonoBehaviour
 {
@@ -15,15 +13,10 @@ public class case2_hidebutton : MonoBehaviour
     public GameObject rightButton5;
     public GameObject rightButton6;
     public GameObject confirmButton;
-    public AudioSource audioSource1;
-    //public AudioSource audioSource;
-    public GameObject hint_plane;
-    public GameObject hint_select;
+    public AudioSource audioSource;
 
     void Start()
     {
-        hint_plane.SetActive(false);
-        hint_select.SetActive(false);
         // 一開始按鈕先隱藏
         rightButton1.SetActive(false);
         rightButton2.SetActive(false);
@@ -39,32 +32,14 @@ public class case2_hidebutton : MonoBehaviour
 
     void OnVideoFinished(VideoPlayer vp)
     {
-
         // 顯示右邊的按鈕
-        hint_plane.SetActive(true);
-        Debug.Log("plane activate");
-        audioSource1.Play();
-        StartCoroutine(WaitForAudioFinish());
-
-
-        //confirmButton.SetActive(true);
-    }
-
-    private IEnumerator WaitForAudioFinish()
-    {
-        // 等待直到音訊播放完畢
-        while (audioSource1.isPlaying)
-        {
-            yield return null; // 每幀檢查
-        }
-
-        hint_select.SetActive(true);
-        //audioSource.Play();
+        audioSource.Play();
         rightButton1.SetActive(true);
         rightButton2.SetActive(true);
         rightButton3.SetActive(true);
         rightButton4.SetActive(true);
         rightButton5.SetActive(true);
         rightButton6.SetActive(true);
+        //confirmButton.SetActive(true);
     }
 }
