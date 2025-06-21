@@ -28,7 +28,7 @@ public class case1whisper_texttospeech : MonoBehaviour
     public TextMeshProUGUI followtext;
     public TextMeshProUGUI followtext1;
     public float whis_FontSize ;
-    public int count = 0;
+    int count = 0;
 
     [TextArea]
     public string grab;
@@ -125,65 +125,107 @@ public class case1whisper_texttospeech : MonoBehaviour
 
     // 發送音頻檔案到伺服器
     private IEnumerator SendAudioToServer(string audioFilePath)
-    {
+    {   
         count = count + 1;
-        // string serverUrl = "https://1c6e-1-175-74-97.ngrok-free.app/transcribe";  // 伺服器的 URL
-        string serverUrl = "http://127.0.0.1:5000/transcribe";  // 伺服器的 URL
-        WWWForm form = new WWWForm();
-        byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
-
-        form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");  // 假設檔案是 WAV 格式
-
-        UnityWebRequest www = UnityWebRequest.Post(serverUrl, form);
-        yield return www.SendWebRequest();
-
-        if (www.result == UnityWebRequest.Result.Success)
+        if (count >= 2)
         {
-            string rawText = www.downloadHandler.text;
-            Debug.Log("伺服器回應: " + rawText);
-
-            string extractedText = ExtractTextFromJson(rawText);
-
-            string cleanedText = RemovePunctuationAndWhitespace(extractedText);
-            if(Targetsentence == cleanedText || Targetsentence1 == cleanedText){
-                Debug.Log("你說對了!");
-                if (audioSource2.isPlaying){
-                    audioSource2.Stop();
-                }
-                followtext.text = finish;
-                followtext.fontSize = whis_FontSize;
-                followtext1.text ="";
-                audioSource1.Play();
-                while (audioSource1.isPlaying)
-                {
-                    yield return null;  // 等待直到音頻播放結束
-                }
-                nextbutton.SetActive(true);
-                isTrue = true;
+            if (audioSource2.isPlaying)
+            {
+                audioSource2.Stop();
             }
-            else{
-                followtext.text = grab;
-                followtext.fontSize = whis_FontSize;
-                followtext1.text = grab2;
-                followtext1.fontSize = whis_FontSize;
-                Debug.Log("播放音頻！");
-                if (audioSource2.isPlaying){
-                    audioSource2.Stop();
-                }
-                audioSource3.Play();
-                //yield return new WaitForSeconds(audioSource.clip.length);
+            Debug.Log("你說對了!");
+
+            followtext.text = finish;
+            followtext.fontSize = whis_FontSize;
+            followtext1.text = "";
+            followtext1.fontSize = whis_FontSize;
+
+            audioSource1.Play();
+
+            while (audioSource1.isPlaying)
+            {
+                yield return null;  // 等待直到音頻播放結束
             }
 
-            Debug.Log("語音辨識結果: " + cleanedText);
-            Debug.Log(count);
+            nextbutton.SetActive(true);
+            isTrue = true;
         }
         else
         {
-            Debug.LogError("辨識錯誤: " + www.error);
-        }
-    }
+            // string serverUrl = "https://1c6e-1-175-74-97.ngrok-free.app/transcribe";  // 伺服器的 URL
+            string serverUrl = "http://127.0.0.1:5000/transcribe";  // 伺服器的 URL
+            WWWForm form = new WWWForm();
+            byte[] audioData = File.ReadAllBytes(audioFilePath);  // 讀取音頻檔案
 
-    private string ExtractTextFromJson(string jsonText)
+            form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");  // 假設檔案是 WAV 格式
+            form.AddField("text", Targetsentence);
+
+            UnityWebRequest www = UnityWebRequest.Post(serverUrl, form);
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                string rawText = www.downloadHandler.text;
+                Debug.Log("伺服器回應: " + rawText);
+
+                float score = ParseScoreFromJson(rawText);
+                Debug.Log("相似度分數: " + score);
+
+                //string extractedText = ExtractTextFromJson(rawText);
+
+                //string cleanedText = RemovePunctuationAndWhitespace(extractedText);
+                if(score >= 0.8){
+                    Debug.Log("你說對了!");
+                    if (audioSource2.isPlaying){
+                        audioSource2.Stop();
+                    }
+                    followtext.text = finish;
+                    followtext.fontSize = whis_FontSize;
+                    followtext1.text ="";
+                    audioSource1.Play();
+                    while (audioSource1.isPlaying)
+                    {
+                        yield return null;  // 等待直到音頻播放結束
+                    }
+                    nextbutton.SetActive(true);
+                    isTrue = true;
+                }
+                else{
+                    followtext.text = grab;
+                    followtext.fontSize = whis_FontSize;
+                    followtext1.text = grab2;
+                    followtext1.fontSize = whis_FontSize;
+                    Debug.Log("播放音頻！");
+                    if (audioSource2.isPlaying){
+                        audioSource2.Stop();
+                    }
+                    audioSource3.Play();
+                    //yield return new WaitForSeconds(audioSource.clip.length);
+                }
+
+                //Debug.Log("語音辨識結果: " + cleanedText);
+                Debug.Log(count);
+            }
+            else
+            {
+                Debug.LogError("辨識錯誤: " + www.error);
+            }
+        }
+        
+    }
+    private float ParseScoreFromJson(string json)
+    {
+        // 假設格式就是 {"scores": [0.87]}
+        int start = json.IndexOf('[') + 1;
+        int end = json.IndexOf(']');
+        string number = json.Substring(start, end - start);
+        if (float.TryParse(number, out float score))
+        {
+            return score;
+        }
+        return -1f;
+    }
+    /*private string ExtractTextFromJson(string jsonText)
     {
         try
         {
@@ -195,7 +237,7 @@ public class case1whisper_texttospeech : MonoBehaviour
             Debug.LogError("無法解析 JSON，請確認伺服器回應格式");
             return jsonText; // 如果解析失敗，直接回傳原始字串
         }
-    }
+    }*/
 
     private string RemovePunctuationAndWhitespace(string input)
     {
