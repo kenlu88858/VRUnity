@@ -1741,13 +1741,13 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u6709\u54EA\u4E9B\u6771\u897F\u9700\u8981\u88DC\u5145\u9019\u6A23\u6211\u5011\u624D\u4E0D\u6703\u8CB7\u5230\u91CD\u8907\u7684\u6771\u897F\u4F60\u770B\u9019\u4E9B\u852C\u83DC\u5DF2\u7D93\u5920\u4E86\u6211\u5011\u4F86\u8CB7\u4E9B\u5176\u4ED6\u7684\u5427"
   saveFileName: recordedAudio.wav
+  errorAudioSource: {fileID: 831083603}
   recordDuration: 15
   waitTime: 2
   nextbutton: {fileID: 1288085615}
   audioSource: {fileID: 2116004015}
   audioSource1: {fileID: 2093686883}
   audioSource2: {fileID: 425370824}
-  errorAudioSource: {fileID: 831083603}
   followtext: {fileID: 1852958367}
   followtext1: {fileID: 718564732}
   whis_FontSize: 20
@@ -7857,7 +7857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 0}
-  HoverSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
 --- !u!1 &532820521
 GameObject:
   m_ObjectHideFlags: 0
@@ -18093,7 +18093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 0}
-  HoverSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
 --- !u!114 &1288085618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26930,7 +26930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 0}
-  HoverSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
 --- !u!222 &1827229655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30999,7 +30999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickedSound: {fileID: 0}
-  HoverSound: {fileID: 0}
+  HoverSound: {fileID: 8300000, guid: 9a6d738025ed59f4fb946bb59c20e774, type: 3}
 --- !u!1 &2093686881
 GameObject:
   m_ObjectHideFlags: 0
