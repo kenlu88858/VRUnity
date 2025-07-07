@@ -13118,6 +13118,7 @@ MonoBehaviour:
   saveFileName: recordedAudio.wav
   recordDuration: 10
   waitTime: 2
+  maxFailCount: 1
   nextbutton: {fileID: 368109726}
   errorTipText: {fileID: 695653837}
   audioSource: {fileID: 1187401295}
@@ -26160,7 +26161,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a9e6d3b8b74b6942aff253aaf1c0312, type: 3}
+  m_audioClip: {fileID: 8300000, guid: db4d059643706dd4fb8fe2b442e6c444, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26738,7 +26739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5B9A\u671F\u6AA2\u67E5\u51B0\u7BB1\u4E26\u6E05\u7406\u904E\u671F\u98DF\u7269\n\u7528\u6EAB\u548C\u7684\u65B9\u5F0F\u63D0\u9192\u75C5\u4EBA\n\u9019\u6A23\u53EF\u4EE5\u57F9\u990A\u75C5\u4EBA\u5F62\u6210\u826F\u597D\u7684\u7FD2\u6163\n\u4E26\u6E1B\u5C11\u98DF\u7269\u6D6A\u8CBB\u548C\u5065\u5EB7\u98A8\u96AA"
+  m_text: "\u5B9A\u671F\u6AA2\u67E5\u51B0\u7BB1\u4E26\u6E05\u7406\u904E\u671F\u98DF\u7269\n\u7528\u6EAB\u548C\u7684\u65B9\u5F0F\u63D0\u9192\u8001\u4EBA\u5BB6\n\u9019\u6A23\u53EF\u4EE5\u57F9\u990A\u8001\u4EBA\u5BB6\u5F62\u6210\u826F\u597D\u7684\u7FD2\u6163\n\u4E26\u6E1B\u5C11\u98DF\u7269\u6D6A\u8CBB\u548C\u5065\u5EB7\u98A8\u96AA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -29774,7 +29775,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b51a45647b3413e4fa973367f42e75ca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 082bad13964be034eb80936780faf67f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

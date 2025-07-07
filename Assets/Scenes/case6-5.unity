@@ -232,7 +232,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b0e0c80cb55fa1a499a8c1a6b840b873, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 74a511a769d689840b0d6192eeb31b19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3189,7 +3189,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd243a08257bd184e9aec40432f6a20e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 57a99da790ed1f74dac25afe09fac1fa, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10892,7 +10892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u70BA\u4E86\u8B93\u75C5\u4EBA\u6E05\u695A\u7406\u89E3\u6E05\u7406\u7684\u5FC5\u8981\u6027\n\u6211\u5011\u73FE\u5728\u5C31\u4F86\u6E05\u7406\u51B0\u7BB1\u5427\n"
+  m_text: "\u70BA\u4E86\u8B93\u8001\u4EBA\u5BB6\u6E05\u695A\u7406\u89E3\u6E05\u7406\u7684\u5FC5\u8981\u6027\n\u6211\u5011\u73FE\u5728\u5C31\u4F86\u6E05\u7406\u51B0\u7BB1\u5427\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -16163,7 +16163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5B9A\u671F\u5E6B\u5FD9\u6E05\u7406\u51B0\u7BB1\n\u4E26\u8AAA\u660E\u5E0C\u671B\u75C5\u4EBA\u4FDD\u6301\u5065\u5EB7\n\u9019\u6A23\u505A\u80FD\u5920\u8B93\u75C5\u4EBA\u611F\u5230\u88AB\u95DC\u5FC3\n\u4E26\u7406\u89E3\u6E05\u7406\u7684\u5FC5\u8981\u6027\r\n"
+  m_text: "\u5B9A\u671F\u5E6B\u5FD9\u6E05\u7406\u51B0\u7BB1\n\u4E26\u8AAA\u660E\u5E0C\u671B\u8001\u4EBA\u5BB6\u4FDD\u6301\u5065\u5EB7\n\u9019\u6A23\u505A\u80FD\u5920\u8B93\u8001\u4EBA\u5BB6\u611F\u5230\u88AB\u95DC\u5FC3\n\u4E26\u7406\u89E3\u6E05\u7406\u7684\u5FC5\u8981\u6027\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -28166,6 +28166,7 @@ MonoBehaviour:
   saveFileName: recordedAudio.wav
   recordDuration: 15
   waitTime: 2
+  maxFailCount: 1
   nextbutton: {fileID: 179669652}
   errorTipText: {fileID: 1696009927}
   audioSource: {fileID: 1894926748}
