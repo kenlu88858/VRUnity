@@ -17677,13 +17677,13 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u4ECA\u5929\u4F86\u8A66\u8A66\u8CB7\u4E00\u4E9B\u4E0D\u540C\u7684\u852C\u83DC\u597D\u55CE\u9019\u6A23\u53EF\u4EE5\u6709\u66F4\u591A\u9078\u64C7\u4F60\u770B\u9019\u4E9B\u6C34\u679C\u4E5F\u4E0D\u932F\u6211\u5011\u4F86\u6311\u4E00\u4E9B\u5427"
   saveFileName: recordedAudio.wav
+  errorAudioSource: {fileID: 1645035971}
   recordDuration: 15
   waitTime: 2
   nextbutton: {fileID: 1868931176}
   audioSource: {fileID: 1745976254}
   audioSource1: {fileID: 1042439420}
   audioSource2: {fileID: 1948257533}
-  errorAudioSource: {fileID: 1645035971}
   followtext: {fileID: 1805703533}
   followtext1: {fileID: 1412261763}
   whis_FontSize: 20
@@ -19762,7 +19762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5E36\u8457\u75C5\u4EBA\u53BB\u8CB7\u83DC\u53EF\u4EE5\u8B93\u4ED6\u4E86\u89E3\u5230\u5BB6\u88E1\u76EE\u524D\u9700\u8981\u54EA\u4E9B\u852C\u83DC\u6C34\u679C,\u9032\u800C\u6E1B\u5C11\u75C5\u4EBA\u591A\u9918\u7684\u64D4\u5FC3\n"
+  m_text: "\u5E36\u8457\u8001\u4EBA\u5BB6\u53BB\u8CB7\u83DC\u53EF\u4EE5\u8B93\u4ED6\u4E86\u89E3\u5230\u5BB6\u88E1\u76EE\u524D\u9700\u8981\u54EA\u4E9B\u852C\u83DC\u6C34\u679C,\u9032\u800C\u6E1B\u5C11\u8001\u4EBA\u5BB6\u591A\u9918\u7684\u64D4\u5FC3\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -21920,7 +21920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5E36\u5979\u53BB\u8CFC\u7269\n\u4E26\u8AAA\u660E\u5E0C\u671B\u75C5\u4EBA\u6E1B\u5C11\u64D4\u5FC3,\u9019\u6A23\u53EF\u4EE5\u8B93\u75C5\u4EBA\u611F\u5230\u8CFC\u7269\u6A02\u8DA3\u4E26\u6E1B\u5C11\u91CD\u8907\u8CFC\u7269\u7684\u884C\u70BA\n"
+  m_text: "\u5E36\u5979\u53BB\u8CFC\u7269\n\u4E26\u8AAA\u660E\u5E0C\u671B\u8001\u4EBA\u5BB6\u6E1B\u5C11\u64D4\u5FC3,\u9019\u6A23\u53EF\u4EE5\u8B93\u8001\u4EBA\u5BB6\u611F\u5230\u8CFC\u7269\u6A02\u8DA3\u4E26\u6E1B\u5C11\u91CD\u8907\u8CFC\u7269\u7684\u884C\u70BA\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
