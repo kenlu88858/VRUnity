@@ -1,16 +1,17 @@
+
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class MoveOnSelect : MonoBehaviour
 {
-    public Transform targetPosition; // «ü©w­n²¾°Ê¨ìªº¦ì¸m
-    public float moveSpeed = 2f;     // ²¾°Ê³t«×
+    public Transform targetPosition; // ï¿½ï¿½ï¿½wï¿½nï¿½ï¿½ï¿½Ê¨ìªºï¿½ï¿½m
+    public float moveSpeed = 2f;     // ï¿½ï¿½ï¿½Ê³tï¿½ï¿½
 
     private bool shouldMove = false;
 
     void Start()
     {
-        // ¸j©w Select ¨Æ¥ó
+        // ï¿½jï¿½w Select ï¿½Æ¥ï¿½
         XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
         interactable.selectEntered.AddListener(OnSelected);
     }
@@ -19,10 +20,10 @@ public class MoveOnSelect : MonoBehaviour
     {
         if (shouldMove && targetPosition != null)
         {
-            // ´¡­È²¾°Ê¨ì¥Ø¼Ð¦ì¸m
+            // ï¿½ï¿½ï¿½È²ï¿½ï¿½Ê¨ï¿½Ø¼Ð¦ï¿½m
             transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, moveSpeed * Time.deltaTime);
 
-            // ¦pªG¨ì¹F¦ì¸m¡A°±¤î²¾°Ê
+            // ï¿½pï¿½Gï¿½ï¿½Fï¿½ï¿½mï¿½Aï¿½ï¿½ï¿½î²¾ï¿½ï¿½
             if (Vector3.Distance(transform.position, targetPosition.position) < 0.01f)
             {
                 shouldMove = false;
