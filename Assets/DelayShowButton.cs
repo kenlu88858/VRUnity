@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class DelayedButtonActivator : MonoBehaviour
+public class DelayedButtonActivator3 : MonoBehaviour
 {
     public Button buttonA;        // 要延遲顯示的按鈕 A
     public Button buttonB;        // 觸發事件的按鈕 B

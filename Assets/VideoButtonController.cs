@@ -54,7 +54,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-public class VideoButtonController : MonoBehaviour
+public class VideoButtonController3 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
 

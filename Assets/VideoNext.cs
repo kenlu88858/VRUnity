@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-public class VideoNext : MonoBehaviour
+public class VideoNext3 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public GameObject nextButton;

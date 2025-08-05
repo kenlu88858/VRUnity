@@ -1,22 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowButtonAfterDelay : MonoBehaviour
+public class ShowButtonAfterDelay3 : MonoBehaviour
 {
-    public Button targetButton;     // ­nÅã¥Üªº«ö¶s
-    public float delayTime = 3f;    // ©µ¿ð´X¬í«á¥X²{
+    public Button targetButton;     // ï¿½nï¿½ï¿½Üªï¿½ï¿½ï¿½ï¿½s
+    public float delayTime = 3f;    // ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½Xï¿½{
 
     private void Start()
     {
         if (targetButton != null)
         {
-            targetButton.gameObject.SetActive(false); // ¤@¶}©l¥ýÁôÂÃ
-            Invoke(nameof(ShowButton), delayTime);    // ©µ¿ð°õ¦æ
+            targetButton.gameObject.SetActive(false); // ï¿½@ï¿½}ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            Invoke(nameof(ShowButton), delayTime);    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
     }
 
     private void ShowButton()
     {
-        targetButton.gameObject.SetActive(true); // Åã¥Ü«ö¶s
+        targetButton.gameObject.SetActive(true); // ï¿½ï¿½Ü«ï¿½ï¿½s
     }
 }
