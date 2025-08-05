@@ -1563,6 +1563,7 @@ GameObject:
   - component: {fileID: 1238269830}
   - component: {fileID: 1238269829}
   - component: {fileID: 1238269828}
+  - component: {fileID: 1238269831}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -1612,8 +1613,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9547169, g: 0.041431006, b: 0.041431006, a: 1}
+    m_PressedColor: {r: 0.9584084, g: 0.97735846, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1684,6 +1685,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238269826}
   m_CullTransparentMesh: 1
+--- !u!114 &1238269831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238269826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75504f8fcd9e47f49837c562d09b67e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  clickedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
+  clickSound: {fileID: 8300000, guid: 4f5ee061558914a4f8dd95e3215421fb, type: 3}
 --- !u!1 &1427215782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,6 +2716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1925486046}
   - component: {fileID: 1925486047}
+  - component: {fileID: 1925486048}
   m_Layer: 0
   m_Name: scenecontroller
   m_TagString: Untagged
@@ -2735,6 +2753,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionButtons: []
   confirmButton: {fileID: 0}
+--- !u!114 &1925486048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925486045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b2efc16107f7440ab69a6827f012d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 1238269828}
+  delayTime: 27
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
