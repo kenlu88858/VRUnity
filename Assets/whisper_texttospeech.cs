@@ -60,6 +60,7 @@ public class Whisper_texttospeech : MonoBehaviour
         }
 
         Debug.Log("🎤 開始錄音流程...");
+
         recordingCoroutine = StartCoroutine(RecordingLoop());
     }
 
