@@ -18,12 +18,38 @@ public class MultipleChoiceManager2 : MonoBehaviour
         }
 
         confirmButton.onClick.AddListener(OnConfirm);
+
+        // 一開始隱藏 Confirm 按鈕
+        confirmButton.gameObject.SetActive(false);
     }
 
     void OnOptionSelected(int index)
     {
         selectedOptions[index] = !selectedOptions[index];
         Debug.Log("Option " + (index + 1) + " selected: " + selectedOptions[index]);
+
+        // 切換顏色
+        ColorBlock colors = optionButtons[index].colors;
+        Color targetColor = selectedOptions[index] ? Color.yellow : Color.white;
+
+        colors.normalColor = targetColor;
+        colors.selectedColor = targetColor;
+        colors.highlightedColor = targetColor;
+        colors.pressedColor = targetColor;
+        optionButtons[index].colors = colors;
+
+        bool anySelected = false;
+        foreach (bool selected in selectedOptions)
+        {
+            if (selected)
+            {
+                anySelected = true;
+                break;
+            }
+        }
+
+        // 顯示或隱藏 confirmButton
+        confirmButton.gameObject.SetActive(anySelected);
     }
 
     void OnConfirm()
@@ -65,5 +91,20 @@ public class MultipleChoiceManager2 : MonoBehaviour
             selectedOptions[i] = false;
         }
         currentIndex = 0;
+    }
+    
+    public void UpdateConfirmButton()
+    {
+        bool anySelected = false;
+        foreach (bool selected in selectedOptions)
+        {
+            if (selected)
+            {
+                anySelected = true;
+                break;
+            }
+        }
+
+        confirmButton.gameObject.SetActive(anySelected);
     }
 }
