@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class HideCanvas2 : MonoBehaviour
+
 {
     public GameObject canvas;
     public Button button;
