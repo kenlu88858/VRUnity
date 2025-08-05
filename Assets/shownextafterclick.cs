@@ -1,57 +1,57 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-public class VideoButtonController : MonoBehaviour
+public class VideoButtonController6 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
 
-    public GameObject[] optionButtons;      // «e6­Ó«ö¶s
-    public GameObject confirmButton;        // ²Ä7­Ó«ö¶s
-    public AudioClip instructionVoice;      // ´£¥Ü»y­µ
+    public GameObject[] optionButtons;      // ï¿½e6ï¿½Ó«ï¿½ï¿½s
+    public GameObject confirmButton;        // ï¿½ï¿½7ï¿½Ó«ï¿½ï¿½s
+    public AudioClip instructionVoice;      // ï¿½ï¿½ï¿½Ü»yï¿½ï¿½
 
-    public GameObject text1;                // ÃB¥~ªº Text 1
-    public GameObject text2;                // ÃB¥~ªº Text 2
-    public GameObject plane1;               // ÃB¥~ªº Plane 1
-    public GameObject plane2;               // ÃB¥~ªº Plane 2
+    public GameObject text1;                // ï¿½Bï¿½~ï¿½ï¿½ Text 1
+    public GameObject text2;                // ï¿½Bï¿½~ï¿½ï¿½ Text 2
+    public GameObject plane1;               // ï¿½Bï¿½~ï¿½ï¿½ Plane 1
+    public GameObject plane2;               // ï¿½Bï¿½~ï¿½ï¿½ Plane 2
 
     private AudioSource audioSource;
     private bool hasSelectedOption = false;
 
     void Start()
     {
-        // ¥ýÃö³¬©Ò¦³«ö¶s
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¦ï¿½ï¿½ï¿½ï¿½s
         foreach (GameObject btn in optionButtons)
             btn.SetActive(false);
 
         confirmButton.SetActive(false);
 
-        // Ãö³¬ÃB¥~ªº¤å¦r»P¥­­±
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Bï¿½~ï¿½ï¿½ï¿½ï¿½rï¿½Pï¿½ï¿½ï¿½ï¿½
         if (text1 != null) text1.SetActive(false);
         if (text2 != null) text2.SetActive(false);
         if (plane1 != null) plane1.SetActive(false);
         if (plane2 != null) plane2.SetActive(false);
 
-        // µù¥U callback
+        // ï¿½ï¿½ï¿½U callback
         videoPlayer.loopPointReached += OnVideoFinished;
 
-        // ­µ®Ä¼½©ñ¾¹
+        // ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
     }
 
     void OnVideoFinished(VideoPlayer vp)
     {
-        // Åã¥Ü«e6­Ó¿ï¶µ«ö¶s
+        // ï¿½ï¿½Ü«e6ï¿½Ó¿ï¶µï¿½ï¿½ï¿½s
         foreach (GameObject btn in optionButtons)
             btn.SetActive(true);
 
-        // Åã¥ÜÃB¥~ªºª«¥ó
+        // ï¿½ï¿½ï¿½ï¿½Bï¿½~ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (text1 != null) text1.SetActive(true);
         if (text2 != null) text2.SetActive(true);
         if (plane1 != null) plane1.SetActive(true);
         if (plane2 != null) plane2.SetActive(true);
 
-        // ¼½©ñ´£¥Ü»y­µ
+        // ï¿½ï¿½ï¿½ñ´£¥Ü»yï¿½ï¿½
         if (instructionVoice != null)
         {
             audioSource.PlayOneShot(instructionVoice);

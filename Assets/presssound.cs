@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class VRHoverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class VRHoverButton6 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public Color hoverColor = Color.red;        // 🔴 碰到時的紅色
     public Color clickedColor = Color.yellow;   // 🟡 點擊後的黃色（保持）
