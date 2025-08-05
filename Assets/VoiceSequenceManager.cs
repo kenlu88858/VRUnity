@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class VoiceSequenceManager : MonoBehaviour
 {
-    public List<VoiceButtonPlayer> voicePlayers;
+    public List<VoiceButtonPlayer7> voicePlayers;
 
     void Start()
     {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HideCanvas : MonoBehaviour
+public class HideCanvas7 : MonoBehaviour
 {
     public GameObject canvas;
     public Button button;

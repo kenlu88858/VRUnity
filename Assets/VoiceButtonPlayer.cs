@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class VoiceButtonPlayer : MonoBehaviour
+public class VoiceButtonPlayer7 : MonoBehaviour
 {
     public AudioSource audioSource;
     public Button playButton;
