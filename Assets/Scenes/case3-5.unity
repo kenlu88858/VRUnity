@@ -14371,7 +14371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1764437042}
   playButton: {fileID: 1784935470}
-  whisperScript: {fileID: 0}
+  whisperScript: {fileID: 1033989370}
 --- !u!1001 &1170520198
 PrefabInstance:
   m_ObjectHideFlags: 0
