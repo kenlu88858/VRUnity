@@ -5691,6 +5691,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6945,6 +6946,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -13584,7 +13586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1033989369}
-  - component: {fileID: 1033989367}
+  - component: {fileID: 1033989370}
   m_Layer: 5
   m_Name: AudioManager1
   m_TagString: Untagged
@@ -13592,7 +13594,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1033989367
+--- !u!224 &1033989369
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033989366}
+  m_LocalRotation: {x: 0, y: -0.00532715, z: -0, w: -0.9999859}
+  m_LocalPosition: {x: 0, y: 0, z: -14749.862}
+  m_LocalScale: {x: 0.19488104, y: 0.36935315, z: 0.40826926}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1168449246}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 659074.56, y: 1789510.8}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1033989370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13601,7 +13622,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033989366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f279e0073d622d64684c6947f19d4d4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 86ffb89a7082a0842a7d179563979e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   savePath: 
@@ -13622,29 +13643,10 @@ MonoBehaviour:
   recordingProgressBar: {fileID: 358167902}
   countdownText: {fileID: 1864790988}
   whis_FontSize: 18
-  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\u8ACB\u8907\u8AA6"
+  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\u8ACB\u9644\u8AA6"
   grab1: "\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\n\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\n\u5B89\u5168\u7684\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
-  finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86 \u8AAA\u7684\u771F\u597D"
---- !u!224 &1033989369
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033989366}
-  m_LocalRotation: {x: 0, y: -0.00532715, z: -0, w: -0.9999859}
-  m_LocalPosition: {x: 0, y: 0, z: -14749.862}
-  m_LocalScale: {x: 0.19488104, y: 0.36935315, z: 0.40826926}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1168449246}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 659074.56, y: 1789510.8}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86 \u8AAA\u5F97\u771F\u597D"
 --- !u!1 &1046558644
 GameObject:
   m_ObjectHideFlags: 0
@@ -23630,7 +23632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1764437042}
   playButton: {fileID: 1784935470}
-  whisperScript: {fileID: 1033989367}
+  whisperScript: {fileID: 0}
 --- !u!1 &1764757729
 GameObject:
   m_ObjectHideFlags: 0
