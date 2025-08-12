@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u900F\u904E\u6EAB\u67D4\u5730\u6F84\u6E05\u548C\u8F49\u79FB\u6CE8\u610F\u529B\n\u53EF\u4EE5\u5E6B\u52A9\u75C5\u4EBA\u611F\u5230\u5B89\u5FC3\n\u6E1B\u5C11\u4E0D\u5FC5\u8981\u7684\u722D\u57F7\n"
+  m_text: "\u900F\u904E\u6EAB\u67D4\u5730\u6F84\u6E05\u548C\u8F49\u79FB\u6CE8\u610F\u529B\n\u53EF\u4EE5\u5E6B\u52A9\u8001\u4EBA\u5BB6\u611F\u5230\u5B89\u5FC3\n\u6E1B\u5C11\u4E0D\u5FC5\u8981\u7684\u722D\u57F7\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -2234,7 +2234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\u9019\u6A23\u53EF\u4EE5\u8B93\u75C5\u4EBA\u5B89\u5FC3\n\u6E1B\u5C11\u4E0D\u5FC5\u8981\u7684\u722D\u57F7"
+  m_text: "\n\u9019\u6A23\u53EF\u4EE5\u8B93\u8001\u4EBA\u5BB6\u5B89\u5FC3\n\u6E1B\u5C11\u4E0D\u5FC5\u8981\u7684\u722D\u57F7"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -6226,6 +6226,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7609,6 +7610,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -20737,7 +20739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7576\u5E33\u672C\u6C92\u6709\u5728\u75C5\u4EBA\u8EAB\u908A\u6642\n\u75C5\u4EBA\u53EF\u80FD\u6703\u611F\u5230\u4E0D\u5B89\u5FC3\n\u6240\u4EE5\u9700\u8981\u8B93\u75C5\u4EBA\u77E5\u9053\u5E33\u672C\u653E\u5728\u67D0\u500B\u5730\u65B9\n\u6C92\u6709\u4E0D\u898B\n"
+  m_text: "\u7576\u5E33\u672C\u6C92\u6709\u5728\u8001\u4EBA\u5BB6\u8EAB\u908A\u6642\n\u8001\u4EBA\u5BB6\u53EF\u80FD\u6703\u611F\u5230\u4E0D\u5B89\u5FC3\n\u6240\u4EE5\u9700\u8981\u8B93\u8001\u4EBA\u5BB6\u77E5\u9053\u5E33\u672C\u653E\u5728\u67D0\u500B\u5730\u65B9\n\u6C92\u6709\u4E0D\u898B\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
