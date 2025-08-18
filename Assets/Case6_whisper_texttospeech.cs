@@ -123,7 +123,7 @@ public class whisper_texttospeech : MonoBehaviour
         WWWForm form = new WWWForm();
         byte[] audioData = File.ReadAllBytes(audioFilePath);
         form.AddBinaryData("file", audioData, "audio.wav", "audio/wav");
-
+        form.AddField("text", Targetsentence);
         UnityWebRequest www = UnityWebRequest.Post(serverUrl, form);
         yield return www.SendWebRequest();
 
