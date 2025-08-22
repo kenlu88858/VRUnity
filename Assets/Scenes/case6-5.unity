@@ -2968,7 +2968,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294409305}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b0e0c80cb55fa1a499a8c1a6b840b873, type: 3}
@@ -11457,6 +11457,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -12721,6 +12722,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -20705,8 +20707,8 @@ GameObject:
   - component: {fileID: 1176355298}
   - component: {fileID: 1176355297}
   - component: {fileID: 1176355300}
-  - component: {fileID: 1176355301}
   - component: {fileID: 1176355302}
+  - component: {fileID: 1176355303}
   m_Layer: 0
   m_Name: scenecontroller
   m_TagString: Untagged
@@ -20757,22 +20759,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetButton: {fileID: 1483913480}
   delayTime: 15
---- !u!114 &1176355301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176355296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 697b628405bd9c940aaa660a644629f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 357372063}
-  targetPosition: {x: 32.43, y: 38.124, z: 28.788}
-  threshold: 0.1
-  buttonToShow: {fileID: 530561383}
 --- !u!114 &1176355302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20788,6 +20774,20 @@ MonoBehaviour:
   buttonA: {fileID: 96566877}
   buttonB: {fileID: 1483913480}
   delayTime: 8
+--- !u!114 &1176355303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176355296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697b628405bd9c940aaa660a644629f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 357372073}
+  buttonToShow: {fileID: 530561383}
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
@@ -25085,7 +25085,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b0e0c80cb55fa1a499a8c1a6b840b873, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 74a511a769d689840b0d6192eeb31b19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -28176,7 +28176,7 @@ MonoBehaviour:
   followtext: {fileID: 1678667794}
   followtext1: {fileID: 689988689}
   whis_FontSize: 18
-  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\u8ACB\u8907\u8AA6"
+  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\u8ACB\u8907\u8AA6"
   grab1: "\n\u6211\u5011\u4E00\u8D77\u4F86\u6E05\u7406\u51B0\u7BB1\n\u9019\u6A23\u98DF\u7269\u6703\u4FDD\u6301\u65B0\u9BAE\n\u6211\u5011\u4E00\u8D77\u4F86\u6574\u7406\u5427"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
   finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86 \u8AAA\u5F97\u771F\u597D"

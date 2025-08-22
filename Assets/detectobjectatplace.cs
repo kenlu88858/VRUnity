@@ -1,33 +1,28 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class ShowButtonWhenArrived : MonoBehaviour
+public class ShowButtonOnClick : MonoBehaviour
 {
-    public Transform targetObject;      // ³Q²¾°Êªºª«Åé
-    public Vector3 targetPosition;      // ¥Ø¼Ğ¦ì¸m
-    public float threshold = 0.1f;      // §P©w¨ì¹Fªº¶ZÂ÷®e³\»~®t
-    public Button buttonToShow;         // ­nÅã¥Üªº«ö¶s
+    public XRBaseInteractable interactable; // éœ€è¦èƒ½è¢«é»æ“Šçš„ç‰©ä»¶ï¼ˆåŠ  XR Grab Interactable æˆ– Simple Interactableï¼‰
+    public Button buttonToShow;             // è¦é¡¯ç¤ºçš„æŒ‰éˆ•
 
-    private bool hasShown = false;      // Á×§K­«½Æ°õ¦æ
+    private void Start()
+    {
+        if (buttonToShow != null)
+            buttonToShow.gameObject.SetActive(false); // ä¸€é–‹å§‹éš±è—
 
-    void Start()
+        if (interactable != null)
+            interactable.selectEntered.AddListener(OnClicked);
+    }
+
+    private void OnClicked(SelectEnterEventArgs args)
     {
         if (buttonToShow != null)
         {
-            buttonToShow.gameObject.SetActive(false); // ¤@¶}©lÁôÂÃ«ö¶s
-        }
-    }
-
-    void Update()
-    {
-        if (!hasShown && targetObject != null)
-        {
-            float distance = Vector3.Distance(targetObject.position, targetPosition);
-            if (distance <= threshold)
-            {
-                buttonToShow.gameObject.SetActive(true); // Åã¥Ü«ö¶s
-                hasShown = true;
-            }
+            buttonToShow.gameObject.SetActive(true);
+            Debug.Log("âœ… ç‰©é«”è¢«é»æ“Šï¼ŒæŒ‰éˆ•å·²é¡¯ç¤ºï¼");
         }
     }
 }
+
