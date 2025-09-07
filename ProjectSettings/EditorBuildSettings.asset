@@ -164,6 +164,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/case2-5_Garden.unity
     guid: d7e4f19692a39ed489be1f0309dac273
+  - enabled: 1
+    path: Assets/Scenes/training04.unity
+    guid: 4c9aee03e87418542884313b6886b307
+  - enabled: 1
+    path: Assets/Scenes/training05.unity
+    guid: 3c02f340eee29074f89a539672a1e79a
+  - enabled: 1
+    path: Assets/Scenes/training03.unity
+    guid: b694a9c4f4b4945448b71cb5d78788f9
+  - enabled: 1
+    path: Assets/Scenes/training02.unity
+    guid: 82c765150261fbc47af900f90b933fb2
+  - enabled: 1
+    path: Assets/Scenes/training01.unity
+    guid: a762c5eed8db35d478e9d4c91e015d18
+  - enabled: 1
+    path: Assets/Scenes/training04_action.unity
+    guid: 22f4eabde57141847a4cb5b3c76f13b7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 27ff1bc1e61b3794ca5e31b62ead9773,
       type: 2}
