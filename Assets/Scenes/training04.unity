@@ -3878,8 +3878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 179370110}
-  fadeDuration: 10
-  displayTime: 11
+  fadeDuration: 2
+  displayTime: 5
 --- !u!114 &367887678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9787,8 +9787,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1405391867}
-  fadeDuration: 10
-  displayTime: 11
+  fadeDuration: 2
+  displayTime: 5
 --- !u!114 &712583150
 MonoBehaviour:
   m_ObjectHideFlags: 0
