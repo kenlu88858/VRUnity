@@ -13,11 +13,16 @@ public class trainingCountdownBarController : MonoBehaviour
     public Button finishButton;          // 倒數結束後顯示的按鈕
 
     [Header("Countdown Settings")]
-    public float countdownDuration = 5f;   // 倒數多久
-    public float delayBeforeStart = 2f;    // 點按鈕後延遲多久開始倒數
+    public float countdownDuration = 10f;   // 倒數多久
+    public float delayBeforeStart = 5f;    // 點按鈕後延遲多久開始倒數
 
     [Header("Trigger Button")]
     public Button triggerButton;           // 觸發倒數的按鈕
+
+    [Header("Audio Settings")]
+    public AudioSource audioSource;        // 用來播放語音的 AudioSource
+    public AudioClip startClip;            // 開始倒數時要播的音效
+    public AudioClip finishClip;           // 結束倒數時要播的音效
 
     private float timer;
     private bool isCounting = false;
@@ -63,6 +68,12 @@ public class trainingCountdownBarController : MonoBehaviour
 
         // 確保進度條顯示
         if (fillImage != null) fillImage.gameObject.SetActive(true);
+
+        // 播放開始語音
+        if (audioSource != null && startClip != null)
+        {
+            audioSource.PlayOneShot(startClip);
+        }
     }
 
     void Update()
@@ -91,6 +102,12 @@ public class trainingCountdownBarController : MonoBehaviour
         if (finishText != null) finishText.gameObject.SetActive(true);
         if (finishButton != null) finishButton.gameObject.SetActive(true);
 
-        Debug.Log("倒數結束，顯示完成UI");
+        // 播放結束語音
+        if (audioSource != null && finishClip != null)
+        {
+            audioSource.PlayOneShot(finishClip);
+        }
+
+        Debug.Log("倒數結束，顯示完成UI + 播放語音");
     }
 }
