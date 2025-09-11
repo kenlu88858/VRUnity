@@ -9941,7 +9941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6B61\u8FCE\u4F86\u5230\u8A13\u7DF4\u6559\u5B78\n\u6211\u5011\u4F86\u89C0\u770B\u5F71\u7247\u5B78\u7FD2\n\u5982\u4F55\u505A\u9EDE\u64CA\u7684\u64CD\u4F5C\u5427"
+  m_text: "\u6B61\u8FCE\u4F86\u5230\u6309\u9215\u9EDE\u64CA\u6559\u5B78\n\u6211\u5011\u4F86\u89C0\u770B\u5F71\u7247\u5B78\u7FD2\n\u5982\u4F55\u505A\u9EDE\u64CA\u7684\u64CD\u4F5C\u5427"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -23407,7 +23407,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fba43e132f4d46147a96d84c8c5f8225, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1b4e0eca194aa244dbca0b9e598e5172, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
