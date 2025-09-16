@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u518D\u5B78\u4E00\u6B21"
+  m_text: "\u518D\u89C0\u770B\u4E00\u6B21"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -15354,7 +15354,7 @@ MonoBehaviour:
   canvasToShow: {fileID: 1419147192}
   audioSource: {fileID: 1756137612}
   promptClip: {fileID: 0}
-  finishClip: {fileID: 8300000, guid: 38d9ae41460f11041890f19e5edde7ca, type: 3}
+  finishClip: {fileID: 8300000, guid: a030f7e290b386340a9e55f74c5325f1, type: 3}
 --- !u!1 &1185015749
 GameObject:
   m_ObjectHideFlags: 0
@@ -18313,7 +18313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5F71\u7247\u6559\u5B78\u7D50\u675F\n\u60F3\u518D\u770B\u4E00\u6B21\u8ACB\u9EDE\u518D\u5B78\u4E00\u6B21\n\u5B78\u6703\u4E86\u8ACB\u9EDE\u4E0B\u4E00\u5E55"
+  m_text: "\u5F71\u7247\u6559\u5B78\u7D50\u675F\n\u60F3\u518D\u770B\u4E00\u6B21\u8ACB\u9EDE\u518D\u89C0\u770B\u4E00\u6B21\n\u5B78\u6703\u4E86\u8ACB\u9EDE\u4E0B\u4E00\u5E55"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
