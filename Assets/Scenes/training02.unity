@@ -6763,7 +6763,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: training03
+          m_StringArgument: training02_action
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &530561384
@@ -28728,7 +28728,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974009928}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 176b6bcf2ceb9d54196953391beb7c58, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 8ceaed73918dfdb4d8d2c1412c3ebc7a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -29525,7 +29525,7 @@ Transform:
   m_GameObject: {fileID: 2031361060}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.265, y: 38.414, z: 28.943}
+  m_LocalPosition: {x: 31.265, y: 38.113, z: 28.943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
