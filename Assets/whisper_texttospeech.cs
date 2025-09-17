@@ -37,6 +37,9 @@ public class Whisper_texttospeech : MonoBehaviour
     [TextArea] public string recongnize;
     [TextArea] public string finish;
 
+    // ⭐ 指到你的倒數條控制器（Inspector 要拖進來）
+    public CountdownBarController countdownBar;
+
     void Start()
     {
         nextbutton.SetActive(false);
@@ -60,7 +63,6 @@ public class Whisper_texttospeech : MonoBehaviour
         }
 
         Debug.Log("🎤 開始錄音流程...");
-
         recordingCoroutine = StartCoroutine(RecordingLoop());
     }
 
@@ -77,8 +79,25 @@ public class Whisper_texttospeech : MonoBehaviour
 
             Debug.Log("📢 請開始說話...");
 
+            // 開始錄音
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
+
+            // ⭐ 同步啟動倒數條（與錄音同時開始）
+            if (countdownBar != null)
+            {
+                countdownBar.gameObject.SetActive(true);
+                countdownBar.StartCountdown(recordDuration);
+            }
+
+            // 等待錄音結束
             yield return new WaitForSeconds(recordDuration);
+
+            // ⭐ 錄音結束，同步關閉倒數條
+            if (countdownBar != null)
+            {
+                countdownBar.StopCountdown();
+            }
+
             Microphone.End(microphoneDevice);
 
             followtext.text = recongnize;
@@ -246,6 +265,12 @@ public class Whisper_texttospeech : MonoBehaviour
         if (Microphone.IsRecording(microphoneDevice))
         {
             Microphone.End(microphoneDevice);
+        }
+
+        // ⭐ 手動停止時也確保倒數條被關閉
+        if (countdownBar != null)
+        {
+            countdownBar.StopCountdown();
         }
 
         Debug.Log("⛔ 錄音流程手動停止");
