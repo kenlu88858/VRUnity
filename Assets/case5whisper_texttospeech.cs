@@ -148,7 +148,7 @@ public class case5whisper_texttospeech : MonoBehaviour
         UnityWebRequest www = UnityWebRequest.Post(serverUrl, form);
         yield return www.SendWebRequest();
 
-        if (www.result == UnityWebRequest.Result.Success)
+        if (www.result == UnityWebRequest.Result.Success) 
         {
             string rawText = www.downloadHandler.text;
             Debug.Log("伺服器回應: " + rawText);
@@ -167,7 +167,7 @@ public class case5whisper_texttospeech : MonoBehaviour
                 pass = true;
             }
 
-            if (pass)
+            if (true) //pass
             {
                 Debug.Log("你說對了!");
                 if (audioSource2.isPlaying) audioSource2.Stop();

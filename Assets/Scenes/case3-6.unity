@@ -915,9 +915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c8e7a23c2bdf44783e16abdf0c5c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 843439861}
   playButton: {fileID: 1505222603}
-  whisperScript: {fileID: 0}
+  whisperScript: {fileID: 461134850}
 --- !u!82 &102817977
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1129,7 +1129,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144946675}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16.099985}
+  m_LocalPosition: {x: 0, y: 0, z: 16.1}
   m_LocalScale: {x: 0.3932815, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1137,7 +1137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: 80.7}
+  m_AnchoredPosition: {x: -3.6, y: 89.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144946677
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.24910738, y: 0, z: -38.29975, w: -0.77894974}
+  m_margin: {x: 0.24910738, y: 20.632755, z: -38.29975, w: -0.77894974}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8643,7 +8643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &636405942
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13357,7 +13357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &958604621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18416,7 +18416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1288459241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31191,7 +31191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2079063459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31304,7 +31304,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079063458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dd5b257ce09d34c8871253c6993526, type: 3}
   m_Name: 

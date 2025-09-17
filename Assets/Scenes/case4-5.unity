@@ -1538,6 +1538,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145828165}
   m_Mesh: {fileID: 3390558720134950976, guid: 5a6a2dea8895cc34e8dfd46da06440a3, type: 3}
+--- !u!1 &150885296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150885297}
+  - component: {fileID: 150885299}
+  - component: {fileID: 150885298}
+  m_Layer: 5
+  m_Name: background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &150885297
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150885296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.35626984}
+  m_LocalScale: {x: 0.008019283, y: 0.0010956747, z: 0.008019283}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 374935600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.0082207, y: 0.12617111}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &150885298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150885296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5018867, g: 0.49525803, b: 0.49525803, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &150885299
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150885296}
+  m_CullTransparentMesh: 1
 --- !u!1 &153456896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,6 +4291,53 @@ Transform:
   - {fileID: 873812751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &374935598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 374935600}
+  - component: {fileID: 374935599}
+  m_Layer: 0
+  m_Name: countdowncontroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &374935599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374935598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fd52d721f7011418bf91ebc254999d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 761425144}
+--- !u!4 &374935600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374935598}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.0025938742, z: -0, w: -0.99999666}
+  m_LocalPosition: {x: -89.5, y: -94.7, z: 67.8}
+  m_LocalScale: {x: 124.699394, y: 124.699425, z: 124.699394}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 150885297}
+  - {fileID: 761425146}
+  m_Father: {fileID: 1600141660}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.297, z: 0}
 --- !u!1001 &377530992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10625,6 +10747,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760710705}
   m_Mesh: {fileID: -8678823145569952518, guid: 5a6a2dea8895cc34e8dfd46da06440a3, type: 3}
+--- !u!1 &761425143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761425146}
+  - component: {fileID: 761425145}
+  - component: {fileID: 761425144}
+  m_Layer: 5
+  m_Name: countdownbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &761425144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761425143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: affa059594145a843b81788037b4ee21, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &761425145
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761425143}
+  m_CullTransparentMesh: 1
+--- !u!224 &761425146
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761425143}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.35626984}
+  m_LocalScale: {x: 0.007615833, y: 0.0005634349, z: 0.008019283}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 374935600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.0082207, y: 0.12617111}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &762600507
 GameObject:
   m_ObjectHideFlags: 0
@@ -12190,13 +12387,13 @@ MonoBehaviour:
   savePath: 
   Targetsentence: "\u6211\u5011\u53BB\u53C3\u52A0\u9130\u91CC\u7684\u6D3B\u52D5\u548C\u670B\u53CB\u5011\u4E00\u8D77\u505A\u4E9B\u6709\u8DA3\u7684\u4E8B\u9019\u5C0D\u4F60\u7684\u5065\u5EB7\u6709\u597D\u8655"
   saveFileName: recordedAudio.wav
-  errorAudioSource: {fileID: 1567667171}
   recordDuration: 15
   waitTime: 2
-  nextbutton: {fileID: 728652729}
   audioSource: {fileID: 86790859}
   audioSource1: {fileID: 1790265455}
   audioSource2: {fileID: 888478073}
+  errorAudioSource: {fileID: 1567667171}
+  nextbutton: {fileID: 728652729}
   followtext: {fileID: 1674645724}
   followtext1: {fileID: 383830842}
   whis_FontSize: 20
@@ -12204,6 +12401,8 @@ MonoBehaviour:
   grab1: "\n\"\u6211\u5011\u53BB\u53C3\u52A0\u9130\u91CC\u7684\u6D3B\u52D5\u548C\n\u670B\u53CB\u5011\u4E00\u8D77\u505A\u4E9B\u6709\u8DA3\u7684\u4E8B\n\u9019\u5C0D\u4F60\u7684\u5065\u5EB7\u6709\u597D\u8655\"\n"
   recongnize: "\n\u8A9E\u97F3\u8FA8\u8B58\u4E2D \n\n\u8ACB\u7A0D\u5019"
   finish: "\n\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86\n\u8AAA\u7684\u771F\u597D"
+  recordingPanel: {fileID: 374935598}
+  recordingProgressBar: {fileID: 761425144}
 --- !u!1 &873812750
 GameObject:
   m_ObjectHideFlags: 0
@@ -15779,7 +15978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2058606981}
   buttonObject: {fileID: 1553502065}
-  autoPlayClip: 1
+  autoPlayClip: 0
 --- !u!1 &1109033903
 GameObject:
   m_ObjectHideFlags: 0
@@ -23842,6 +24041,7 @@ RectTransform:
   m_LocalScale: {x: 0.008019283, y: 0.008019283, z: 0.008019283}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 374935600}
   - {fileID: 1652253667}
   - {fileID: 1674645723}
   - {fileID: 383830841}
@@ -25395,8 +25595,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294506744
-  m_fontColor: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+    rgba: 4278519045
+  m_fontColor: {r: 0.01886791, g: 0.018761111, b: 0.018761111, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
