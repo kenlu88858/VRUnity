@@ -9402,7 +9402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456c9db3ade849c79640281bdc05206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceClip: {fileID: 8300000, guid: 879cdccd12d104ab1b10862d5080353d, type: 3}
+  voiceClip: {fileID: 8300000, guid: 9a270c5272e8443c2a309ec573ef8eda, type: 3}
 --- !u!114 &714444474
 MonoBehaviour:
   m_ObjectHideFlags: 0

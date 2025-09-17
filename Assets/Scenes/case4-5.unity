@@ -21343,7 +21343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456c9db3ade849c79640281bdc05206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceClip: {fileID: 8300000, guid: 52860530879aa4abaa0c2071c5c54ed0, type: 3}
+  voiceClip: {fileID: 8300000, guid: 9a270c5272e8443c2a309ec573ef8eda, type: 3}
 --- !u!114 &1444289106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23039,7 +23039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1567667170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31284,7 +31284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2058606980
 MonoBehaviour:
   m_ObjectHideFlags: 0
