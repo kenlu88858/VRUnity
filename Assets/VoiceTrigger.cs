@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class VoiceTriggerTest : MonoBehaviour
 {
-    public AudioClip voiceClip;
-
-    private AudioSource audioSource;
+    // 直接在 Inspector 指派 AudioSource（也可以事先掛在物件上）
+    public AudioSource audioSource;
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = voiceClip;
+        // 如果 Inspector 沒指定，就自動加一個
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        // 基本設定
         audioSource.playOnAwake = false;
-        audioSource.spatialBlend = 0f; // 設為2D音效，避免空間定位影響聽不到
+        audioSource.spatialBlend = 0f; // 設為 2D
     }
 
     void OnTriggerEnter(Collider other)

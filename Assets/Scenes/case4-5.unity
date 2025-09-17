@@ -21343,7 +21343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6456c9db3ade849c79640281bdc05206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceClip: {fileID: 8300000, guid: 9a270c5272e8443c2a309ec573ef8eda, type: 3}
+  audioSource: {fileID: 2058606981}
 --- !u!114 &1444289106
 MonoBehaviour:
   m_ObjectHideFlags: 0
