@@ -92,9 +92,9 @@ public class whisper_texttospeech_3 : MonoBehaviour
             Debug.Log("�ж}�l����...");
             //�}�l��������ܳѾl���ƩM��L�q��
             recordingPanel?.SetActive(true);
-            countdownTitleText.gameObject.SetActive(true);
+            //countdownTitleText.gameObject.SetActive(true);
             recordingProgressBar.gameObject.SetActive(true);
-            countdownText.gameObject.SetActive(true);
+            //countdownText.gameObject.SetActive(true);
             StartCoroutine(ShowRecordingCountdown(recordDuration));
             // �}�l����
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
@@ -126,7 +126,7 @@ public class whisper_texttospeech_3 : MonoBehaviour
 
             // �o�e���W����A������
             yield return StartCoroutine(SendAudioToServer(savePath));
-
+         
             // ���� 2 ���A�~��U�@������
             yield return new WaitForSeconds(waitTime);
         }
@@ -189,7 +189,7 @@ public class whisper_texttospeech_3 : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
 
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
-            if (Targetsentence == cleanedText)
+            if (true) //Targetsentence == cleanedText
             {
                 if (audioSource1.isPlaying)
                 {

@@ -18,7 +18,7 @@ public class whisper_texttospeech : MonoBehaviour
 
     private bool isTrue = false;
     private int failCount = 0; // 新增失敗次數計數器
-    public int maxFailCount = 1; // 允許的最大失敗次數
+    public int maxFailCount = 0; // 允許的最大失敗次數
 
     public GameObject nextbutton;
     public TextMeshProUGUI errorTipText;
@@ -135,7 +135,7 @@ public class whisper_texttospeech : MonoBehaviour
             string extractedText = ExtractTextFromJson(rawText);
             string cleanedText = RemovePunctuationAndWhitespace(extractedText);
 
-            if (Targetsentence == cleanedText || failCount > maxFailCount)
+            if (true) //failCount >= maxFailCount || Targetsentence == cleanedText
             {
                 if (audioSource1.isPlaying)
                     audioSource1.Stop();
