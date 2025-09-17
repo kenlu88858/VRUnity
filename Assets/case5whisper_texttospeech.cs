@@ -8,6 +8,7 @@ using TMPro;
 public class case5whisper_texttospeech : MonoBehaviour
 {
     public SafeBoxController safeBoxController;
+    public CountdownBarController countdownBar; // 新增：對倒數條控制器的引用
     private string microphoneDevice;
     private Coroutine recordingCoroutine;
     public string savePath;
@@ -84,9 +85,22 @@ public class case5whisper_texttospeech : MonoBehaviour
             }
 
             Debug.Log("請開始說話...");
+
+            // 新增：在開始錄音前，啟動倒數條
+            if (countdownBar != null)
+            {
+                countdownBar.StartCountdown(recordDuration);
+            }
+
             AudioClip recordedClip = Microphone.Start(microphoneDevice, false, (int)recordDuration, 44100);
             yield return new WaitForSeconds(recordDuration);
             Microphone.End(microphoneDevice);
+
+            // 新增：在錄音結束後，停止倒數條
+            if (countdownBar != null)
+            {
+                countdownBar.StopCountdown();
+            }
 
             followtext.text = recongnize;
             followtext.fontSize = whis_FontSize;
@@ -251,6 +265,12 @@ public class case5whisper_texttospeech : MonoBehaviour
         if (Microphone.IsRecording(microphoneDevice))
         {
             Microphone.End(microphoneDevice);
+        }
+
+        // 新增：在手動停止時也確保倒數條被隱藏
+        if (countdownBar != null)
+        {
+            countdownBar.StopCountdown();
         }
 
         isTrue = false;
