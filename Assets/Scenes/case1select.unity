@@ -2153,8 +2153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 9}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.7999878, y: 18.699997}
+  m_SizeDelta: {x: 152.7, y: 8.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1175471035
 MonoBehaviour:
@@ -2922,7 +2922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4F60\u6703\u600E\u9EBC\u505A?"
+  m_text: "\u4F60\u6703\u600E\u9EBC\u8AAA(\u505A)?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -2986,7 +2986,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -45.383087, y: 0, z: -59.416183, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4072,7 +4072,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u9762\u5C0D\u8001\u4EBA\u5BB6\u4E00\u76F4\u53CD\u8986\u554F\u76F8\u540C\u554F\u984C\u7684\u60C5\u6CC1
-    \u4F60\u6703\u600E\u9EBC\u505A?\r\n\u8ACB\u9078\u64C7\u53F3\u65B9\u60C5\u5883\u6309\u9215
+    \u4F60\u6703\u600E\u9EBC\u8AAA(\u505A)?\r\n\u8ACB\u9078\u64C7\u53F3\u65B9\u60C5\u5883\u6309\u9215
     \u9078\u64C7\u5B8C\u7562\u8ACB\u6309\u4E0B\u4E00\u5E55"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
@@ -4137,7 +4137,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -60.993958, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

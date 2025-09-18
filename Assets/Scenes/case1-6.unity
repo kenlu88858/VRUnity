@@ -5991,6 +5991,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6977,6 +6978,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10330,7 +10332,6 @@ MonoBehaviour:
   followtext: {fileID: 1870144618}
   followtext1: {fileID: 1115417783}
   whis_FontSize: 18
-  count: 0
   grab: "\u8907\u8AA6\u5167\u5BB9\u6709\u8AA4\n\n\u8ACB\u548C\u6211\u8907\u8AA6\u4E00\u6B21\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\u8ACB\u958B\u59CB\u8907\u8AA6"
   grab2: "\n\n\n\u6211\u5011\u4F86\u4E00\u8D77\u62FC\u500B\u62FC\u5716\n\u9019\u500B\u5F88\u597D\u73A9!"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5019"
@@ -15624,7 +15625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 47.4}
+  m_AnchoredPosition: {x: -13.1, y: 47.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190440408
@@ -15647,7 +15648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u63A5\u4E0B\u4F86\u6211\u5011\u53EF\u4EE5\u8A66\u8457\u9080\u8ACB\u75C5\u4EBA\u548C\u75C5\u4EBA\u4E00\u8D77\u62FC\u62FC\u5716\n\u9019\u6A23\u53EF\u4EE5\u8B93\u75C5\u4EBA\u5206\u6563\u6CE8\u610F\u529B\n\n"
+  m_text: "\u63A5\u4E0B\u4F86\u6211\u5011\u53EF\u4EE5\u8A66\u8457\u9080\u8ACB\u8001\u4EBA\u5BB6\u548C\u8001\u4EBA\u5BB6\u4E00\u8D77\u62FC\u62FC\u5716\n\u9019\u6A23\u53EF\u4EE5\u8B93\u8001\u4EBA\u5BB6\u5206\u6563\u6CE8\u610F\u529B\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -15711,7 +15712,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -74.23048, y: 0, z: -108.53564, w: 0}
+  m_margin: {x: 42.843445, y: 0, z: -108.53564, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -25509,7 +25510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5B89\u6392\u4E00\u4E9B\u7C21\u55AE\u7684\u6D3B\u52D5\n\u4F86\u8F49\u79FB\u75C5\u4EBA\u7684\u6CE8\u610F\u529B\n\u6E1B\u5C11\u75C5\u4EBA\u91CD\u8907\u63D0\u554F\u7684\u983B\u7387\n\n"
+  m_text: "\u5B89\u6392\u4E00\u4E9B\u7C21\u55AE\u7684\u6D3B\u52D5\n\u4F86\u8F49\u79FB\u8001\u4EBA\u5BB6\u7684\u6CE8\u610F\u529B\n\u6E1B\u5C11\u8001\u4EBA\u5BB6\u91CD\u8907\u63D0\u554F\u7684\u983B\u7387\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,

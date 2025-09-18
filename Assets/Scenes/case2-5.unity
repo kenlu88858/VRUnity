@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u63A5\u4E0B\u4F86\u6211\u5011\u8A66\u8457\u8DDF\u75C5\u4EBA\u8AAA\u8A71\n\u9080\u8ACB\u4ED6\u4E00\u8D77\u5916\u51FA\u8D70\u4E00\u5708\n"
+  m_text: "\u63A5\u4E0B\u4F86\u6211\u5011\u8A66\u8457\u8DDF\u8001\u4EBA\u5BB6\u8AAA\u8A71\n\u9080\u8ACB\u4ED6\u4E00\u8D77\u5916\u51FA\u8D70\u4E00\u5708\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -13063,7 +13063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7167\u9867\u8005\u53EF\u4EE5\u966A\u75C5\u4EBA\u5916\u51FA\u8D70\u4E00\u5708\n\u5229\u7528\u75C5\u4EBA\u77ED\u671F\u8A18\u61B6\u529B\u5DEE\u7684\u7279\u9EDE\u8F49\u79FB\u6CE8\u610F\u529B\n"
+  m_text: "\u7167\u9867\u8005\u53EF\u4EE5\u966A\u8001\u4EBA\u5BB6\u5916\u51FA\u8D70\u4E00\u5708\n\u5229\u7528\u8001\u4EBA\u5BB6\u77ED\u671F\u8A18\u61B6\u529B\u5DEE\u7684\u7279\u9EDE\u8F49\u79FB\u6CE8\u610F\u529B\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -13127,7 +13127,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -38.29975, w: 0}
+  m_margin: {x: -20.916359, y: 0, z: -38.29975, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
