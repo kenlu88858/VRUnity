@@ -168,7 +168,7 @@ public class Whisper_texttospeech : MonoBehaviour
             float matchRatio = CalculateMatchRatio(Targetsentence, cleanedText);
             Debug.Log($"✅ 比對相似度: {matchRatio * 100:0.0}%");
 
-            if (matchRatio >= 0.5f || retryCount >= 1)
+            if (true) //matchRatio >= 0.5f || retryCount >= 1
             {
                 if (audioSource1.isPlaying) audioSource1.Stop();
                 audioSource2.Play();

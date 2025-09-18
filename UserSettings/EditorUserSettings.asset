@@ -6,31 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 53065604065359095a0d0a2640720944154e4a7c787c7134752c4e32e1e3623b
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 050601055702505d540d5e2747255c44174e48797e2c73342e281867b5b3306b
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 510751515d065d0e5e575c27407507444f4e1e7f787b20652971446ab4b66661
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 0057010204010d5f5b575f2649210644174f1b2c742c7e617a281e31b2b76c39
-      flags: 0
-    RecentlyUsedSceneGuid-4:
       value: 01020151550d0b5d08085d7349260d4413154878282e27677a284864b4b0353a
       flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-1:
       value: 0253005603040a0b080d557146760f4443154a2e7d7174652b714567bbb93160
       flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-2:
       value: 5303000256575b0b555d5b7647215e44434e41727d2974622f794561e0b2646a
       flags: 0
-    RecentlyUsedSceneGuid-7:
+    RecentlyUsedSceneGuid-3:
+      value: 57030d045400505f5457547016770845424f4a28752c77627a281e61b1b7623e
+      flags: 0
+    RecentlyUsedSceneGuid-4:
       value: 0057025400540d5d0e5d087344770913174e1a79287f2760287f1865bbb96060
       flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 050601055702505d540d5e2747255c44174e48797e2c73342e281867b5b3306b
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 5052045403065d0b080b097049730844104f412b797b7f667a7b1c62e7b76d39
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 53065604065359095a0d0a2640720944154e4a7c787c7134752c4e32e1e3623b
+      flags: 0
     RecentlyUsedSceneGuid-8:
-      value: 57030d045400505f5457547016770845424f4a28752c77627a281e61b1b7623e
+      value: 5400550401545d0e585b5c7049205d4443161a7275717367797b4b67bab56760
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+      value: 025304055050510d545e5f2015275d444e4e407c7d71233478794e64b4b8356a
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

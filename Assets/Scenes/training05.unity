@@ -346,12 +346,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImage: {fileID: 1146922994}
+  backgroundBar: {fileID: 420625978}
   text1: {fileID: 1389112716}
   text2: {fileID: 680782967}
   finishText: {fileID: 695653837}
   finishButton: {fileID: 368109727}
   countdownDuration: 10
-  delayBeforeStart: 6
+  delayBeforeStart: 7
   triggerButton: {fileID: 1681489144}
   audioSource: {fileID: 1606635731}
   startClip: {fileID: 0}
@@ -10087,7 +10088,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712583148}
   m_LocalRotation: {x: -0, y: 0.00532715, z: -0, w: -0.9999859}
-  m_LocalPosition: {x: 0, y: 0, z: 30.051}
+  m_LocalPosition: {x: 0, y: 0, z: 30.103}
   m_LocalScale: {x: 0.008019283, y: 0.008019283, z: 0.008019283}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15764,7 +15765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: affa059594145a843b81788037b4ee21, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15791,7 +15792,7 @@ RectTransform:
   m_GameObject: {fileID: 1146922993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92134, y: -0.10568, z: 1}
+  m_LocalScale: {x: 0.87519926, y: -0.098027706, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334331239}
@@ -27653,7 +27654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 30.901, y: 38.587}
+  m_AnchoredPosition: {x: 30.97, y: 38.587}
   m_SizeDelta: {x: 1063.5, y: 557.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1828648072
