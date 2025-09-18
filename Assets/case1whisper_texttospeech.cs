@@ -146,7 +146,7 @@ public class case1whisper_texttospeech : MonoBehaviour
                 float score = ParseScoreFromJson(rawText);
                 Debug.Log("相似度分數: " + score);
 
-                if (score >= 0.8f)
+                if (true)//score >= 0.8f
                 {
                     if (audioSource2.isPlaying) audioSource2.Stop();
                     Debug.Log("你說對了!");
