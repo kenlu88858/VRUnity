@@ -199,6 +199,7 @@ public class whisper_texttospeech_3 : MonoBehaviour
                 audioSource2.Play();
                 isTrue = true;
                 errorTipText.gameObject.SetActive(false); // ���T�����ÿ��~�T��
+                while (audioSource2.isPlaying) yield return null;
                 nextbutton.SetActive(true);  // ? ��o��[�b�o�̡I
 
             }

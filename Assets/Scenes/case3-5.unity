@@ -812,7 +812,7 @@ RectTransform:
   m_GameObject: {fileID: 132753247}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 16.2}
-  m_LocalScale: {x: 0.33765814, y: 0.64645, z: 0.64645}
+  m_LocalScale: {x: 0.31348518, y: 0.63928086, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1168449246}
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\u8ACB\u8907\u8AA6"
+  m_text: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\u8ACB\u8907\u8AA6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -3472,7 +3472,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 542a889fa08d13e42bf7eb09ba6023fd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0ae16eff34d5b0e4bab328a38c67a3d4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -13643,7 +13643,7 @@ MonoBehaviour:
   recordingProgressBar: {fileID: 358167902}
   countdownText: {fileID: 1864790988}
   whis_FontSize: 18
-  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\u8ACB\u9644\u8AA6"
+  grab: "\u8ACB\u548C\u6211\u8907\u8AA6\u4EE5\u4E0B\u6587\u5B57\n\n\n\n\n\u8ACB\u8907\u8AA6"
   grab1: "\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\n\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\n\u5B89\u5168\u7684\n"
   recongnize: "\u8A9E\u97F3\u8FA8\u8B58\u4E2D\n\n\u8ACB\u7A0D\u5F8C"
   finish: "\u8A9E\u97F3\u8FA8\u8B58\u5B8C\u6210\n\n\u4F60\u8AAA\u5C0D\u4E86 \u8AAA\u5F97\u771F\u597D"
@@ -18853,7 +18853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7167\u9867\u8005\u61C9\u7528\u540C\u7406\u5FC3\u56DE\u61C9\u75C5\u4EBA\u7684\u611F\u53D7\n\u4F8B\u5982\u8AAA\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\n\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\u5B89\u5168\u7684"
+  m_text: "\u7167\u9867\u8005\u61C9\u7528\u540C\u7406\u5FC3\u56DE\u61C9\u8001\u4EBA\u5BB6\u7684\u611F\u53D7\n\u4F8B\u5982\u8AAA\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\n\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\u5B89\u5168\u7684"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -19212,7 +19212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u63A5\u8457\u6703\u8ACB\u60A8\u8907\u8AA6\u6587\u5B57\n\u76EE\u7684\u662F\u5E0C\u671B\u60A8\u53EF\u4EE5\u7406\u89E3\n\u7528\u540C\u7406\u5FC3\u7684\u65B9\u5F0F\u548C\u8001\u4EBA\u6E9D\u901A\n"
+  m_text: "\u63A5\u8457\u6703\u8ACB\u60A8\u8907\u8AA6\u6587\u5B57\n\u76EE\u7684\u662F\u5E0C\u671B\u60A8\u53EF\u4EE5\u7406\u89E3\n\u7528\u540C\u7406\u5FC3\u7684\u65B9\u5F0F\u548C\u8001\u4EBA\u5BB6\u6E9D\u901A\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -28229,14 +28229,14 @@ RectTransform:
   m_GameObject: {fileID: 2051273209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 16}
-  m_LocalScale: {x: 0.32618842, y: 0.64645, z: 0.64645}
+  m_LocalScale: {x: 0.3095169, y: 0.61713344, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1168449246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.5, y: 61.3}
+  m_AnchoredPosition: {x: -3.5, y: 62.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051273211
@@ -28259,7 +28259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\n\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\u5B89\u5168\u7684"
+  m_text: "\n\u6211\u77E5\u9053\u4F60\u5F88\u64D4\u5FC3\n\u6211\u5011\u4E00\u8D77\u770B\u770B\u5BB6\u88E1\u662F\u4E0D\u662F\u5B89\u5168\u7684"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3e618524139e9b47b44da53da5aa841, type: 2}
   m_sharedMaterial: {fileID: -8087993702413025508, guid: e3e618524139e9b47b44da53da5aa841,
@@ -29430,7 +29430,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d75d0866de3230f41a1272ff4fb138eb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 79f55a4eb8e4f0c45bc326edc6ffaeff, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
